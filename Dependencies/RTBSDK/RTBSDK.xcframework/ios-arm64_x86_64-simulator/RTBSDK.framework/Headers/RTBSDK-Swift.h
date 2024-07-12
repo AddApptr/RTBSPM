@@ -302,6 +302,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 @class RTBBannerSize;
+@class NSString;
 @class RTBBannerRequestConfiguration;
 @protocol RTBDSPBannerProtocol;
 @class UIView;
@@ -311,7 +312,9 @@ SWIFT_CLASS("_TtC6RTBSDK11RTBBannerAd")
 /// Init RTBBannerAd
 /// \param size The banner size of type <code>RTBBannerSize</code>
 ///
-- (nonnull instancetype)initWithSize:(RTBBannerSize * _Nonnull)size OBJC_DESIGNATED_INITIALIZER;
+/// \param userAgent The user agent
+///
+- (nonnull instancetype)initWithSize:(RTBBannerSize * _Nonnull)size userAgent:(NSString * _Nonnull)userAgent OBJC_DESIGNATED_INITIALIZER;
 /// load a new ad with  configuration
 /// \param configuration Banner request configuration <code>RTBBannerRequestConfiguration</code> that is needed to request a new ad.
 ///
@@ -320,15 +323,15 @@ SWIFT_CLASS("_TtC6RTBSDK11RTBBannerAd")
 /// Get the loaded banner view
 ///
 /// returns:
-/// The loaded banner view of type <code>UIView</code>
+/// The loaded banner view of type <code>UIView</code> if loaded
 - (UIView * _Nullable)getBannerView SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+
 @class RTBBidInfo;
-@class NSString;
 
 SWIFT_PROTOCOL("_TtP6RTBSDK19RTBBannerAdDelegate_")
 @protocol RTBBannerAdDelegate
@@ -385,6 +388,7 @@ SWIFT_CLASS("_TtC6RTBSDK13RTBBannerView")
 - (void)setDSPAdapters:(NSArray<id <RTBDSPBannerProtocol>> * _Nonnull)adapters;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
+
 
 
 
@@ -919,6 +923,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 #if defined(__OBJC__)
 @class RTBBannerSize;
+@class NSString;
 @class RTBBannerRequestConfiguration;
 @protocol RTBDSPBannerProtocol;
 @class UIView;
@@ -928,7 +933,9 @@ SWIFT_CLASS("_TtC6RTBSDK11RTBBannerAd")
 /// Init RTBBannerAd
 /// \param size The banner size of type <code>RTBBannerSize</code>
 ///
-- (nonnull instancetype)initWithSize:(RTBBannerSize * _Nonnull)size OBJC_DESIGNATED_INITIALIZER;
+/// \param userAgent The user agent
+///
+- (nonnull instancetype)initWithSize:(RTBBannerSize * _Nonnull)size userAgent:(NSString * _Nonnull)userAgent OBJC_DESIGNATED_INITIALIZER;
 /// load a new ad with  configuration
 /// \param configuration Banner request configuration <code>RTBBannerRequestConfiguration</code> that is needed to request a new ad.
 ///
@@ -937,15 +944,15 @@ SWIFT_CLASS("_TtC6RTBSDK11RTBBannerAd")
 /// Get the loaded banner view
 ///
 /// returns:
-/// The loaded banner view of type <code>UIView</code>
+/// The loaded banner view of type <code>UIView</code> if loaded
 - (UIView * _Nullable)getBannerView SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+
 @class RTBBidInfo;
-@class NSString;
 
 SWIFT_PROTOCOL("_TtP6RTBSDK19RTBBannerAdDelegate_")
 @protocol RTBBannerAdDelegate
@@ -1002,6 +1009,7 @@ SWIFT_CLASS("_TtC6RTBSDK13RTBBannerView")
 - (void)setDSPAdapters:(NSArray<id <RTBDSPBannerProtocol>> * _Nonnull)adapters;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
+
 
 
 

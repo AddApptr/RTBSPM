@@ -32,7 +32,7 @@ import _SwiftConcurrencyShims
 }
 @objc public class RTBBannerAd : ObjectiveC.NSObject {
   weak public var delegate: (any RTBSDK.RTBBannerAdDelegate)?
-  @objc public init(size: RTBSDK.RTBBannerSize)
+  @objc public init(size: RTBSDK.RTBBannerSize, userAgent: Swift.String)
   @objc public func load(configuration: RTBSDK.RTBBannerRequestConfiguration)
   @objc public func setDSPAdapters(_ adapters: [any RTBSDK.RTBDSPBannerProtocol])
   @objc public func getBannerView() -> UIKit.UIView?
