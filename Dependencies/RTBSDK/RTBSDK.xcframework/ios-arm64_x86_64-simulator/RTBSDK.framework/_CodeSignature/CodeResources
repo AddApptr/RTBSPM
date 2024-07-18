@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		B36YxCxMpM2gtgJVo+lznaBWe18=
+		PKx5HyQvmyUvQEGFrM0egfREyBM=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		tQx+MeXYfwhpbx85qE9lkjzM2eE=
+		2O6VdtcfcNxjVV1Pl/Uo/34+4uM=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		FnD7fe+R2Y9i0xkUF4zEWQLMFQo=
+		SdemYLTsRojkLKH6Xo1v3IkRK48=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		tQx+MeXYfwhpbx85qE9lkjzM2eE=
+		2O6VdtcfcNxjVV1Pl/Uo/34+4uM=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		kEJAeM0YhrigGmylb54lWY1e3PA=
+		TjdQgKCkwpYJ89XiOgefskyKO1w=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -89,7 +89,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			wZ7HVJXon2okFXACfT1T2wBZ6Q98uDJCdxHDZDbU+o4=
+			pwDP73KFOoZPx+DSntx9fWyTaz8fTp64x9VsOlQw0ls=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -117,14 +117,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			G5o8q1NKVjekWyToZ/JvaD80xFLhAuj1o5AUk+Eh6sY=
+			YWC1vL69xFLECEPmsMcsDkcHHSNgtWA5A5d5jdK4/GU=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wZ7HVJXon2okFXACfT1T2wBZ6Q98uDJCdxHDZDbU+o4=
+			pwDP73KFOoZPx+DSntx9fWyTaz8fTp64x9VsOlQw0ls=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -152,7 +152,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			6FV9pzIk7TRp2O+qX6pZyJrULIBdCr0hTt64ajwur6M=
+			Upp0DHQpqV7bQ9XKMnx130ZkF9GbQdEicpXWSEYwrpQ=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

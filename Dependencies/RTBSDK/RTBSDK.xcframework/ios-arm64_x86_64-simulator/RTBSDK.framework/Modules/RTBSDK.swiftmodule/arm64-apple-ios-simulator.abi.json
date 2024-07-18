@@ -850,16 +850,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "RTBSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
         "kind": "TypeDecl",
         "name": "RTBSDKManager",
         "printedName": "RTBSDKManager",
@@ -7841,7 +7831,7 @@
       "kind": "StringLiteral",
       "offset": 1235,
       "length": 7,
-      "value": "\"1.3.2\""
+      "value": "\"1.3.3\""
     },
     {
       "filePath": "\/Users\/mahmoud\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/RTBDSPSignalCollector.swift",
