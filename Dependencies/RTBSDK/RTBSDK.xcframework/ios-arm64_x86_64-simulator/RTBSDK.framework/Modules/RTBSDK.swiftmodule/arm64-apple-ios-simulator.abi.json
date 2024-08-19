@@ -15,6 +15,208 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "RTBBannerAdProvider",
+        "printedName": "RTBBannerAdProvider",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "load",
+            "printedName": "load(configuration:size:userAgent:loadDelegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBannerRequestConfiguration",
+                "printedName": "RTBSDK.RTBBannerRequestConfiguration",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerRequestConfiguration"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBannerSize",
+                "printedName": "RTBSDK.RTBBannerSize",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerSize"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBannerAdLoadDelegate",
+                "printedName": "any RTBSDK.RTBBannerAdLoadDelegate",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdLoadDelegate"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBBannerAdProvider(cm)loadWithConfiguration:size:userAgent:loadDelegate:",
+            "mangledName": "$s6RTBSDK19RTBBannerAdProviderC4load13configuration4size9userAgent0E8DelegateyAA0B20RequestConfigurationC_AA0B4SizeCSSAA0bc4LoadJ0_ptFZ",
+            "moduleName": "RTBSDK",
+            "static": true,
+            "objc_name": "loadWithConfiguration:size:userAgent:loadDelegate:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getBannerView",
+            "printedName": "getBannerView(bannerBid:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIView?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIView",
+                    "printedName": "UIKit.UIView",
+                    "usr": "c:objc(cs)UIView"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBannerBid",
+                "printedName": "RTBSDK.RTBBannerBid",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerBid"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBannerAdInteractionDelegate",
+                "printedName": "any RTBSDK.RTBBannerAdInteractionDelegate",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdInteractionDelegate"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBBannerAdProvider(cm)getBannerViewWithBannerBid:delegate:",
+            "mangledName": "$s6RTBSDK19RTBBannerAdProviderC13getBannerView9bannerBid8delegateSo6UIViewCSgAA0bI0C_AA0bC19InteractionDelegate_ptFZ",
+            "moduleName": "RTBSDK",
+            "static": true,
+            "objc_name": "getBannerViewWithBannerBid:delegate:",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBannerAdProvider",
+                "printedName": "RTBSDK.RTBBannerAdProvider",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerAdProvider"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBBannerAdProvider(im)init",
+            "mangledName": "$s6RTBSDK19RTBBannerAdProviderCACycfc",
+            "moduleName": "RTBSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@RTBSDK@objc(cs)RTBBannerAdProvider",
+        "mangledName": "$s6RTBSDK19RTBBannerAdProviderC",
+        "moduleName": "RTBSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "RTBSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
@@ -486,347 +688,6 @@
         "declAttributes": [
           "AccessControl",
           "ObjC"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "UIKit",
-        "printedName": "UIKit",
-        "declKind": "Import",
-        "moduleName": "RTBSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "RTBBannerAd",
-        "printedName": "RTBBannerAd",
-        "children": [
-          {
-            "kind": "Var",
-            "name": "delegate",
-            "printedName": "delegate",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "WeakStorage",
-                "printedName": "(any RTBSDK.RTBBannerAdDelegate)?"
-              }
-            ],
-            "declKind": "Var",
-            "usr": "s:6RTBSDK11RTBBannerAdC8delegateAA0bC8Delegate_pSgvp",
-            "mangledName": "$s6RTBSDK11RTBBannerAdC8delegateAA0bC8Delegate_pSgvp",
-            "moduleName": "RTBSDK",
-            "declAttributes": [
-              "HasInitialValue",
-              "HasStorage",
-              "ReferenceOwnership",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "ownership": 1,
-            "hasStorage": true,
-            "accessors": [
-              {
-                "kind": "Accessor",
-                "name": "Get",
-                "printedName": "Get()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(any RTBSDK.RTBBannerAdDelegate)?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RTBBannerAdDelegate",
-                        "printedName": "any RTBSDK.RTBBannerAdDelegate",
-                        "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdDelegate"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6RTBSDK11RTBBannerAdC8delegateAA0bC8Delegate_pSgvg",
-                "mangledName": "$s6RTBSDK11RTBBannerAdC8delegateAA0bC8Delegate_pSgvg",
-                "moduleName": "RTBSDK",
-                "implicit": true,
-                "accessorKind": "get"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Set",
-                "printedName": "Set()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  },
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Optional",
-                    "printedName": "(any RTBSDK.RTBBannerAdDelegate)?",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "RTBBannerAdDelegate",
-                        "printedName": "any RTBSDK.RTBBannerAdDelegate",
-                        "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdDelegate"
-                      }
-                    ],
-                    "usr": "s:Sq"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6RTBSDK11RTBBannerAdC8delegateAA0bC8Delegate_pSgvs",
-                "mangledName": "$s6RTBSDK11RTBBannerAdC8delegateAA0bC8Delegate_pSgvs",
-                "moduleName": "RTBSDK",
-                "implicit": true,
-                "accessorKind": "set"
-              },
-              {
-                "kind": "Accessor",
-                "name": "Modify",
-                "printedName": "Modify()",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "Void",
-                    "printedName": "()"
-                  }
-                ],
-                "declKind": "Accessor",
-                "usr": "s:6RTBSDK11RTBBannerAdC8delegateAA0bC8Delegate_pSgvM",
-                "mangledName": "$s6RTBSDK11RTBBannerAdC8delegateAA0bC8Delegate_pSgvM",
-                "moduleName": "RTBSDK",
-                "implicit": true,
-                "accessorKind": "_modify"
-              }
-            ]
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init(size:userAgent:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "RTBBannerAd",
-                "printedName": "RTBSDK.RTBBannerAd",
-                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerAd"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "RTBBannerSize",
-                "printedName": "RTBSDK.RTBBannerSize",
-                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerSize"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@RTBSDK@objc(cs)RTBBannerAd(im)initWithSize:userAgent:",
-            "mangledName": "$s6RTBSDK11RTBBannerAdC4size9userAgentAcA0B4SizeC_SStcfc",
-            "moduleName": "RTBSDK",
-            "objc_name": "initWithSize:userAgent:",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "init_kind": "Designated"
-          },
-          {
-            "kind": "Function",
-            "name": "load",
-            "printedName": "load(configuration:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "RTBBannerRequestConfiguration",
-                "printedName": "RTBSDK.RTBBannerRequestConfiguration",
-                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerRequestConfiguration"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@RTBSDK@objc(cs)RTBBannerAd(im)loadWithConfiguration:",
-            "mangledName": "$s6RTBSDK11RTBBannerAdC4load13configurationyAA0B20RequestConfigurationC_tF",
-            "moduleName": "RTBSDK",
-            "objc_name": "loadWithConfiguration:",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "setDSPAdapters",
-            "printedName": "setDSPAdapters(_:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Array",
-                "printedName": "[any RTBSDK.RTBDSPBannerProtocol]",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "RTBDSPBannerProtocol",
-                    "printedName": "any RTBSDK.RTBDSPBannerProtocol",
-                    "usr": "c:@M@RTBSDK@objc(pl)RTBDSPBannerProtocol"
-                  }
-                ],
-                "usr": "s:Sa"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@RTBSDK@objc(cs)RTBBannerAd(im)setDSPAdapters:",
-            "mangledName": "$s6RTBSDK11RTBBannerAdC14setDSPAdaptersyySayAA20RTBDSPBannerProtocol_pGF",
-            "moduleName": "RTBSDK",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getBannerView",
-            "printedName": "getBannerView()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "UIKit.UIView?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "UIView",
-                    "printedName": "UIKit.UIView",
-                    "usr": "c:objc(cs)UIView"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@RTBSDK@objc(cs)RTBBannerAd(im)getBannerView",
-            "mangledName": "$s6RTBSDK11RTBBannerAdC13getBannerViewSo6UIViewCSgyF",
-            "moduleName": "RTBSDK",
-            "declAttributes": [
-              "AccessControl",
-              "ObjC",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "RTBBannerAd",
-                "printedName": "RTBSDK.RTBBannerAd",
-                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerAd"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "c:@M@RTBSDK@objc(cs)RTBBannerAd(im)init",
-            "mangledName": "$s6RTBSDK11RTBBannerAdCACycfc",
-            "moduleName": "RTBSDK",
-            "overriding": true,
-            "implicit": true,
-            "objc_name": "init",
-            "declAttributes": [
-              "Dynamic",
-              "ObjC",
-              "Override"
-            ],
-            "init_kind": "Designated"
-          }
-        ],
-        "declKind": "Class",
-        "usr": "c:@M@RTBSDK@objc(cs)RTBBannerAd",
-        "mangledName": "$s6RTBSDK11RTBBannerAdC",
-        "moduleName": "RTBSDK",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ],
-        "superclassUsr": "c:objc(cs)NSObject",
-        "superclassNames": [
-          "ObjectiveC.NSObject"
-        ],
-        "conformances": [
-          {
-            "kind": "Conformance",
-            "name": "Equatable",
-            "printedName": "Equatable",
-            "usr": "s:SQ",
-            "mangledName": "$sSQ"
-          },
-          {
-            "kind": "Conformance",
-            "name": "Hashable",
-            "printedName": "Hashable",
-            "usr": "s:SH",
-            "mangledName": "$sSH"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CVarArg",
-            "printedName": "CVarArg",
-            "usr": "s:s7CVarArgP",
-            "mangledName": "$ss7CVarArgP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObservingPublishing",
-            "printedName": "_KeyValueCodingAndObservingPublishing",
-            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
-            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "_KeyValueCodingAndObserving",
-            "printedName": "_KeyValueCodingAndObserving",
-            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
-            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomStringConvertible",
-            "printedName": "CustomStringConvertible",
-            "usr": "s:s23CustomStringConvertibleP",
-            "mangledName": "$ss23CustomStringConvertibleP"
-          },
-          {
-            "kind": "Conformance",
-            "name": "CustomDebugStringConvertible",
-            "printedName": "CustomDebugStringConvertible",
-            "usr": "s:s28CustomDebugStringConvertibleP",
-            "mangledName": "$ss28CustomDebugStringConvertibleP"
-          }
         ]
       },
       {
@@ -2477,6 +2338,16 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "RTBSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -2568,237 +2439,6 @@
         "printedName": "WebKit",
         "declKind": "Import",
         "moduleName": "RTBSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "RTBSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "TypeDecl",
-        "name": "RTBBannerAdDelegate",
-        "printedName": "RTBBannerAdDelegate",
-        "children": [
-          {
-            "kind": "Function",
-            "name": "bannerAdDidReceiveAd",
-            "printedName": "bannerAdDidReceiveAd(bidInfo:networkName:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "RTBBidInfo",
-                "printedName": "RTBSDK.RTBBidInfo",
-                "usr": "c:@M@RTBSDK@objc(cs)RTBBidInfo"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdDelegate(im)bannerAdDidReceiveAdWithBidInfo:networkName:",
-            "mangledName": "$s6RTBSDK19RTBBannerAdDelegateP06bannerc10DidReceiveC07bidInfo11networkNameyAA06RTBBidI0C_SStF",
-            "moduleName": "RTBSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBBannerAdDelegate>",
-            "sugared_genericSig": "<Self where Self : RTBSDK.RTBBannerAdDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerAd",
-            "printedName": "bannerAd(didFailToReceiveAd:networkName:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdDelegate(im)bannerAdWithDidFailToReceiveAd:networkName:",
-            "mangledName": "$s6RTBSDK19RTBBannerAdDelegateP06bannerC0016didFailToReceiveC011networkNameySS_SStF",
-            "moduleName": "RTBSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBBannerAdDelegate>",
-            "sugared_genericSig": "<Self where Self : RTBSDK.RTBBannerAdDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerAd",
-            "printedName": "bannerAd(didFailToRender:networkName:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdDelegate(im)bannerAdWithDidFailToRender:networkName:",
-            "mangledName": "$s6RTBSDK19RTBBannerAdDelegateP06bannerC015didFailToRender11networkNameySS_SStF",
-            "moduleName": "RTBSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBBannerAdDelegate>",
-            "sugared_genericSig": "<Self where Self : RTBSDK.RTBBannerAdDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerAdDidRecordClick",
-            "printedName": "bannerAdDidRecordClick(networkName:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdDelegate(im)bannerAdDidRecordClickWithNetworkName:",
-            "mangledName": "$s6RTBSDK19RTBBannerAdDelegateP06bannerC14DidRecordClick11networkNameySS_tF",
-            "moduleName": "RTBSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBBannerAdDelegate>",
-            "sugared_genericSig": "<Self where Self : RTBSDK.RTBBannerAdDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerAdDidPauseForAd",
-            "printedName": "bannerAdDidPauseForAd(networkName:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdDelegate(im)bannerAdDidPauseForAdWithNetworkName:",
-            "mangledName": "$s6RTBSDK19RTBBannerAdDelegateP06bannerc11DidPauseForC011networkNameySS_tF",
-            "moduleName": "RTBSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBBannerAdDelegate>",
-            "sugared_genericSig": "<Self where Self : RTBSDK.RTBBannerAdDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "bannerAdDidResumeAfterAd",
-            "printedName": "bannerAdDidResumeAfterAd(networkName:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "String",
-                "printedName": "Swift.String",
-                "usr": "s:SS"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdDelegate(im)bannerAdDidResumeAfterAdWithNetworkName:",
-            "mangledName": "$s6RTBSDK19RTBBannerAdDelegateP06bannerc14DidResumeAfterC011networkNameySS_tF",
-            "moduleName": "RTBSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBBannerAdDelegate>",
-            "sugared_genericSig": "<Self where Self : RTBSDK.RTBBannerAdDelegate>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment",
-              "ObjC"
-            ],
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          }
-        ],
-        "declKind": "Protocol",
-        "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdDelegate",
-        "mangledName": "$s6RTBSDK19RTBBannerAdDelegateP",
-        "moduleName": "RTBSDK",
-        "genericSig": "<τ_0_0 : AnyObject>",
-        "sugared_genericSig": "<Self : AnyObject>",
-        "declAttributes": [
-          "AccessControl",
-          "ObjC"
-        ]
       },
       {
         "kind": "Import",
@@ -4950,6 +4590,85 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "RTBBannerAdLoadDelegate",
+        "printedName": "RTBBannerAdLoadDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "bannerAdDidReceiveAd",
+            "printedName": "bannerAdDidReceiveAd(bannerBid:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBannerBid",
+                "printedName": "RTBSDK.RTBBannerBid",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerBid"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdLoadDelegate(im)bannerAdDidReceiveAdWithBannerBid:",
+            "mangledName": "$s6RTBSDK23RTBBannerAdLoadDelegateP06bannerc10DidReceiveC00F3BidyAA0bI0C_tF",
+            "moduleName": "RTBSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBBannerAdLoadDelegate>",
+            "sugared_genericSig": "<Self where Self : RTBSDK.RTBBannerAdLoadDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerAdDidFailToReceiveAd",
+            "printedName": "bannerAdDidFailToReceiveAd(errorMessage:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdLoadDelegate(im)bannerAdDidFailToReceiveAdWithErrorMessage:",
+            "mangledName": "$s6RTBSDK23RTBBannerAdLoadDelegateP06bannerc16DidFailToReceiveC012errorMessageySS_tF",
+            "moduleName": "RTBSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBBannerAdLoadDelegate>",
+            "sugared_genericSig": "<Self where Self : RTBSDK.RTBBannerAdLoadDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdLoadDelegate",
+        "mangledName": "$s6RTBSDK23RTBBannerAdLoadDelegateP",
+        "moduleName": "RTBSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ]
+      },
+      {
         "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
@@ -5325,6 +5044,139 @@
         "moduleName": "RTBSDK",
         "declAttributes": [
           "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RTBSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RTBBannerAdInteractionDelegate",
+        "printedName": "RTBBannerAdInteractionDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "bannerAdDidRecordClick",
+            "printedName": "bannerAdDidRecordClick()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdInteractionDelegate(im)bannerAdDidRecordClick",
+            "mangledName": "$s6RTBSDK30RTBBannerAdInteractionDelegateP06bannerC14DidRecordClickyyF",
+            "moduleName": "RTBSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBBannerAdInteractionDelegate>",
+            "sugared_genericSig": "<Self where Self : RTBSDK.RTBBannerAdInteractionDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerAdDidPauseForAd",
+            "printedName": "bannerAdDidPauseForAd()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdInteractionDelegate(im)bannerAdDidPauseForAd",
+            "mangledName": "$s6RTBSDK30RTBBannerAdInteractionDelegateP06bannerc11DidPauseForC0yyF",
+            "moduleName": "RTBSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBBannerAdInteractionDelegate>",
+            "sugared_genericSig": "<Self where Self : RTBSDK.RTBBannerAdInteractionDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerAdDidResumeAfterAd",
+            "printedName": "bannerAdDidResumeAfterAd()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdInteractionDelegate(im)bannerAdDidResumeAfterAd",
+            "mangledName": "$s6RTBSDK30RTBBannerAdInteractionDelegateP06bannerc14DidResumeAfterC0yyF",
+            "moduleName": "RTBSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBBannerAdInteractionDelegate>",
+            "sugared_genericSig": "<Self where Self : RTBSDK.RTBBannerAdInteractionDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerAdDidFailToRender",
+            "printedName": "bannerAdDidFailToRender(error:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdInteractionDelegate(im)bannerAdDidFailToRenderWithError:",
+            "mangledName": "$s6RTBSDK30RTBBannerAdInteractionDelegateP06bannerC15DidFailToRender5errorySS_tF",
+            "moduleName": "RTBSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBBannerAdInteractionDelegate>",
+            "sugared_genericSig": "<Self where Self : RTBSDK.RTBBannerAdInteractionDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@RTBSDK@objc(pl)RTBBannerAdInteractionDelegate",
+        "mangledName": "$s6RTBSDK30RTBBannerAdInteractionDelegateP",
+        "moduleName": "RTBSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
         ]
       },
       {
@@ -6544,6 +6396,86 @@
         "declAttributes": [
           "AccessControl",
           "ObjC"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "RTBSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RTBBannerBid",
+        "printedName": "RTBBannerBid",
+        "declKind": "Class",
+        "usr": "c:@M@RTBSDK@objc(cs)RTBBannerBid",
+        "mangledName": "$s6RTBSDK12RTBBannerBidC",
+        "moduleName": "RTBSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:@M@RTBSDK@objc(cs)RTBBidInfo",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "RTBSDK.RTBBidInfo",
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
         ]
       },
       {
@@ -7771,13 +7703,6 @@
       "value": "\"RTBSDK.RTBCloseOverlay\""
     },
     {
-      "filePath": "\/Users\/mahmoud\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/Banners\/RTBBannerAd.swift",
-      "kind": "StringLiteral",
-      "offset": 117,
-      "length": 11,
-      "value": "\"RTBSDK.RTBBannerAd\""
-    },
-    {
       "filePath": "\/Users\/mahmoud\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/MRAID\/RTBMRAIDViewData.swift",
       "kind": "BooleanLiteral",
       "offset": 539,
@@ -7831,7 +7756,7 @@
       "kind": "StringLiteral",
       "offset": 1235,
       "length": 7,
-      "value": "\"1.3.3\""
+      "value": "\"1.3.4\""
     },
     {
       "filePath": "\/Users\/mahmoud\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/RTBDSPSignalCollector.swift",
@@ -7951,6 +7876,13 @@
       "offset": 255,
       "length": 4,
       "value": "true"
+    },
+    {
+      "filePath": "\/Users\/mahmoud\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/Banners\/BannerAd\/RTBBannerAdView.swift",
+      "kind": "StringLiteral",
+      "offset": 108,
+      "length": 15,
+      "value": "\"RTBSDK.RTBBannerAdView\""
     },
     {
       "filePath": "\/Users\/mahmoud\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/MRAID\/RTBVASTIconViewTracking.swift",
@@ -9096,7 +9028,7 @@
     {
       "filePath": "\/Users\/mahmoud\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/Banners\/RTBBannerView.swift",
       "kind": "StringLiteral",
-      "offset": 115,
+      "offset": 121,
       "length": 13,
       "value": "\"RTBSDK.RTBBannerView\""
     },
@@ -9183,6 +9115,13 @@
       "offset": 936,
       "length": 5,
       "value": "5"
+    },
+    {
+      "filePath": "\/Users\/mahmoud\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/Banners\/BannerAd\/RTBBannerBid.swift",
+      "kind": "StringLiteral",
+      "offset": 123,
+      "length": 12,
+      "value": "\"RTBSDK.RTBBannerBid\""
     },
     {
       "filePath": "\/Users\/mahmoud\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/Logger\/RTBLogger.swift",

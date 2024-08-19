@@ -18,6 +18,12 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc public class RTBBannerAdProvider : ObjectiveC.NSObject {
+  @objc public static func load(configuration: RTBSDK.RTBBannerRequestConfiguration, size: RTBSDK.RTBBannerSize, userAgent: Swift.String, loadDelegate: any RTBSDK.RTBBannerAdLoadDelegate)
+  @objc public static func getBannerView(bannerBid: RTBSDK.RTBBannerBid, delegate: any RTBSDK.RTBBannerAdInteractionDelegate) -> UIKit.UIView?
+  @objc override dynamic public init()
+  @objc deinit
+}
 @objc public protocol RTBDSPInterstitialProtocol : RTBSDK.RTBDSAdPProtocol {
   @objc var adDelegate: (any RTBSDK.RTBDSPInterstitialDelegate)? { get set }
   @objc @discardableResult
@@ -29,14 +35,6 @@ import _SwiftConcurrencyShims
   @objc func dspAdViewDidRecordClick(_ ad: any RTBSDK.RTBDSPInterstitialProtocol, networkName: Swift.String)
   @objc func dspAdViewDidPauseForAd(_ ad: any RTBSDK.RTBDSPInterstitialProtocol, networkName: Swift.String)
   @objc func dspAdViewDidResumeAfterAd(_ ad: any RTBSDK.RTBDSPInterstitialProtocol, networkName: Swift.String)
-}
-@objc public class RTBBannerAd : ObjectiveC.NSObject {
-  weak public var delegate: (any RTBSDK.RTBBannerAdDelegate)?
-  @objc public init(size: RTBSDK.RTBBannerSize, userAgent: Swift.String)
-  @objc public func load(configuration: RTBSDK.RTBBannerRequestConfiguration)
-  @objc public func setDSPAdapters(_ adapters: [any RTBSDK.RTBDSPBannerProtocol])
-  @objc public func getBannerView() -> UIKit.UIView?
-  @objc deinit
 }
 @objc @_inheritsConvenienceInitializers final public class RTBSDKManager : ObjectiveC.NSObject {
   public static let shared: RTBSDK.RTBSDKManager
@@ -66,14 +64,6 @@ extension RTBSDK.RTBBannerSize {
   @objc public var clickURL: Swift.String?
   @objc public var impressionURL: Swift.String?
   @objc deinit
-}
-@objc public protocol RTBBannerAdDelegate {
-  @objc func bannerAdDidReceiveAd(bidInfo: RTBSDK.RTBBidInfo, networkName: Swift.String)
-  @objc func bannerAd(didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
-  @objc func bannerAd(didFailToRender errorMessage: Swift.String, networkName: Swift.String)
-  @objc func bannerAdDidRecordClick(networkName: Swift.String)
-  @objc func bannerAdDidPauseForAd(networkName: Swift.String)
-  @objc func bannerAdDidResumeAfterAd(networkName: Swift.String)
 }
 @objc public class RTBFullscreenRequestConfiguration : ObjectiveC.NSObject {
   @objc public var forceCloseButtonForMraid: Swift.Bool
@@ -117,12 +107,22 @@ extension RTBSDK.RTBBannerSize {
   @objc func didCollectSignals(_ dsp: any RTBSDK.RTBDSPProtocol, signals: [Swift.String : Any])
   @objc func didFailToCollectSignals(_ dsp: any RTBSDK.RTBDSPProtocol, error: Swift.String)
 }
-@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class RTBBannerView : UIKit.UIView {
+@objc public protocol RTBBannerAdLoadDelegate {
+  @objc func bannerAdDidReceiveAd(bannerBid: RTBSDK.RTBBannerBid)
+  @objc func bannerAdDidFailToReceiveAd(errorMessage: Swift.String)
+}
+@_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class RTBBannerView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) weak public var delegate: (any RTBSDK.RTBBannerViewDelegate)?
   @objc @_Concurrency.MainActor(unsafe) public init(size: RTBSDK.RTBBannerSize)
   @objc @_Concurrency.MainActor(unsafe) public func load(configuration: RTBSDK.RTBBannerRequestConfiguration)
   @objc @_Concurrency.MainActor(unsafe) public func setDSPAdapters(_ adapters: [any RTBSDK.RTBDSPBannerProtocol])
   @objc deinit
+}
+@objc public protocol RTBBannerAdInteractionDelegate {
+  @objc func bannerAdDidRecordClick()
+  @objc func bannerAdDidPauseForAd()
+  @objc func bannerAdDidResumeAfterAd()
+  @objc func bannerAdDidFailToRender(error: Swift.String)
 }
 @_inheritsConvenienceInitializers @objc public class RTBFullscreenAd : ObjectiveC.NSObject {
   weak public var delegate: (any RTBSDK.RTBFullscreenDelegate)?
@@ -166,6 +166,9 @@ extension RTBSDK.RTBFullscreenAd : RTBSDK.RTBDSPInterstitialDelegate {
   @objc func fullscreenAdDidRecordClick(_ fullscreenAd: RTBSDK.RTBFullscreenAd, networkName: Swift.String)
   @objc func fullscreenAdDidPauseForAd(_ fullscreenAd: RTBSDK.RTBFullscreenAd, networkName: Swift.String)
   @objc func fullscreenAdDidResumeAfterAd(_ fullscreenAd: RTBSDK.RTBFullscreenAd, networkName: Swift.String)
+}
+@_hasMissingDesignatedInitializers @objc public class RTBBannerBid : RTBSDK.RTBBidInfo {
+  @objc deinit
 }
 @objc public protocol RTBDSPBannerProtocol : RTBSDK.RTBDSAdPProtocol {
   @objc var bannerDelegate: (any RTBSDK.RTBDSPBannerDelegate)? { get set }

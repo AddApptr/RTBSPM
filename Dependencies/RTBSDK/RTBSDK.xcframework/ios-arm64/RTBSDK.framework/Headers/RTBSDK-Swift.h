@@ -301,54 +301,72 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
-@class RTBBannerSize;
 @class NSString;
+
+SWIFT_PROTOCOL("_TtP6RTBSDK30RTBBannerAdInteractionDelegate_")
+@protocol RTBBannerAdInteractionDelegate
+/// Tells the delegate that a click has been recorded for the ad.
+- (void)bannerAdDidRecordClick;
+/// Tells the delegate that ad has opened external browser.
+- (void)bannerAdDidPauseForAd;
+/// Tells the delegate that Ad has been dismissed.
+- (void)bannerAdDidResumeAfterAd;
+/// Tells the delegate that an ad rendering failed.
+- (void)bannerAdDidFailToRenderWithError:(NSString * _Nonnull)error;
+@end
+
+@class RTBBannerBid;
+
+SWIFT_PROTOCOL("_TtP6RTBSDK23RTBBannerAdLoadDelegate_")
+@protocol RTBBannerAdLoadDelegate
+/// Tells the delegate that an ad request successfully received an ad.
+/// @param bannerBid Information about the bid.
+- (void)bannerAdDidReceiveAdWithBannerBid:(RTBBannerBid * _Nonnull)bannerBid;
+/// Tells the delegate that an ad request failed.
+- (void)bannerAdDidFailToReceiveAdWithErrorMessage:(NSString * _Nonnull)errorMessage;
+@end
+
 @class RTBBannerRequestConfiguration;
-@protocol RTBDSPBannerProtocol;
+@class RTBBannerSize;
 @class UIView;
 
-SWIFT_CLASS("_TtC6RTBSDK11RTBBannerAd")
-@interface RTBBannerAd : NSObject
-/// Init RTBBannerAd
-/// \param size The banner size of type <code>RTBBannerSize</code>
+SWIFT_CLASS("_TtC6RTBSDK19RTBBannerAdProvider")
+@interface RTBBannerAdProvider : NSObject
+/// Load a new banner ad with  configuration
+/// \param configuration banner request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
 ///
-/// \param userAgent The user agent
+/// \param size banner size
 ///
-- (nonnull instancetype)initWithSize:(RTBBannerSize * _Nonnull)size userAgent:(NSString * _Nonnull)userAgent OBJC_DESIGNATED_INITIALIZER;
-/// load a new ad with  configuration
-/// \param configuration Banner request configuration <code>RTBBannerRequestConfiguration</code> that is needed to request a new ad.
+/// \param userAgent user agent
 ///
-- (void)loadWithConfiguration:(RTBBannerRequestConfiguration * _Nonnull)configuration;
-- (void)setDSPAdapters:(NSArray<id <RTBDSPBannerProtocol>> * _Nonnull)adapters;
-/// Get the loaded banner view
+/// \param loadDelegate the <code>RTBBannerAdLoadDelegate</code> that will be notified with the load result
+///
++ (void)loadWithConfiguration:(RTBBannerRequestConfiguration * _Nonnull)configuration size:(RTBBannerSize * _Nonnull)size userAgent:(NSString * _Nonnull)userAgent loadDelegate:(id <RTBBannerAdLoadDelegate> _Nonnull)loadDelegate;
+/// Get the banner view using a previously loaded bid info
+/// \param bannerBid An instance of <code>RTBBannerBid</code>
+///
+/// \param delegate The <code>RTBBannerAdInteractionDelegate</code> that will be notified with the ad interactions like clicks, pause, etc.
+///
 ///
 /// returns:
-/// The loaded banner view of type <code>UIView</code> if loaded
-- (UIView * _Nullable)getBannerView SWIFT_WARN_UNUSED_RESULT;
+/// A view to be rendered
++ (UIView * _Nullable)getBannerViewWithBannerBid:(RTBBannerBid * _Nonnull)bannerBid delegate:(id <RTBBannerAdInteractionDelegate> _Nonnull)delegate SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+SWIFT_CLASS("_TtC6RTBSDK10RTBBidInfo")
+@interface RTBBidInfo : NSObject
+@property (nonatomic) float priceCPM;
+@property (nonatomic, copy) NSString * _Nonnull bidder;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
-
-@class RTBBidInfo;
-
-SWIFT_PROTOCOL("_TtP6RTBSDK19RTBBannerAdDelegate_")
-@protocol RTBBannerAdDelegate
-/// Tells the delegate that an ad request successfully received an ad
-/// \param bidInfo an instance of <code>RTBBidInfo</code> representing bid price and and bidder name
-///
-- (void)bannerAdDidReceiveAdWithBidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that an ad request failed
-- (void)bannerAdWithDidFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that an ad coudln’t be rendered.
-- (void)bannerAdWithDidFailToRender:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that a click has been recorded for the ad.
-- (void)bannerAdDidRecordClickWithNetworkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that ad has opened external browser
-- (void)bannerAdDidPauseForAdWithNetworkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that Ad has been dismissed
-- (void)bannerAdDidResumeAfterAdWithNetworkName:(NSString * _Nonnull)networkName;
+SWIFT_CLASS("_TtC6RTBSDK12RTBBannerBid")
+@interface RTBBannerBid : RTBBidInfo
 @end
 
 @class NSNumber;
@@ -376,6 +394,7 @@ SWIFT_CLASS("_TtC6RTBSDK13RTBBannerSize")
 
 
 @class NSCoder;
+@protocol RTBDSPBannerProtocol;
 
 SWIFT_CLASS("_TtC6RTBSDK13RTBBannerView")
 @interface RTBBannerView : UIView
@@ -412,15 +431,6 @@ SWIFT_PROTOCOL("_TtP6RTBSDK21RTBBannerViewDelegate_")
 - (void)bannerViewDidResumeAfterAd:(RTBBannerView * _Nonnull)bannerView networkName:(NSString * _Nonnull)networkName;
 @end
 
-
-SWIFT_CLASS("_TtC6RTBSDK10RTBBidInfo")
-@interface RTBBidInfo : NSObject
-@property (nonatomic) float priceCPM;
-@property (nonatomic, copy) NSString * _Nonnull bidder;
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
-@end
 
 
 SWIFT_CLASS("_TtC6RTBSDK18RTBBidderExtraInfo")
