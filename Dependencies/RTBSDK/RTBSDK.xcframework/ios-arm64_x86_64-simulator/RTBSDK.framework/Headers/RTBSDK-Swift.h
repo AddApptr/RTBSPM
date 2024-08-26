@@ -676,13 +676,7 @@ SWIFT_CLASS("_TtC6RTBSDK17RTBNativeAdLoader")
 @interface RTBNativeAdLoader : NSObject
 /// The <code>RTBNativeAdLoaderDelegate</code> that will be notified with the load events
 @property (nonatomic, weak) id <RTBNativeAdLoaderDelegate> _Nullable delegate;
-/// load a new native ad with  configuration. Can be called from background threads.
-/// \param configuration native ad request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
-///
-/// \param userAgent user agent
-///
-- (void)loadWithConfiguration:(RTBNativeAdRequestConfiguration * _Nonnull)configuration userAgent:(NSString * _Nonnull)userAgent;
-/// load a new native ad with  configuration. Must be called from the main thread.
+/// load a new natibe ad with  configuration
 /// \param configuration native ad request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
 ///
 - (void)loadWithConfiguration:(RTBNativeAdRequestConfiguration * _Nonnull)configuration;
@@ -705,7 +699,7 @@ SWIFT_PROTOCOL("_TtP6RTBSDK25RTBNativeAdLoaderDelegate_")
 ///
 /// \param networkName The biddder name
 ///
-- (void)nativeAdDidReceiveAd:(RTBNativeAdLoader * _Nonnull)nativeAdLoader bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
+- (void)nativeAdDidReceiveAd:(RTBNativeAdLoader * _Nonnull)nativeAdLoader networkName:(NSString * _Nonnull)networkName;
 /// Tells the delegate that an ad request failed
 /// \param nativeAdLoader The <code>nativeAdLoader</code> that failed to load an ad
 ///
@@ -1426,13 +1420,7 @@ SWIFT_CLASS("_TtC6RTBSDK17RTBNativeAdLoader")
 @interface RTBNativeAdLoader : NSObject
 /// The <code>RTBNativeAdLoaderDelegate</code> that will be notified with the load events
 @property (nonatomic, weak) id <RTBNativeAdLoaderDelegate> _Nullable delegate;
-/// load a new native ad with  configuration. Can be called from background threads.
-/// \param configuration native ad request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
-///
-/// \param userAgent user agent
-///
-- (void)loadWithConfiguration:(RTBNativeAdRequestConfiguration * _Nonnull)configuration userAgent:(NSString * _Nonnull)userAgent;
-/// load a new native ad with  configuration. Must be called from the main thread.
+/// load a new natibe ad with  configuration
 /// \param configuration native ad request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
 ///
 - (void)loadWithConfiguration:(RTBNativeAdRequestConfiguration * _Nonnull)configuration;
@@ -1455,7 +1443,7 @@ SWIFT_PROTOCOL("_TtP6RTBSDK25RTBNativeAdLoaderDelegate_")
 ///
 /// \param networkName The biddder name
 ///
-- (void)nativeAdDidReceiveAd:(RTBNativeAdLoader * _Nonnull)nativeAdLoader bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
+- (void)nativeAdDidReceiveAd:(RTBNativeAdLoader * _Nonnull)nativeAdLoader networkName:(NSString * _Nonnull)networkName;
 /// Tells the delegate that an ad request failed
 /// \param nativeAdLoader The <code>nativeAdLoader</code> that failed to load an ad
 ///
