@@ -52,7 +52,7 @@ import _SwiftConcurrencyShims
   @objc deinit
 }
 @objc public protocol RTBNativeAdLoaderDelegate {
-  @objc func nativeAdDidReceiveAd(_ nativeAdLoader: RTBSDK.RTBNativeAdLoader, networkName: Swift.String)
+  @objc func nativeAdDidReceiveAd(_ nativeAdLoader: RTBSDK.RTBNativeAdLoader, bidInfo: RTBSDK.RTBBidInfo, networkName: Swift.String)
   @objc func nativeAdView(_ nativeAdLoader: RTBSDK.RTBNativeAdLoader, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
 }
 @objc public class RTBBannerSize : ObjectiveC.NSObject {
@@ -106,6 +106,7 @@ extension RTBSDK.RTBBannerSize {
 }
 @_inheritsConvenienceInitializers @objc public class RTBNativeAdLoader : ObjectiveC.NSObject {
   @objc weak public var delegate: (any RTBSDK.RTBNativeAdLoaderDelegate)?
+  @objc public func load(configuration: RTBSDK.RTBNativeAdRequestConfiguration, userAgent: Swift.String)
   @objc public func load(configuration: RTBSDK.RTBNativeAdRequestConfiguration)
   @objc public func getNativeAd() -> RTBSDK.RTBNativeAd?
   @objc override dynamic public init()
