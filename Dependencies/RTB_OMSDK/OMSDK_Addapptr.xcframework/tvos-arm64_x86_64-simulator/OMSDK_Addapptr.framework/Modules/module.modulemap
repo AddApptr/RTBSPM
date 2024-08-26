@@ -1,0 +1,4 @@
+module OMSDK_Addapptr {
+    header "Headers/OMIDImports.h"
+    export *
+}
