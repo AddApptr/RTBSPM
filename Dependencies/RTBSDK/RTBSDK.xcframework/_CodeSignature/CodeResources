@@ -46,7 +46,7 @@
 		</data>
 		<key>ios-arm64/RTBSDK.framework/RTBSDK</key>
 		<data>
-		EWvwkDqMpzkZA3Zoq2C4KMTDrCk=
+		NkJ7rSU+81VXi8DqEQHdF5q61Cs=
 		</data>
 		<key>ios-arm64/RTBSDK.framework/omsdk-v1.js</key>
 		<data>
@@ -110,7 +110,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/RTBSDK</key>
 		<data>
-		gtAvSl6KNiZXAtd5HT6U+Roegug=
+		3qLnuDHhikCR82YKsPjqId8DMyU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -237,11 +237,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			EWvwkDqMpzkZA3Zoq2C4KMTDrCk=
+			NkJ7rSU+81VXi8DqEQHdF5q61Cs=
 			</data>
 			<key>hash2</key>
 			<data>
-			oGMBsMm4ilCcKpRMbjV/yxwc6anv6WvzOg4zQEdcU5s=
+			RjtE+AxWslsDo4Wmb+HDGxHV4VvbW1t5Ai8TbkOgbmE=
 			</data>
 		</dict>
 		<key>ios-arm64/RTBSDK.framework/omsdk-v1.js</key>
@@ -413,11 +413,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			gtAvSl6KNiZXAtd5HT6U+Roegug=
+			3qLnuDHhikCR82YKsPjqId8DMyU=
 			</data>
 			<key>hash2</key>
 			<data>
-			hWBIPnWSMxjQexC8PjM805z+5b3vSDK2DXrVZC+GdNk=
+			jYEukto9yyTqjU9APJh889Tk2RyrzfP3bVOu0EhxkHU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/_CodeSignature/CodeResources</key>
