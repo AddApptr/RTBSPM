@@ -8,7 +8,6 @@ import SystemConfiguration.CaptiveNetwork
 import CoreLocation
 import CoreTelephony
 import Foundation
-import OMSDK_Addapptr
 import PhotosUI
 @_exported import RTBSDK
 import StoreKit
@@ -37,7 +36,7 @@ import _SwiftConcurrencyShims
   @objc func dspAdViewDidPauseForAd(_ ad: any RTBSDK.RTBDSPInterstitialProtocol, networkName: Swift.String)
   @objc func dspAdViewDidResumeAfterAd(_ ad: any RTBSDK.RTBDSPInterstitialProtocol, networkName: Swift.String)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class RTBSDKManager : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers final public class RTBSDKManager : ObjectiveC.NSObject {
   public static let shared: RTBSDK.RTBSDKManager
   final public var isPaid: Swift.Bool?
   final public var isChildDirected: Swift.Bool?
@@ -49,11 +48,8 @@ import _SwiftConcurrencyShims
   }
   final public var useGeoLocation: Swift.Bool
   final public let sdkVersion: Swift.String
+  @objc override dynamic public init()
   @objc deinit
-}
-@objc public protocol RTBNativeAdLoaderDelegate {
-  @objc func nativeAdDidReceiveAd(_ nativeAdLoader: RTBSDK.RTBNativeAdLoader, bidInfo: RTBSDK.RTBBidInfo, networkName: Swift.String)
-  @objc func nativeAdView(_ nativeAdLoader: RTBSDK.RTBNativeAdLoader, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
 }
 @objc public class RTBBannerSize : ObjectiveC.NSObject {
   public init(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)
@@ -67,18 +63,6 @@ extension RTBSDK.RTBBannerSize {
 @_hasMissingDesignatedInitializers @objc public class RTBBidderExtraInfo : ObjectiveC.NSObject {
   @objc public var clickURL: Swift.String?
   @objc public var impressionURL: Swift.String?
-  @objc deinit
-}
-@_hasMissingDesignatedInitializers @objc public class RTBNativeAd : ObjectiveC.NSObject {
-  @objc weak public var delegate: (any RTBSDK.RTBNativeAdInteractionDelegate)?
-  @objc public var title: Swift.String?
-  @objc public var callToAction: Swift.String?
-  @objc public var body: Swift.String?
-  @objc public var icon: Swift.String?
-  @objc public var image: Swift.String?
-  @objc public var rating: Foundation.NSNumber?
-  @objc public var sponsered: Swift.String?
-  @objc public func trackImpression(view: UIKit.UIView)
   @objc deinit
 }
 @objc public class RTBFullscreenRequestConfiguration : ObjectiveC.NSObject {
@@ -104,14 +88,6 @@ extension RTBSDK.RTBBannerSize {
   }
   @objc deinit
 }
-@_inheritsConvenienceInitializers @objc public class RTBNativeAdLoader : ObjectiveC.NSObject {
-  @objc weak public var delegate: (any RTBSDK.RTBNativeAdLoaderDelegate)?
-  @objc public func load(configuration: RTBSDK.RTBNativeAdRequestConfiguration, userAgent: Swift.String)
-  @objc public func load(configuration: RTBSDK.RTBNativeAdRequestConfiguration)
-  @objc public func getNativeAd() -> RTBSDK.RTBNativeAd?
-  @objc override dynamic public init()
-  @objc deinit
-}
 @objc public protocol RTBBannerViewDelegate {
   @objc func bannerViewDidReceiveAd(_ bannerView: RTBSDK.RTBBannerView, bidInfo: RTBSDK.RTBBidInfo, networkName: Swift.String)
   @objc func bannerView(_ bannerView: RTBSDK.RTBBannerView, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
@@ -119,12 +95,6 @@ extension RTBSDK.RTBBannerSize {
   @objc func bannerViewDidRecordClick(_ bannerView: RTBSDK.RTBBannerView, networkName: Swift.String)
   @objc func bannerViewDidPauseForAd(_ bannerView: RTBSDK.RTBBannerView, networkName: Swift.String)
   @objc func bannerViewDidResumeAfterAd(_ bannerView: RTBSDK.RTBBannerView, networkName: Swift.String)
-}
-@objc public class RTBNativeAdRequestConfiguration : ObjectiveC.NSObject {
-  @objc public var bidFloor: Foundation.NSNumber?
-  @objc public var sellerId: Swift.String?
-  @objc public init(placementId: Swift.Int, iTunesAppId: Swift.String)
-  @objc deinit
 }
 @objc public protocol RTBDSPProtocol {
   @objc var bidderName: Swift.String { get }
@@ -147,12 +117,6 @@ extension RTBSDK.RTBBannerSize {
   @objc @_Concurrency.MainActor(unsafe) public func load(configuration: RTBSDK.RTBBannerRequestConfiguration)
   @objc @_Concurrency.MainActor(unsafe) public func setDSPAdapters(_ adapters: [any RTBSDK.RTBDSPBannerProtocol])
   @objc deinit
-}
-@objc public protocol RTBNativeAdInteractionDelegate {
-  @objc func nativeAdView(_ nativeAd: RTBSDK.RTBNativeAd, didFailToRender errorMessage: Swift.String, networkName: Swift.String)
-  @objc func nativeAdDidRecordClick(_ nativeAd: RTBSDK.RTBNativeAd, networkName: Swift.String)
-  @objc func nativeAdDidPauseForAd(_ nativeAd: RTBSDK.RTBNativeAd, networkName: Swift.String)
-  @objc func nativeAdDidResumeAfterAd(_ nativeAd: RTBSDK.RTBNativeAd, networkName: Swift.String)
 }
 @objc public protocol RTBBannerAdInteractionDelegate {
   @objc func bannerAdDidRecordClick()
