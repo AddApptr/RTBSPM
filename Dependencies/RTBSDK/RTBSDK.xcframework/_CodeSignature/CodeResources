@@ -6,7 +6,7 @@
 	<dict>
 		<key>ios-arm64/RTBSDK.framework/Headers/RTBSDK-Swift.h</key>
 		<data>
-		2pxzxBik1g+bcCNTU+5OUZwv+AE=
+		rFFZKcRoc3ykU+Nl33Px9TVyamw=
 		</data>
 		<key>ios-arm64/RTBSDK.framework/Headers/RTBSDK.h</key>
 		<data>
@@ -14,23 +14,23 @@
 		</data>
 		<key>ios-arm64/RTBSDK.framework/Info.plist</key>
 		<data>
-		1xysMSrYQBdpBFiu6FCVA8yBC3E=
+		Df85unFfNPwN2Uksa8XYd4BZBAk=
 		</data>
 		<key>ios-arm64/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		vDZQLqmvEHAgFukKWeaD5L0NrG4=
+		gIKMrEj2nbyfyEo98BxYRT1wS0E=
 		</data>
 		<key>ios-arm64/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		mFj0AqjOZHbsTyKg9+R0UiS60/U=
+		vE/aWxrUS51JHU+QRN16zEE0lwA=
 		</data>
 		<key>ios-arm64/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		IeVL4Y7rpz3aPQcHM1vOvWF3yII=
+		PFQWOyvi6s/Bat87/K0sqP2CD6s=
 		</data>
 		<key>ios-arm64/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		mFj0AqjOZHbsTyKg9+R0UiS60/U=
+		vE/aWxrUS51JHU+QRN16zEE0lwA=
 		</data>
 		<key>ios-arm64/RTBSDK.framework/Modules/module.modulemap</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>ios-arm64/RTBSDK.framework/PrivacyInfo.xcprivacy</key>
 		<data>
-		Gznxqhkc/WDISsTwl8LVoxksrIU=
+		NTiEXzBgC6MxWVUL2IS3BUUzxi8=
 		</data>
 		<key>ios-arm64/RTBSDK.framework/RTBMRAID.js</key>
 		<data>
@@ -46,11 +46,15 @@
 		</data>
 		<key>ios-arm64/RTBSDK.framework/RTBSDK</key>
 		<data>
-		SAWUV3e9kSH1I/HgIECQXCpyURk=
+		NkJ7rSU+81VXi8DqEQHdF5q61Cs=
+		</data>
+		<key>ios-arm64/RTBSDK.framework/omsdk-v1.js</key>
+		<data>
+		GlfqPsJz8KVEoSAeC7YX/+v3XFg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Headers/RTBSDK-Swift.h</key>
 		<data>
-		dEZGi3VwKzic0vJJdMkYOE1Mkxg=
+		Znji4MbGoxlxiNqLuaIcCgZBo6E=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Headers/RTBSDK.h</key>
 		<data>
@@ -58,39 +62,39 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Info.plist</key>
 		<data>
-		++idasEhO8jj1viIi/91lCtAJ3U=
+		nm/tG3HIjs2h69SOew9clTG4v2s=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		vDZQLqmvEHAgFukKWeaD5L0NrG4=
+		gIKMrEj2nbyfyEo98BxYRT1wS0E=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		rk7Srtf2Ii0rv2tr/x6ooV0o0PA=
+		JvPVjDI/0rs1vJQARkoHpTV0NFE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		c8p8nvVPsERJHs700IloYkTtEyA=
+		5lhSYshvkVLSnmUKlP5e5db74c4=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		rk7Srtf2Ii0rv2tr/x6ooV0o0PA=
+		JvPVjDI/0rs1vJQARkoHpTV0NFE=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		vDZQLqmvEHAgFukKWeaD5L0NrG4=
+		gIKMrEj2nbyfyEo98BxYRT1wS0E=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		ly711UHnrP3r0TXPWZWN/wZB7UY=
+		XR7bFwJDotpJHyfghYFF8d6Luro=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		CZ1oGyAA6L6F9LGYduLKBtsqc84=
+		zYm77j6w1RAB8/F3DXnHt1gu62Q=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		ly711UHnrP3r0TXPWZWN/wZB7UY=
+		XR7bFwJDotpJHyfghYFF8d6Luro=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/module.modulemap</key>
 		<data>
@@ -98,7 +102,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/PrivacyInfo.xcprivacy</key>
 		<data>
-		Gznxqhkc/WDISsTwl8LVoxksrIU=
+		NTiEXzBgC6MxWVUL2IS3BUUzxi8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/RTBMRAID.js</key>
 		<data>
@@ -106,11 +110,15 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/RTBSDK</key>
 		<data>
-		OWxE423QzacJbbVHQX9jGl8WkDE=
+		3qLnuDHhikCR82YKsPjqId8DMyU=
 		</data>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Iw8NdTqPFPWfTbfMOfQ98m+GBME=
+		j4PHZ+uSSH3ofgSQKlN0Xol+KGY=
+		</data>
+		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/omsdk-v1.js</key>
+		<data>
+		GlfqPsJz8KVEoSAeC7YX/+v3XFg=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -119,11 +127,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			2pxzxBik1g+bcCNTU+5OUZwv+AE=
+			rFFZKcRoc3ykU+Nl33Px9TVyamw=
 			</data>
 			<key>hash2</key>
 			<data>
-			d4ALltBafWgS7W8WN3PEaXJrK6hq9cnCDt4aarH8Hgo=
+			Rhmw1zN7TZ6l8E/5raZIXYG+KQSbvtsEhxO2pHgdJfA=
 			</data>
 		</dict>
 		<key>ios-arm64/RTBSDK.framework/Headers/RTBSDK.h</key>
@@ -141,55 +149,55 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1xysMSrYQBdpBFiu6FCVA8yBC3E=
+			Df85unFfNPwN2Uksa8XYd4BZBAk=
 			</data>
 			<key>hash2</key>
 			<data>
-			NHuPuhk3ZpRZCGwe76n4xrt4RBLVLRv9NlA9ScsC1Gs=
+			aAu5qMWliEuYkAUX5XmXSI+7jSr2PAobGHYUNc9BT8c=
 			</data>
 		</dict>
 		<key>ios-arm64/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vDZQLqmvEHAgFukKWeaD5L0NrG4=
+			gIKMrEj2nbyfyEo98BxYRT1wS0E=
 			</data>
 			<key>hash2</key>
 			<data>
-			3JaslDQPakwWlt8DS6R4KijYRM7pgoz6Ue2CDEkFhJ8=
+			dM5knwAsGZdhXSgaKIWYCFdwPCVDIqnrVV7C1aWuWmk=
 			</data>
 		</dict>
 		<key>ios-arm64/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mFj0AqjOZHbsTyKg9+R0UiS60/U=
+			vE/aWxrUS51JHU+QRN16zEE0lwA=
 			</data>
 			<key>hash2</key>
 			<data>
-			YrwRp4xQsPu/b/b6Gk2hIOnXxcIB1bhkv9T/UAHvgyI=
+			WZ3KCA1pvLCylB7VkC+sBtLC7NtAy0ZWqjoLWsQXMXM=
 			</data>
 		</dict>
 		<key>ios-arm64/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			IeVL4Y7rpz3aPQcHM1vOvWF3yII=
+			PFQWOyvi6s/Bat87/K0sqP2CD6s=
 			</data>
 			<key>hash2</key>
 			<data>
-			FGaKolsX90A0dot4fYKApPtLN6q7EjKi313F5QqXgG8=
+			oEP6GDhvWF+pSUkaXYariU9oRsnn1TYVFynoH3byV5c=
 			</data>
 		</dict>
 		<key>ios-arm64/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			mFj0AqjOZHbsTyKg9+R0UiS60/U=
+			vE/aWxrUS51JHU+QRN16zEE0lwA=
 			</data>
 			<key>hash2</key>
 			<data>
-			YrwRp4xQsPu/b/b6Gk2hIOnXxcIB1bhkv9T/UAHvgyI=
+			WZ3KCA1pvLCylB7VkC+sBtLC7NtAy0ZWqjoLWsQXMXM=
 			</data>
 		</dict>
 		<key>ios-arm64/RTBSDK.framework/Modules/module.modulemap</key>
@@ -207,11 +215,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Gznxqhkc/WDISsTwl8LVoxksrIU=
+			NTiEXzBgC6MxWVUL2IS3BUUzxi8=
 			</data>
 			<key>hash2</key>
 			<data>
-			I+FnKEFxfKwRVnRGcBRTiLebMJo3tUhSuOZwPL0PD8E=
+			ZNaxre+hhzaVK+oVD/miwcIK0vbOKNbbeut4t7S+KgY=
 			</data>
 		</dict>
 		<key>ios-arm64/RTBSDK.framework/RTBMRAID.js</key>
@@ -229,22 +237,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			SAWUV3e9kSH1I/HgIECQXCpyURk=
+			NkJ7rSU+81VXi8DqEQHdF5q61Cs=
 			</data>
 			<key>hash2</key>
 			<data>
-			dQoVJzCBsZK5jAGZ6Q+RC3Ou7EXwQGJtcpMqwjxqT2I=
+			RjtE+AxWslsDo4Wmb+HDGxHV4VvbW1t5Ai8TbkOgbmE=
+			</data>
+		</dict>
+		<key>ios-arm64/RTBSDK.framework/omsdk-v1.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GlfqPsJz8KVEoSAeC7YX/+v3XFg=
+			</data>
+			<key>hash2</key>
+			<data>
+			ra4FXalcaqwM3nKtA0wBuQ91z5BaWivkiTz6QCwJmuA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Headers/RTBSDK-Swift.h</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			dEZGi3VwKzic0vJJdMkYOE1Mkxg=
+			Znji4MbGoxlxiNqLuaIcCgZBo6E=
 			</data>
 			<key>hash2</key>
 			<data>
-			DxRZJPN6LRZjYkkd6QrxRSHJVQCW2muf34YRaaHis54=
+			TKeSQWEiB3ohrUgMkUuTZ/EmJSw19sia7klj0r7fiTs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Headers/RTBSDK.h</key>
@@ -262,99 +281,99 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			++idasEhO8jj1viIi/91lCtAJ3U=
+			nm/tG3HIjs2h69SOew9clTG4v2s=
 			</data>
 			<key>hash2</key>
 			<data>
-			XH+vxqAVCe13w7vUvW72CzM6IY/oLstkQ/ipqvNEc/w=
+			EIQ9698V4dhtliBPHJeoFqvOSBNxwsY1nm7oM5gpFFU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vDZQLqmvEHAgFukKWeaD5L0NrG4=
+			gIKMrEj2nbyfyEo98BxYRT1wS0E=
 			</data>
 			<key>hash2</key>
 			<data>
-			3JaslDQPakwWlt8DS6R4KijYRM7pgoz6Ue2CDEkFhJ8=
+			dM5knwAsGZdhXSgaKIWYCFdwPCVDIqnrVV7C1aWuWmk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rk7Srtf2Ii0rv2tr/x6ooV0o0PA=
+			JvPVjDI/0rs1vJQARkoHpTV0NFE=
 			</data>
 			<key>hash2</key>
 			<data>
-			pPImLBx8z/ZPt1vPncBV0WNJDI71XvWdP0xiUh0HDV0=
+			p0LjydqCByKTUC7bMvbXu/cBBU8ouF5J4l/Srr9ZwiE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			c8p8nvVPsERJHs700IloYkTtEyA=
+			5lhSYshvkVLSnmUKlP5e5db74c4=
 			</data>
 			<key>hash2</key>
 			<data>
-			m6NCuW2Pvym79AqaDTOJbEOXy7oGEC2mb2KaNNsup5A=
+			YFr7iO6sZ7WXFDff331030kp56VK/oMrNI9j3NyRuI8=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			rk7Srtf2Ii0rv2tr/x6ooV0o0PA=
+			JvPVjDI/0rs1vJQARkoHpTV0NFE=
 			</data>
 			<key>hash2</key>
 			<data>
-			pPImLBx8z/ZPt1vPncBV0WNJDI71XvWdP0xiUh0HDV0=
+			p0LjydqCByKTUC7bMvbXu/cBBU8ouF5J4l/Srr9ZwiE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			vDZQLqmvEHAgFukKWeaD5L0NrG4=
+			gIKMrEj2nbyfyEo98BxYRT1wS0E=
 			</data>
 			<key>hash2</key>
 			<data>
-			3JaslDQPakwWlt8DS6R4KijYRM7pgoz6Ue2CDEkFhJ8=
+			dM5knwAsGZdhXSgaKIWYCFdwPCVDIqnrVV7C1aWuWmk=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ly711UHnrP3r0TXPWZWN/wZB7UY=
+			XR7bFwJDotpJHyfghYFF8d6Luro=
 			</data>
 			<key>hash2</key>
 			<data>
-			1zo+zk4n6y8LfsvP3qCUZB4rBfgrofXiQEj0WaftTYU=
+			UxG8uz6wlW0TrRAPu1uvUWB4zQWrbasSDKAdZlXdJmQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			CZ1oGyAA6L6F9LGYduLKBtsqc84=
+			zYm77j6w1RAB8/F3DXnHt1gu62Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			5cBs6D8BUUTtAkCNjnJAEA47eSTtjm9UHi+DHDrLDmg=
+			MiAiAqLOT5aupQ7aGgy1cmTpSc+ObW94ppgcQ+h0xUA=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			ly711UHnrP3r0TXPWZWN/wZB7UY=
+			XR7bFwJDotpJHyfghYFF8d6Luro=
 			</data>
 			<key>hash2</key>
 			<data>
-			1zo+zk4n6y8LfsvP3qCUZB4rBfgrofXiQEj0WaftTYU=
+			UxG8uz6wlW0TrRAPu1uvUWB4zQWrbasSDKAdZlXdJmQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/Modules/module.modulemap</key>
@@ -372,11 +391,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Gznxqhkc/WDISsTwl8LVoxksrIU=
+			NTiEXzBgC6MxWVUL2IS3BUUzxi8=
 			</data>
 			<key>hash2</key>
 			<data>
-			I+FnKEFxfKwRVnRGcBRTiLebMJo3tUhSuOZwPL0PD8E=
+			ZNaxre+hhzaVK+oVD/miwcIK0vbOKNbbeut4t7S+KgY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/RTBMRAID.js</key>
@@ -394,22 +413,33 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			OWxE423QzacJbbVHQX9jGl8WkDE=
+			3qLnuDHhikCR82YKsPjqId8DMyU=
 			</data>
 			<key>hash2</key>
 			<data>
-			zHxfX1VjS9BHoqtGTMriH2Hhl6Yv1fEqI3ww8V2DArE=
+			jYEukto9yyTqjU9APJh889Tk2RyrzfP3bVOu0EhxkHU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Iw8NdTqPFPWfTbfMOfQ98m+GBME=
+			j4PHZ+uSSH3ofgSQKlN0Xol+KGY=
 			</data>
 			<key>hash2</key>
 			<data>
-			NMvecS3ekDs5ggqD+YriLNtg8VlxyRv7G9nHWUSrbQ4=
+			TAZn9na1LFBz51dGKrm6q6MjVJm/8BRqXjzD3YMkJQI=
+			</data>
+		</dict>
+		<key>ios-arm64_x86_64-simulator/RTBSDK.framework/omsdk-v1.js</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			GlfqPsJz8KVEoSAeC7YX/+v3XFg=
+			</data>
+			<key>hash2</key>
+			<data>
+			ra4FXalcaqwM3nKtA0wBuQ91z5BaWivkiTz6QCwJmuA=
 			</data>
 		</dict>
 	</dict>
