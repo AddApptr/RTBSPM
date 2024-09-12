@@ -613,10 +613,129 @@ SWIFT_CLASS("_TtC6RTBSDK9RTBLogger")
 @end
 
 
+@protocol RTBNativeAdInteractionDelegate;
+
+SWIFT_CLASS("_TtC6RTBSDK11RTBNativeAd")
+@interface RTBNativeAd : NSObject
+/// The <code>RTBNativeAdInteractionDelegate</code> that will be notified with ad interaction events
+@property (nonatomic, weak) id <RTBNativeAdInteractionDelegate> _Nullable delegate;
+/// Native ad title
+@property (nonatomic, copy) NSString * _Nullable title;
+/// Native ad call to action text
+@property (nonatomic, copy) NSString * _Nullable callToAction;
+/// Native ad body text
+@property (nonatomic, copy) NSString * _Nullable body;
+/// Native ad icon url
+@property (nonatomic, copy) NSString * _Nullable icon;
+/// Native ad main image url
+@property (nonatomic, copy) NSString * _Nullable image;
+/// Native ad rating
+@property (nonatomic, strong) NSNumber * _Nullable rating;
+/// Native ad sponsered text
+@property (nonatomic, copy) NSString * _Nullable sponsered;
+- (void)trackImpressionWithView:(UIView * _Nonnull)view;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_PROTOCOL("_TtP6RTBSDK30RTBNativeAdInteractionDelegate_")
+@protocol RTBNativeAdInteractionDelegate
+/// Tells the delegate that an ad coudln’t be rendered.
+/// \param nativeAd The <code>RTBNativeAd</code>
+///
+/// \param errorMessage The error message
+///
+/// \param networkName The biddder name
+///
+- (void)nativeAdView:(RTBNativeAd * _Nonnull)nativeAd didFailToRender:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that a click has been recorded for the ad.
+/// \param nativeAd The <code>RTBNativeAd</code>
+///
+/// \param networkName The biddder name
+///
+- (void)nativeAdDidRecordClick:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that ad has opened external browser
+/// \param nativeAd The <code>RTBNativeAd</code>
+///
+/// \param networkName The biddder name
+///
+- (void)nativeAdDidPauseForAd:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that Ad has been dismissed
+/// \param nativeAd The <code>RTBNativeAd</code> that contains all ad assets
+///
+/// \param networkName The bidder name
+///
+- (void)nativeAdDidResumeAfterAd:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
+@end
+
+@protocol RTBNativeAdLoaderDelegate;
+@class RTBNativeAdRequestConfiguration;
+
+SWIFT_CLASS("_TtC6RTBSDK17RTBNativeAdLoader")
+@interface RTBNativeAdLoader : NSObject
+/// The <code>RTBNativeAdLoaderDelegate</code> that will be notified with the load events
+@property (nonatomic, weak) id <RTBNativeAdLoaderDelegate> _Nullable delegate;
+/// load a new native ad with  configuration. Can be called from background threads.
+/// \param configuration native ad request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
+///
+/// \param userAgent user agent
+///
+- (void)loadWithConfiguration:(RTBNativeAdRequestConfiguration * _Nonnull)configuration userAgent:(NSString * _Nonnull)userAgent;
+/// load a new native ad with  configuration. Must be called from the main thread.
+/// \param configuration native ad request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
+///
+- (void)loadWithConfiguration:(RTBNativeAdRequestConfiguration * _Nonnull)configuration;
+/// Gets the native ad data
+///
+/// returns:
+/// An instance of <code>RTBNativeAd</code>
+- (RTBNativeAd * _Nullable)getNativeAd SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+SWIFT_PROTOCOL("_TtP6RTBSDK25RTBNativeAdLoaderDelegate_")
+@protocol RTBNativeAdLoaderDelegate
+/// Tells the delegate that an ad request successfully received an ad. The delegate may want to add
+/// \param nativeAdLoader the <code>RTBNativeAd</code> that loaded the native ad
+///
+/// \param bidInfo an instance of <code>RTBBidInfo</code> representing bid price and and bidder name
+///
+/// \param networkName The biddder name
+///
+- (void)nativeAdDidReceiveAd:(RTBNativeAdLoader * _Nonnull)nativeAdLoader bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that an ad request failed
+/// \param nativeAdLoader The <code>nativeAdLoader</code> that failed to load an ad
+///
+/// \param errorMessage Error message
+///
+/// \param networkName The biddder name
+///
+- (void)nativeAdView:(RTBNativeAdLoader * _Nonnull)nativeAdLoader didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
+@end
+
+
+SWIFT_CLASS("_TtC6RTBSDK31RTBNativeAdRequestConfiguration")
+@interface RTBNativeAdRequestConfiguration : NSObject
+/// Represents the bid floor price in USD.
+@property (nonatomic, strong) NSNumber * _Nullable bidFloor;
+@property (nonatomic, copy) NSString * _Nullable sellerId;
+/// \param placementId Represents the placement ID on SmartyAd dashboard.
+///
+/// \param iTunesAppId Represents the AppId on the publisher Apple developer account.
+///
+- (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 SWIFT_CLASS("_TtC6RTBSDK13RTBSDKManager")
 @interface RTBSDKManager : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
@@ -1244,10 +1363,129 @@ SWIFT_CLASS("_TtC6RTBSDK9RTBLogger")
 @end
 
 
+@protocol RTBNativeAdInteractionDelegate;
+
+SWIFT_CLASS("_TtC6RTBSDK11RTBNativeAd")
+@interface RTBNativeAd : NSObject
+/// The <code>RTBNativeAdInteractionDelegate</code> that will be notified with ad interaction events
+@property (nonatomic, weak) id <RTBNativeAdInteractionDelegate> _Nullable delegate;
+/// Native ad title
+@property (nonatomic, copy) NSString * _Nullable title;
+/// Native ad call to action text
+@property (nonatomic, copy) NSString * _Nullable callToAction;
+/// Native ad body text
+@property (nonatomic, copy) NSString * _Nullable body;
+/// Native ad icon url
+@property (nonatomic, copy) NSString * _Nullable icon;
+/// Native ad main image url
+@property (nonatomic, copy) NSString * _Nullable image;
+/// Native ad rating
+@property (nonatomic, strong) NSNumber * _Nullable rating;
+/// Native ad sponsered text
+@property (nonatomic, copy) NSString * _Nullable sponsered;
+- (void)trackImpressionWithView:(UIView * _Nonnull)view;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_PROTOCOL("_TtP6RTBSDK30RTBNativeAdInteractionDelegate_")
+@protocol RTBNativeAdInteractionDelegate
+/// Tells the delegate that an ad coudln’t be rendered.
+/// \param nativeAd The <code>RTBNativeAd</code>
+///
+/// \param errorMessage The error message
+///
+/// \param networkName The biddder name
+///
+- (void)nativeAdView:(RTBNativeAd * _Nonnull)nativeAd didFailToRender:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that a click has been recorded for the ad.
+/// \param nativeAd The <code>RTBNativeAd</code>
+///
+/// \param networkName The biddder name
+///
+- (void)nativeAdDidRecordClick:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that ad has opened external browser
+/// \param nativeAd The <code>RTBNativeAd</code>
+///
+/// \param networkName The biddder name
+///
+- (void)nativeAdDidPauseForAd:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that Ad has been dismissed
+/// \param nativeAd The <code>RTBNativeAd</code> that contains all ad assets
+///
+/// \param networkName The bidder name
+///
+- (void)nativeAdDidResumeAfterAd:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
+@end
+
+@protocol RTBNativeAdLoaderDelegate;
+@class RTBNativeAdRequestConfiguration;
+
+SWIFT_CLASS("_TtC6RTBSDK17RTBNativeAdLoader")
+@interface RTBNativeAdLoader : NSObject
+/// The <code>RTBNativeAdLoaderDelegate</code> that will be notified with the load events
+@property (nonatomic, weak) id <RTBNativeAdLoaderDelegate> _Nullable delegate;
+/// load a new native ad with  configuration. Can be called from background threads.
+/// \param configuration native ad request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
+///
+/// \param userAgent user agent
+///
+- (void)loadWithConfiguration:(RTBNativeAdRequestConfiguration * _Nonnull)configuration userAgent:(NSString * _Nonnull)userAgent;
+/// load a new native ad with  configuration. Must be called from the main thread.
+/// \param configuration native ad request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
+///
+- (void)loadWithConfiguration:(RTBNativeAdRequestConfiguration * _Nonnull)configuration;
+/// Gets the native ad data
+///
+/// returns:
+/// An instance of <code>RTBNativeAd</code>
+- (RTBNativeAd * _Nullable)getNativeAd SWIFT_WARN_UNUSED_RESULT;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
+
+
+SWIFT_PROTOCOL("_TtP6RTBSDK25RTBNativeAdLoaderDelegate_")
+@protocol RTBNativeAdLoaderDelegate
+/// Tells the delegate that an ad request successfully received an ad. The delegate may want to add
+/// \param nativeAdLoader the <code>RTBNativeAd</code> that loaded the native ad
+///
+/// \param bidInfo an instance of <code>RTBBidInfo</code> representing bid price and and bidder name
+///
+/// \param networkName The biddder name
+///
+- (void)nativeAdDidReceiveAd:(RTBNativeAdLoader * _Nonnull)nativeAdLoader bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that an ad request failed
+/// \param nativeAdLoader The <code>nativeAdLoader</code> that failed to load an ad
+///
+/// \param errorMessage Error message
+///
+/// \param networkName The biddder name
+///
+- (void)nativeAdView:(RTBNativeAdLoader * _Nonnull)nativeAdLoader didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
+@end
+
+
+SWIFT_CLASS("_TtC6RTBSDK31RTBNativeAdRequestConfiguration")
+@interface RTBNativeAdRequestConfiguration : NSObject
+/// Represents the bid floor price in USD.
+@property (nonatomic, strong) NSNumber * _Nullable bidFloor;
+@property (nonatomic, copy) NSString * _Nullable sellerId;
+/// \param placementId Represents the placement ID on SmartyAd dashboard.
+///
+/// \param iTunesAppId Represents the AppId on the publisher Apple developer account.
+///
+- (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 
 SWIFT_CLASS("_TtC6RTBSDK13RTBSDKManager")
 @interface RTBSDKManager : NSObject
-- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
