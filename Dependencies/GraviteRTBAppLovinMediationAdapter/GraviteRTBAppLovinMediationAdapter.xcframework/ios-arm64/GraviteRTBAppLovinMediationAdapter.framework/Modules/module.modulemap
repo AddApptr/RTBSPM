@@ -1,0 +1,11 @@
+framework module GraviteRTBAppLovinMediationAdapter {
+  umbrella header "GraviteRTBAppLovinMediationAdapter.h"
+  export *
+
+  module * { export * }
+}
+
+module GraviteRTBAppLovinMediationAdapter.Swift {
+  header "GraviteRTBAppLovinMediationAdapter-Swift.h"
+  requires objc
+}

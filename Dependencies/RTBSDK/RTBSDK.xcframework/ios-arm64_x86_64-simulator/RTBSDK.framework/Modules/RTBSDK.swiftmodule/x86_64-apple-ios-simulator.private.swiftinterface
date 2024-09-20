@@ -37,18 +37,26 @@ import _SwiftConcurrencyShims
   @objc func dspAdViewDidPauseForAd(_ ad: any RTBSDK.RTBDSPInterstitialProtocol, networkName: Swift.String)
   @objc func dspAdViewDidResumeAfterAd(_ ad: any RTBSDK.RTBDSPInterstitialProtocol, networkName: Swift.String)
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class RTBSDKManager : ObjectiveC.NSObject {
-  public static let shared: RTBSDK.RTBSDKManager
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc final public class RTBSDKManager : ObjectiveC.NSObject {
+  @objc public static let shared: RTBSDK.RTBSDKManager
   final public var isPaid: Swift.Bool?
   final public var isChildDirected: Swift.Bool?
+  @objc(isChildDirected) final public var objc_isChildDirected: Foundation.NSNumber? {
+    @objc get
+    @objc set
+  }
   final public var isGDPRApplies: Swift.Bool?
+  @objc(isGDPRApplies) final public var objc_isGDPRApplies: Foundation.NSNumber? {
+    @objc get
+    @objc set
+  }
   final public var testModeEnabled: Swift.Bool?
   final public var logLevel: RTBSDK.RTBLogLevel? {
     get
     set
   }
-  final public var useGeoLocation: Swift.Bool
-  final public let sdkVersion: Swift.String
+  @objc final public var useGeoLocation: Swift.Bool
+  @objc final public let sdkVersion: Swift.String
   @objc deinit
 }
 @objc public protocol RTBNativeAdLoaderDelegate {
@@ -56,13 +64,13 @@ import _SwiftConcurrencyShims
   @objc func nativeAdView(_ nativeAdLoader: RTBSDK.RTBNativeAdLoader, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
 }
 @objc public class RTBBannerSize : ObjectiveC.NSObject {
-  public init(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)
+  @objc public init(width: CoreFoundation.CGFloat, height: CoreFoundation.CGFloat)
   @objc deinit
 }
 extension RTBSDK.RTBBannerSize {
-  public static let banner320x50: RTBSDK.RTBBannerSize
-  public static let banner300x250: RTBSDK.RTBBannerSize
-  public static let banner728x90: RTBSDK.RTBBannerSize
+  @objc public static let banner320x50: RTBSDK.RTBBannerSize
+  @objc public static let banner300x250: RTBSDK.RTBBannerSize
+  @objc public static let banner728x90: RTBSDK.RTBBannerSize
 }
 @_hasMissingDesignatedInitializers @objc public class RTBBidderExtraInfo : ObjectiveC.NSObject {
   @objc public var clickURL: Swift.String?
@@ -86,6 +94,9 @@ extension RTBSDK.RTBBannerSize {
   @objc public var bidFloor: Foundation.NSNumber?
   @objc public var sellerId: Swift.String?
   @objc public init(placementId: Swift.Int, iTunesAppId: Swift.String)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
   @objc deinit
 }
 @objc public protocol RTBDSAdPProtocol : RTBSDK.RTBDSPProtocol {
@@ -99,6 +110,8 @@ extension RTBSDK.RTBBannerSize {
 @_hasMissingDesignatedInitializers @objc public class RTBBidInfo : ObjectiveC.NSObject {
   @objc public var priceCPM: Swift.Float
   @objc public var bidder: Swift.String
+  @objc public var creativeId: Swift.String?
+  @objc public var campaignId: Swift.String?
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
@@ -142,7 +155,7 @@ extension RTBSDK.RTBBannerSize {
   @objc func bannerAdDidFailToReceiveAd(errorMessage: Swift.String)
 }
 @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class RTBBannerView : UIKit.UIView {
-  @_Concurrency.MainActor(unsafe) weak public var delegate: (any RTBSDK.RTBBannerViewDelegate)?
+  @objc @_Concurrency.MainActor(unsafe) weak public var delegate: (any RTBSDK.RTBBannerViewDelegate)?
   @objc @_Concurrency.MainActor(unsafe) public init(size: RTBSDK.RTBBannerSize)
   @objc @_Concurrency.MainActor(unsafe) public func load(configuration: RTBSDK.RTBBannerRequestConfiguration)
   @objc @_Concurrency.MainActor(unsafe) public func setDSPAdapters(_ adapters: [any RTBSDK.RTBDSPBannerProtocol])
@@ -161,7 +174,7 @@ extension RTBSDK.RTBBannerSize {
   @objc func bannerAdDidFailToRender(error: Swift.String)
 }
 @_inheritsConvenienceInitializers @objc public class RTBFullscreenAd : ObjectiveC.NSObject {
-  weak public var delegate: (any RTBSDK.RTBFullscreenDelegate)?
+  @objc weak public var delegate: (any RTBSDK.RTBFullscreenDelegate)?
   @objc override dynamic public init()
   @discardableResult
   @objc public func load(configuration: RTBSDK.RTBFullscreenRequestConfiguration) -> Swift.Bool
@@ -227,6 +240,9 @@ extension RTBSDK.RTBFullscreenAd : RTBSDK.RTBDSPInterstitialDelegate {
   @objc public var bidFloor: Foundation.NSNumber?
   @objc public var sellerId: Swift.String?
   @objc public init(placementId: Swift.Int, iTunesAppId: Swift.String)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
   @objc deinit
 }
 extension RTBSDK.RTBLogLevel : Swift.Equatable {}

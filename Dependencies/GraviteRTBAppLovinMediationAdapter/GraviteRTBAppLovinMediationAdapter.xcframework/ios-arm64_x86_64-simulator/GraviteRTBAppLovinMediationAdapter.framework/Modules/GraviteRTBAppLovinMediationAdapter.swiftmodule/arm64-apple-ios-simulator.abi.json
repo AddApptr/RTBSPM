@@ -1,0 +1,1189 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAppLovinMediationAdapter",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AppLovinSDK",
+        "printedName": "AppLovinSDK",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAppLovinMediationAdapter"
+      },
+      {
+        "kind": "Import",
+        "name": "RTBSDK",
+        "printedName": "RTBSDK",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAppLovinMediationAdapter"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RTBAppLovinManager",
+        "printedName": "RTBAppLovinManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RTBAppLovinManager",
+                "printedName": "GraviteRTBAppLovinMediationAdapter.RTBAppLovinManager",
+                "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinManager"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinManager(cpy)shared",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC7ManagerC6sharedACvpZ",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RTBAppLovinManager",
+                    "printedName": "GraviteRTBAppLovinMediationAdapter.RTBAppLovinManager",
+                    "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinManager"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinManager(cm)shared",
+                "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC7ManagerC6sharedACvgZ",
+                "moduleName": "GraviteRTBAppLovinMediationAdapter",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "initialize",
+            "printedName": "initialize(with:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MAAdapterInitializationParameters",
+                "printedName": "any AppLovinSDK.MAAdapterInitializationParameters",
+                "usr": "c:objc(pl)MAAdapterInitializationParameters"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinManager(im)initializeWith:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC7ManagerC10initialize4withSbSo33MAAdapterInitializationParameters_p_tF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "initializeWith:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "prepareItunesId",
+            "printedName": "prepareItunesId(parameters:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MAAdapterParameters",
+                "printedName": "any AppLovinSDK.MAAdapterParameters",
+                "usr": "c:objc(pl)MAAdapterParameters"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinManager(im)prepareItunesIdWithParameters:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC7ManagerC15prepareItunesId10parametersySo19MAAdapterParameters_p_tF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "prepareItunesIdWithParameters:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "logMessage",
+            "printedName": "logMessage(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinManager(cm)logMessage:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC7ManagerC10logMessageyySSFZ",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RTBAppLovinManager",
+                "printedName": "GraviteRTBAppLovinMediationAdapter.RTBAppLovinManager",
+                "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinManager"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinManager(im)init",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC7ManagerCACycfc",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinManager",
+        "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC7ManagerC",
+        "moduleName": "GraviteRTBAppLovinMediationAdapter",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAppLovinMediationAdapter",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AppLovinSDK",
+        "printedName": "AppLovinSDK",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAppLovinMediationAdapter"
+      },
+      {
+        "kind": "Import",
+        "name": "RTBSDK",
+        "printedName": "RTBSDK",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAppLovinMediationAdapter"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RTBAppLovinInterstitialLoader",
+        "printedName": "RTBAppLovinInterstitialLoader",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(interstitialDelegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RTBAppLovinInterstitialLoader",
+                "printedName": "GraviteRTBAppLovinMediationAdapter.RTBAppLovinInterstitialLoader",
+                "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinInterstitialLoader"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any AppLovinSDK.MAInterstitialAdapterDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MAInterstitialAdapterDelegate",
+                    "printedName": "any AppLovinSDK.MAInterstitialAdapterDelegate",
+                    "usr": "c:objc(pl)MAInterstitialAdapterDelegate"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinInterstitialLoader(im)initWithInterstitialDelegate:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC18InterstitialLoaderC20interstitialDelegateACSo014MAInterstitialeI0_pSg_tcfc",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "initWithInterstitialDelegate:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "load",
+            "printedName": "load(parameters:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MAAdapterResponseParameters",
+                "printedName": "any AppLovinSDK.MAAdapterResponseParameters",
+                "usr": "c:objc(pl)MAAdapterResponseParameters"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinInterstitialLoader(im)loadWithParameters:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC18InterstitialLoaderC4load10parametersySo27MAAdapterResponseParameters_p_tF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "loadWithParameters:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "show",
+            "printedName": "show(controller:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinInterstitialLoader(im)showWithController:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC18InterstitialLoaderC4show10controllerySo16UIViewControllerCSg_tF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "showWithController:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "destroy",
+            "printedName": "destroy()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinInterstitialLoader(im)destroy",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC18InterstitialLoaderC7destroyyyF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RTBAppLovinInterstitialLoader",
+                "printedName": "GraviteRTBAppLovinMediationAdapter.RTBAppLovinInterstitialLoader",
+                "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinInterstitialLoader"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinInterstitialLoader(im)init",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC18InterstitialLoaderCACycfc",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "fullscreenAdDidReceiveAd",
+            "printedName": "fullscreenAdDidReceiveAd(_:bidInfo:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBFullscreenAd",
+                "printedName": "RTBSDK.RTBFullscreenAd",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBFullscreenAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBidInfo",
+                "printedName": "RTBSDK.RTBBidInfo",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBidInfo"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinInterstitialLoader(im)fullscreenAdDidReceiveAd:bidInfo:networkName:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC18InterstitialLoaderC022fullscreenAdDidReceiveI0_7bidInfo11networkNamey6RTBSDK013RTBFullscreenI0C_AG06RTBBidM0CSStF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "fullscreenAdDidReceiveAd:bidInfo:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fullscreenAd",
+            "printedName": "fullscreenAd(_:didFailToReceiveAd:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBFullscreenAd",
+                "printedName": "RTBSDK.RTBFullscreenAd",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBFullscreenAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinInterstitialLoader(im)fullscreenAd:didFailToReceiveAd:networkName:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC18InterstitialLoaderC12fullscreenAd_016didFailToReceiveI011networkNamey6RTBSDK013RTBFullscreenI0C_S2StF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "fullscreenAd:didFailToReceiveAd:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fullscreenAdDidRecordClick",
+            "printedName": "fullscreenAdDidRecordClick(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBFullscreenAd",
+                "printedName": "RTBSDK.RTBFullscreenAd",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBFullscreenAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinInterstitialLoader(im)fullscreenAdDidRecordClick:networkName:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC18InterstitialLoaderC26fullscreenAdDidRecordClick_11networkNamey6RTBSDK013RTBFullscreenI0C_SStF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "fullscreenAdDidRecordClick:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fullscreenAdDidPauseForAd",
+            "printedName": "fullscreenAdDidPauseForAd(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBFullscreenAd",
+                "printedName": "RTBSDK.RTBFullscreenAd",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBFullscreenAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinInterstitialLoader(im)fullscreenAdDidPauseForAd:networkName:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC18InterstitialLoaderC023fullscreenAdDidPauseForI0_11networkNamey6RTBSDK013RTBFullscreenI0C_SStF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "fullscreenAdDidPauseForAd:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "fullscreenAdDidResumeAfterAd",
+            "printedName": "fullscreenAdDidResumeAfterAd(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBFullscreenAd",
+                "printedName": "RTBSDK.RTBFullscreenAd",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBFullscreenAd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinInterstitialLoader(im)fullscreenAdDidResumeAfterAd:networkName:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC18InterstitialLoaderC026fullscreenAdDidResumeAfterI0_11networkNamey6RTBSDK013RTBFullscreenI0C_SStF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "fullscreenAdDidResumeAfterAd:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinInterstitialLoader",
+        "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC18InterstitialLoaderC",
+        "moduleName": "GraviteRTBAppLovinMediationAdapter",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "RTBFullscreenDelegate",
+            "printedName": "RTBFullscreenDelegate",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBFullscreenDelegate",
+            "mangledName": "$s6RTBSDK21RTBFullscreenDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAppLovinMediationAdapter",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "AppLovinSDK",
+        "printedName": "AppLovinSDK",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAppLovinMediationAdapter"
+      },
+      {
+        "kind": "Import",
+        "name": "RTBSDK",
+        "printedName": "RTBSDK",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAppLovinMediationAdapter"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RTBAppLovinBannerLoader",
+        "printedName": "RTBAppLovinBannerLoader",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(bannerDelegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RTBAppLovinBannerLoader",
+                "printedName": "GraviteRTBAppLovinMediationAdapter.RTBAppLovinBannerLoader",
+                "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinBannerLoader"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any AppLovinSDK.MAAdViewAdapterDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MAAdViewAdapterDelegate",
+                    "printedName": "any AppLovinSDK.MAAdViewAdapterDelegate",
+                    "usr": "c:objc(pl)MAAdViewAdapterDelegate"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinBannerLoader(im)initWithBannerDelegate:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC12BannerLoaderC14bannerDelegateACSo08MAAdVieweI0_pSg_tcfc",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "initWithBannerDelegate:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "load",
+            "printedName": "load(parameters:adFormat:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MAAdapterResponseParameters",
+                "printedName": "any AppLovinSDK.MAAdapterResponseParameters",
+                "usr": "c:objc(pl)MAAdapterResponseParameters"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MAAdFormat",
+                "printedName": "AppLovinSDK.MAAdFormat",
+                "usr": "c:objc(cs)MAAdFormat"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinBannerLoader(im)loadWithParameters:adFormat:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC12BannerLoaderC4load10parameters8adFormatySo27MAAdapterResponseParameters_p_So04MAAdK0CtF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "loadWithParameters:adFormat:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "destroy",
+            "printedName": "destroy()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinBannerLoader(im)destroy",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC12BannerLoaderC7destroyyyF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RTBAppLovinBannerLoader",
+                "printedName": "GraviteRTBAppLovinMediationAdapter.RTBAppLovinBannerLoader",
+                "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinBannerLoader"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinBannerLoader(im)init",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC12BannerLoaderCACycfc",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewDidReceiveAd",
+            "printedName": "bannerViewDidReceiveAd(_:bidInfo:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBannerView",
+                "printedName": "RTBSDK.RTBBannerView",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBidInfo",
+                "printedName": "RTBSDK.RTBBidInfo",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBidInfo"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinBannerLoader(im)bannerViewDidReceiveAd:bidInfo:networkName:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC12BannerLoaderC22bannerViewDidReceiveAd_7bidInfo11networkNamey6RTBSDK09RTBBannerI0C_AG06RTBBidN0CSStF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "bannerViewDidReceiveAd:bidInfo:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerView",
+            "printedName": "bannerView(_:didFailToRender:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBannerView",
+                "printedName": "RTBSDK.RTBBannerView",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinBannerLoader(im)bannerView:didFailToRender:networkName:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC12BannerLoaderC10bannerView_15didFailToRender11networkNamey6RTBSDK09RTBBannerI0C_S2StF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "bannerView:didFailToRender:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerView",
+            "printedName": "bannerView(_:didFailToReceiveAd:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBannerView",
+                "printedName": "RTBSDK.RTBBannerView",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinBannerLoader(im)bannerView:didFailToReceiveAd:networkName:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC12BannerLoaderC10bannerView_18didFailToReceiveAd11networkNamey6RTBSDK09RTBBannerI0C_S2StF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "bannerView:didFailToReceiveAd:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewDidRecordClick",
+            "printedName": "bannerViewDidRecordClick(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBannerView",
+                "printedName": "RTBSDK.RTBBannerView",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinBannerLoader(im)bannerViewDidRecordClick:networkName:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC12BannerLoaderC24bannerViewDidRecordClick_11networkNamey6RTBSDK09RTBBannerI0C_SStF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "bannerViewDidRecordClick:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewDidPauseForAd",
+            "printedName": "bannerViewDidPauseForAd(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBannerView",
+                "printedName": "RTBSDK.RTBBannerView",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinBannerLoader(im)bannerViewDidPauseForAd:networkName:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC12BannerLoaderC23bannerViewDidPauseForAd_11networkNamey6RTBSDK09RTBBannerI0C_SStF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "bannerViewDidPauseForAd:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "bannerViewDidResumeAfterAd",
+            "printedName": "bannerViewDidResumeAfterAd(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBBannerView",
+                "printedName": "RTBSDK.RTBBannerView",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinBannerLoader(im)bannerViewDidResumeAfterAd:networkName:",
+            "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC12BannerLoaderC26bannerViewDidResumeAfterAd_11networkNamey6RTBSDK09RTBBannerI0C_SStF",
+            "moduleName": "GraviteRTBAppLovinMediationAdapter",
+            "objc_name": "bannerViewDidResumeAfterAd:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@GraviteRTBAppLovinMediationAdapter@objc(cs)RTBAppLovinBannerLoader",
+        "mangledName": "$s34GraviteRTBAppLovinMediationAdapter0bC12BannerLoaderC",
+        "moduleName": "GraviteRTBAppLovinMediationAdapter",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "RTBBannerViewDelegate",
+            "printedName": "RTBBannerViewDelegate",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerViewDelegate",
+            "mangledName": "$s6RTBSDK21RTBBannerViewDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/GraviteRTBAppLovinMediationAdapter\/RTBAppLovinInterstitialLoader.swift",
+      "kind": "StringLiteral",
+      "offset": 201,
+      "length": 29,
+      "value": "\"GraviteRTBAppLovinMediationAdapter.RTBAppLovinInterstitialLoader\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/GraviteRTBAppLovinMediationAdapter\/RTBAppLovinBannerLoader.swift",
+      "kind": "StringLiteral",
+      "offset": 195,
+      "length": 23,
+      "value": "\"GraviteRTBAppLovinMediationAdapter.RTBAppLovinBannerLoader\""
+    }
+  ]
+}

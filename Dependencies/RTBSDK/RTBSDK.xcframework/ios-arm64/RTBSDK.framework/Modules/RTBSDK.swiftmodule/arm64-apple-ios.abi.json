@@ -735,7 +735,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6RTBSDK13RTBSDKManagerC6sharedACvpZ",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBSDKManager(cpy)shared",
             "mangledName": "$s6RTBSDK13RTBSDKManagerC6sharedACvpZ",
             "moduleName": "RTBSDK",
             "static": true,
@@ -743,7 +743,8 @@
               "HasInitialValue",
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -761,13 +762,14 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6RTBSDK13RTBSDKManagerC6sharedACvgZ",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBSDKManager(cm)shared",
                 "mangledName": "$s6RTBSDK13RTBSDKManagerC6sharedACvgZ",
                 "moduleName": "RTBSDK",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               }
@@ -1017,6 +1019,125 @@
           },
           {
             "kind": "Var",
+            "name": "objc_isChildDirected",
+            "printedName": "objc_isChildDirected",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBSDKManager(py)isChildDirected",
+            "mangledName": "$s6RTBSDK13RTBSDKManagerC20objc_isChildDirectedSo8NSNumberCSgvp",
+            "moduleName": "RTBSDK",
+            "objc_name": "isChildDirected",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSNumber?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSNumber",
+                        "printedName": "Foundation.NSNumber",
+                        "usr": "c:objc(cs)NSNumber"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBSDKManager(im)isChildDirected",
+                "mangledName": "$s6RTBSDK13RTBSDKManagerC20objc_isChildDirectedSo8NSNumberCSgvg",
+                "moduleName": "RTBSDK",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSNumber?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSNumber",
+                        "printedName": "Foundation.NSNumber",
+                        "usr": "c:objc(cs)NSNumber"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBSDKManager(im)setIsChildDirected:",
+                "mangledName": "$s6RTBSDK13RTBSDKManagerC20objc_isChildDirectedSo8NSNumberCSgvs",
+                "moduleName": "RTBSDK",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6RTBSDK13RTBSDKManagerC20objc_isChildDirectedSo8NSNumberCSgvM",
+                "mangledName": "$s6RTBSDK13RTBSDKManagerC20objc_isChildDirectedSo8NSNumberCSgvM",
+                "moduleName": "RTBSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "isGDPRApplies",
             "printedName": "isGDPRApplies",
             "children": [
@@ -1127,6 +1248,125 @@
                 "declKind": "Accessor",
                 "usr": "s:6RTBSDK13RTBSDKManagerC13isGDPRAppliesSbSgvM",
                 "mangledName": "$s6RTBSDK13RTBSDKManagerC13isGDPRAppliesSbSgvM",
+                "moduleName": "RTBSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "objc_isGDPRApplies",
+            "printedName": "objc_isGDPRApplies",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Foundation.NSNumber?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "NSNumber",
+                    "printedName": "Foundation.NSNumber",
+                    "usr": "c:objc(cs)NSNumber"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBSDKManager(py)isGDPRApplies",
+            "mangledName": "$s6RTBSDK13RTBSDKManagerC18objc_isGDPRAppliesSo8NSNumberCSgvp",
+            "moduleName": "RTBSDK",
+            "objc_name": "isGDPRApplies",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSNumber?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSNumber",
+                        "printedName": "Foundation.NSNumber",
+                        "usr": "c:objc(cs)NSNumber"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBSDKManager(im)isGDPRApplies",
+                "mangledName": "$s6RTBSDK13RTBSDKManagerC18objc_isGDPRAppliesSo8NSNumberCSgvg",
+                "moduleName": "RTBSDK",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Foundation.NSNumber?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "NSNumber",
+                        "printedName": "Foundation.NSNumber",
+                        "usr": "c:objc(cs)NSNumber"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBSDKManager(im)setIsGDPRApplies:",
+                "mangledName": "$s6RTBSDK13RTBSDKManagerC18objc_isGDPRAppliesSo8NSNumberCSgvs",
+                "moduleName": "RTBSDK",
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6RTBSDK13RTBSDKManagerC18objc_isGDPRAppliesSo8NSNumberCSgvM",
+                "mangledName": "$s6RTBSDK13RTBSDKManagerC18objc_isGDPRAppliesSo8NSNumberCSgvM",
                 "moduleName": "RTBSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -1391,7 +1631,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6RTBSDK13RTBSDKManagerC14useGeoLocationSbvp",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBSDKManager(py)useGeoLocation",
             "mangledName": "$s6RTBSDK13RTBSDKManagerC14useGeoLocationSbvp",
             "moduleName": "RTBSDK",
             "declAttributes": [
@@ -1399,6 +1639,7 @@
               "Final",
               "HasStorage",
               "AccessControl",
+              "ObjC",
               "RawDocComment"
             ],
             "hasStorage": true,
@@ -1416,12 +1657,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6RTBSDK13RTBSDKManagerC14useGeoLocationSbvg",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBSDKManager(im)useGeoLocation",
                 "mangledName": "$s6RTBSDK13RTBSDKManagerC14useGeoLocationSbvg",
                 "moduleName": "RTBSDK",
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               },
@@ -1443,12 +1685,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6RTBSDK13RTBSDKManagerC14useGeoLocationSbvs",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBSDKManager(im)setUseGeoLocation:",
                 "mangledName": "$s6RTBSDK13RTBSDKManagerC14useGeoLocationSbvs",
                 "moduleName": "RTBSDK",
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "set"
               },
@@ -1488,14 +1731,15 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6RTBSDK13RTBSDKManagerC10sdkVersionSSvp",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBSDKManager(py)sdkVersion",
             "mangledName": "$s6RTBSDK13RTBSDKManagerC10sdkVersionSSvp",
             "moduleName": "RTBSDK",
             "declAttributes": [
               "HasInitialValue",
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isLet": true,
             "hasStorage": true,
@@ -1513,12 +1757,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6RTBSDK13RTBSDKManagerC10sdkVersionSSvg",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBSDKManager(im)sdkVersion",
                 "mangledName": "$s6RTBSDK13RTBSDKManagerC10sdkVersionSSvg",
                 "moduleName": "RTBSDK",
                 "implicit": true,
                 "declAttributes": [
-                  "Final"
+                  "Final",
+                  "ObjC"
                 ],
                 "accessorKind": "get"
               }
@@ -1775,11 +2020,13 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:6RTBSDK13RTBBannerSizeC5width6heightAC14CoreFoundation7CGFloatV_AHtcfc",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBBannerSize(im)initWithWidth:height:",
             "mangledName": "$s6RTBSDK13RTBBannerSizeC5width6heightAC12CoreGraphics7CGFloatV_AHtcfc",
             "moduleName": "RTBSDK",
+            "objc_name": "initWithWidth:height:",
             "declAttributes": [
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "init_kind": "Designated"
           },
@@ -1822,7 +2069,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6RTBSDK13RTBBannerSizeC12banner320x50ACvpZ",
+            "usr": "c:@CM@RTBSDK@objc(cs)RTBBannerSize(cpy)banner320x50",
             "mangledName": "$s6RTBSDK13RTBBannerSizeC12banner320x50ACvpZ",
             "moduleName": "RTBSDK",
             "static": true,
@@ -1830,7 +2077,8 @@
               "HasInitialValue",
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isFromExtension": true,
             "isLet": true,
@@ -1849,12 +2097,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6RTBSDK13RTBBannerSizeC12banner320x50ACvgZ",
+                "usr": "c:@CM@RTBSDK@objc(cs)RTBBannerSize(cm)banner320x50",
                 "mangledName": "$s6RTBSDK13RTBBannerSizeC12banner320x50ACvgZ",
                 "moduleName": "RTBSDK",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
+                  "ObjC",
                   "Final"
                 ],
                 "isFromExtension": true,
@@ -1875,7 +2124,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6RTBSDK13RTBBannerSizeC13banner300x250ACvpZ",
+            "usr": "c:@CM@RTBSDK@objc(cs)RTBBannerSize(cpy)banner300x250",
             "mangledName": "$s6RTBSDK13RTBBannerSizeC13banner300x250ACvpZ",
             "moduleName": "RTBSDK",
             "static": true,
@@ -1883,7 +2132,8 @@
               "HasInitialValue",
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isFromExtension": true,
             "isLet": true,
@@ -1902,12 +2152,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6RTBSDK13RTBBannerSizeC13banner300x250ACvgZ",
+                "usr": "c:@CM@RTBSDK@objc(cs)RTBBannerSize(cm)banner300x250",
                 "mangledName": "$s6RTBSDK13RTBBannerSizeC13banner300x250ACvgZ",
                 "moduleName": "RTBSDK",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
+                  "ObjC",
                   "Final"
                 ],
                 "isFromExtension": true,
@@ -1928,7 +2179,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6RTBSDK13RTBBannerSizeC12banner728x90ACvpZ",
+            "usr": "c:@CM@RTBSDK@objc(cs)RTBBannerSize(cpy)banner728x90",
             "mangledName": "$s6RTBSDK13RTBBannerSizeC12banner728x90ACvpZ",
             "moduleName": "RTBSDK",
             "static": true,
@@ -1936,7 +2187,8 @@
               "HasInitialValue",
               "Final",
               "HasStorage",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "isFromExtension": true,
             "isLet": true,
@@ -1955,12 +2207,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6RTBSDK13RTBBannerSizeC12banner728x90ACvgZ",
+                "usr": "c:@CM@RTBSDK@objc(cs)RTBBannerSize(cm)banner728x90",
                 "mangledName": "$s6RTBSDK13RTBBannerSizeC12banner728x90ACvgZ",
                 "moduleName": "RTBSDK",
                 "static": true,
                 "implicit": true,
                 "declAttributes": [
+                  "ObjC",
                   "Final"
                 ],
                 "isFromExtension": true,
@@ -3998,6 +4251,57 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBFullscreenRequestConfiguration(py)description",
+            "mangledName": "$s6RTBSDK33RTBFullscreenRequestConfigurationC11descriptionSSvp",
+            "moduleName": "RTBSDK",
+            "overriding": true,
+            "objc_name": "description",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBFullscreenRequestConfiguration(im)description",
+                "mangledName": "$s6RTBSDK33RTBFullscreenRequestConfigurationC11descriptionSSvg",
+                "moduleName": "RTBSDK",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -4880,6 +5184,240 @@
                 "declKind": "Accessor",
                 "usr": "s:6RTBSDK10RTBBidInfoC6bidderSSvM",
                 "mangledName": "$s6RTBSDK10RTBBidInfoC6bidderSSvM",
+                "moduleName": "RTBSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "creativeId",
+            "printedName": "creativeId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBBidInfo(py)creativeId",
+            "mangledName": "$s6RTBSDK10RTBBidInfoC10creativeIdSSSgvp",
+            "moduleName": "RTBSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBidInfo(im)creativeId",
+                "mangledName": "$s6RTBSDK10RTBBidInfoC10creativeIdSSSgvg",
+                "moduleName": "RTBSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBidInfo(im)setCreativeId:",
+                "mangledName": "$s6RTBSDK10RTBBidInfoC10creativeIdSSSgvs",
+                "moduleName": "RTBSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6RTBSDK10RTBBidInfoC10creativeIdSSSgvM",
+                "mangledName": "$s6RTBSDK10RTBBidInfoC10creativeIdSSSgvM",
+                "moduleName": "RTBSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "campaignId",
+            "printedName": "campaignId",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBBidInfo(py)campaignId",
+            "mangledName": "$s6RTBSDK10RTBBidInfoC10campaignIdSSSgvp",
+            "moduleName": "RTBSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBidInfo(im)campaignId",
+                "mangledName": "$s6RTBSDK10RTBBidInfoC10campaignIdSSSgvg",
+                "moduleName": "RTBSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBidInfo(im)setCampaignId:",
+                "mangledName": "$s6RTBSDK10RTBBidInfoC10campaignIdSSSgvs",
+                "moduleName": "RTBSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:6RTBSDK10RTBBidInfoC10campaignIdSSSgvM",
+                "mangledName": "$s6RTBSDK10RTBBidInfoC10campaignIdSSSgvM",
                 "moduleName": "RTBSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -6606,7 +7144,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6RTBSDK13RTBBannerViewC8delegateAA0bC8Delegate_pSgvp",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBBannerView(py)delegate",
             "mangledName": "$s6RTBSDK13RTBBannerViewC8delegateAA0bC8Delegate_pSgvp",
             "moduleName": "RTBSDK",
             "declAttributes": [
@@ -6614,7 +7152,8 @@
               "HasStorage",
               "Custom",
               "ReferenceOwnership",
-              "AccessControl"
+              "AccessControl",
+              "ObjC"
             ],
             "ownership": 1,
             "hasStorage": true,
@@ -6640,10 +7179,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6RTBSDK13RTBBannerViewC8delegateAA0bC8Delegate_pSgvg",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerView(im)delegate",
                 "mangledName": "$s6RTBSDK13RTBBannerViewC8delegateAA0bC8Delegate_pSgvg",
                 "moduleName": "RTBSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -6672,10 +7214,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6RTBSDK13RTBBannerViewC8delegateAA0bC8Delegate_pSgvs",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerView(im)setDelegate:",
                 "mangledName": "$s6RTBSDK13RTBBannerViewC8delegateAA0bC8Delegate_pSgvs",
                 "moduleName": "RTBSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -7278,7 +7823,7 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:6RTBSDK15RTBFullscreenAdC8delegateAA0B8Delegate_pSgvp",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBFullscreenAd(py)delegate",
             "mangledName": "$s6RTBSDK15RTBFullscreenAdC8delegateAA0B8Delegate_pSgvp",
             "moduleName": "RTBSDK",
             "declAttributes": [
@@ -7286,6 +7831,7 @@
               "HasStorage",
               "AccessControl",
               "ReferenceOwnership",
+              "ObjC",
               "RawDocComment"
             ],
             "ownership": 1,
@@ -7312,10 +7858,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6RTBSDK15RTBFullscreenAdC8delegateAA0B8Delegate_pSgvg",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBFullscreenAd(im)delegate",
                 "mangledName": "$s6RTBSDK15RTBFullscreenAdC8delegateAA0B8Delegate_pSgvg",
                 "moduleName": "RTBSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "get"
               },
               {
@@ -7344,10 +7893,13 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:6RTBSDK15RTBFullscreenAdC8delegateAA0B8Delegate_pSgvs",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBFullscreenAd(im)setDelegate:",
                 "mangledName": "$s6RTBSDK15RTBFullscreenAdC8delegateAA0B8Delegate_pSgvs",
                 "moduleName": "RTBSDK",
                 "implicit": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
                 "accessorKind": "set"
               },
               {
@@ -9476,6 +10028,57 @@
             "init_kind": "Designated"
           },
           {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBBannerRequestConfiguration(py)description",
+            "mangledName": "$s6RTBSDK29RTBBannerRequestConfigurationC11descriptionSSvp",
+            "moduleName": "RTBSDK",
+            "overriding": true,
+            "objc_name": "description",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBBannerRequestConfiguration(im)description",
+                "mangledName": "$s6RTBSDK29RTBBannerRequestConfigurationC11descriptionSSvg",
+                "moduleName": "RTBSDK",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init()",
@@ -9822,30 +10425,30 @@
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/RTBSDKManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 612,
+      "offset": 974,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/RTBSDKManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 756,
+      "offset": 1456,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/RTBSDKManager.swift",
       "kind": "BooleanLiteral",
-      "offset": 1200,
+      "offset": 1906,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/RTBSDKManager.swift",
       "kind": "StringLiteral",
-      "offset": 1235,
+      "offset": 1947,
       "length": 7,
-      "value": "\"1.4.0\""
+      "value": "\"1.4.1\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/RTBDSPSignalCollector.swift",
@@ -9885,72 +10488,100 @@
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/Banners\/RTBBannerSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 411,
+      "offset": 427,
       "length": 3,
       "value": "320"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/Banners\/RTBBannerSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 424,
+      "offset": 440,
       "length": 2,
       "value": "50"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/Banners\/RTBBannerSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 487,
+      "offset": 509,
       "length": 3,
       "value": "300"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/Banners\/RTBBannerSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 500,
+      "offset": 522,
       "length": 3,
       "value": "250"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/Banners\/RTBBannerSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 563,
+      "offset": 591,
       "length": 3,
       "value": "728"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/Banners\/RTBBannerSize.swift",
       "kind": "IntegerLiteral",
-      "offset": 576,
+      "offset": 604,
       "length": 2,
       "value": "90"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBNativeAdResponse.swift",
       "kind": "StringLiteral",
-      "offset": 466,
+      "offset": 522,
       "length": 13,
       "value": "\"pricing-cpm\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBNativeAdResponse.swift",
       "kind": "StringLiteral",
-      "offset": 528,
+      "offset": 584,
       "length": 16,
       "value": "\"x-button-delay\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBNativeAdResponse.swift",
       "kind": "StringLiteral",
-      "offset": 466,
+      "offset": 627,
+      "length": 12,
+      "value": "\"creativeid\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBNativeAdResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 666,
+      "length": 12,
+      "value": "\"campaignid\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBNativeAdResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 522,
       "length": 13,
       "value": "\"pricing-cpm\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBNativeAdResponse.swift",
       "kind": "StringLiteral",
-      "offset": 528,
+      "offset": 584,
       "length": 16,
       "value": "\"x-button-delay\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBNativeAdResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 627,
+      "length": 12,
+      "value": "\"creativeid\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBNativeAdResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 666,
+      "length": 12,
+      "value": "\"campaignid\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DSPProtocols\/RTBBidderExtraInfo.swift",
@@ -11082,72 +11713,100 @@
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
       "kind": "StringLiteral",
-      "offset": 478,
+      "offset": 534,
       "length": 5,
       "value": "\"adm\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
       "kind": "StringLiteral",
-      "offset": 567,
+      "offset": 623,
       "length": 13,
       "value": "\"pricing-cpm\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
       "kind": "StringLiteral",
-      "offset": 633,
+      "offset": 689,
       "length": 16,
       "value": "\"x-button-delay\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
       "kind": "StringLiteral",
-      "offset": 679,
+      "offset": 735,
       "length": 8,
       "value": "\"impUrl\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
       "kind": "StringLiteral",
-      "offset": 712,
+      "offset": 768,
       "length": 8,
       "value": "\"clkUrl\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
       "kind": "StringLiteral",
-      "offset": 478,
+      "offset": 803,
+      "length": 12,
+      "value": "\"creativeid\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 842,
+      "length": 12,
+      "value": "\"campaignid\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 534,
       "length": 5,
       "value": "\"adm\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
       "kind": "StringLiteral",
-      "offset": 567,
+      "offset": 623,
       "length": 13,
       "value": "\"pricing-cpm\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
       "kind": "StringLiteral",
-      "offset": 633,
+      "offset": 689,
       "length": 16,
       "value": "\"x-button-delay\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
       "kind": "StringLiteral",
-      "offset": 679,
+      "offset": 735,
       "length": 8,
       "value": "\"impUrl\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
       "kind": "StringLiteral",
-      "offset": 712,
+      "offset": 768,
       "length": 8,
       "value": "\"clkUrl\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 803,
+      "length": 12,
+      "value": "\"creativeid\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/DataModel\/ResponseModels\/RTBResponse.swift",
+      "kind": "StringLiteral",
+      "offset": 842,
+      "length": 12,
+      "value": "\"campaignid\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/NativeAd\/RTBNativeAdRequestConfiguration.swift",
@@ -11215,7 +11874,7 @@
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/Banners\/RTBBannerView.swift",
       "kind": "Array",
-      "offset": 355,
+      "offset": 361,
       "length": 2,
       "value": "[]"
     },
@@ -11229,7 +11888,7 @@
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/RTBSDK\/AdFormats\/Fullscreen\/RTBFullscreenAd.swift",
       "kind": "Array",
-      "offset": 524,
+      "offset": 530,
       "length": 2,
       "value": "[]"
     },

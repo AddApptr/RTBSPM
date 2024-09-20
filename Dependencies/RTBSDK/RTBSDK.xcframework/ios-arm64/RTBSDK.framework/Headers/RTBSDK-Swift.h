@@ -359,6 +359,8 @@ SWIFT_CLASS("_TtC6RTBSDK10RTBBidInfo")
 @interface RTBBidInfo : NSObject
 @property (nonatomic) float priceCPM;
 @property (nonatomic, copy) NSString * _Nonnull bidder;
+@property (nonatomic, copy) NSString * _Nullable creativeId;
+@property (nonatomic, copy) NSString * _Nullable campaignId;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -381,6 +383,7 @@ SWIFT_CLASS("_TtC6RTBSDK29RTBBannerRequestConfiguration")
 /// \param iTunesAppId Represents the AppId on the publisher Apple developer account.
 ///
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -388,16 +391,28 @@ SWIFT_CLASS("_TtC6RTBSDK29RTBBannerRequestConfiguration")
 
 SWIFT_CLASS("_TtC6RTBSDK13RTBBannerSize")
 @interface RTBBannerSize : NSObject
+- (nonnull instancetype)initWithWidth:(CGFloat)width height:(CGFloat)height OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+@interface RTBBannerSize (SWIFT_EXTENSION(RTBSDK))
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBBannerSize * _Nonnull banner320x50;)
++ (RTBBannerSize * _Nonnull)banner320x50 SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBBannerSize * _Nonnull banner300x250;)
++ (RTBBannerSize * _Nonnull)banner300x250 SWIFT_WARN_UNUSED_RESULT;
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBBannerSize * _Nonnull banner728x90;)
++ (RTBBannerSize * _Nonnull)banner728x90 SWIFT_WARN_UNUSED_RESULT;
+@end
+
+@protocol RTBBannerViewDelegate;
 @class NSCoder;
 @protocol RTBDSPBannerProtocol;
 
 SWIFT_CLASS("_TtC6RTBSDK13RTBBannerView")
 @interface RTBBannerView : UIView
+@property (nonatomic, weak) id <RTBBannerViewDelegate> _Nullable delegate;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
 - (nonnull instancetype)initWithSize:(RTBBannerSize * _Nonnull)size OBJC_DESIGNATED_INITIALIZER;
 /// load a new ad with  configuration
@@ -518,10 +533,13 @@ SWIFT_PROTOCOL("_TtP6RTBSDK26RTBDSPInterstitialProtocol_")
 @end
 
 
+@protocol RTBFullscreenDelegate;
 @class RTBFullscreenRequestConfiguration;
 
 SWIFT_CLASS("_TtC6RTBSDK15RTBFullscreenAd")
 @interface RTBFullscreenAd : NSObject
+/// The delegate the will be notified with the different events
+@property (nonatomic, weak) id <RTBFullscreenDelegate> _Nullable delegate;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 /// Start loading a fullscreen ad
 /// \param configuration Fullscreen request configuration that is needed to request a new Ad, see <code>RTBFullscreenRequestConfiguration</code>
@@ -588,6 +606,7 @@ SWIFT_CLASS("_TtC6RTBSDK33RTBFullscreenRequestConfiguration")
 /// \param iTunesAppId Represents the AppId on the publisher Apple developer account.
 ///
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -734,6 +753,13 @@ SWIFT_CLASS("_TtC6RTBSDK31RTBNativeAdRequestConfiguration")
 
 SWIFT_CLASS("_TtC6RTBSDK13RTBSDKManager")
 @interface RTBSDKManager : NSObject
+SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBSDKManager * _Nonnull shared;)
++ (RTBSDKManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+@property (nonatomic, strong) NSNumber * _Nullable isChildDirected;
+@property (nonatomic, strong) NSNumber * _Nullable isGDPRApplies;
+/// A bool that indicates whether the SDK should use the geo location or not. Default value is <em>false</em>
+@property (nonatomic) BOOL useGeoLocation;
+@property (nonatomic, readonly, copy) NSString * _Nonnull sdkVersion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
