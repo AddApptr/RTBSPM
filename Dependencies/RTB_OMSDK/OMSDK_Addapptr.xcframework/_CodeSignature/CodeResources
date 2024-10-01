@@ -30,7 +30,7 @@
 		</data>
 		<key>ios-arm64/OMSDK_Addapptr.framework/Headers/OMIDJavaScriptSessionService.h</key>
 		<data>
-		XfrShPJIGhEwFRAPRJOKM6cj9RA=
+		7jAG7GJPxzfbE3ogRwhrobkZ1ts=
 		</data>
 		<key>ios-arm64/OMSDK_Addapptr.framework/Headers/OMIDMediaEvents.h</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>ios-arm64/OMSDK_Addapptr.framework/Info.plist</key>
 		<data>
-		egawhHN85rDl0MnMwhmIZCX96do=
+		gI8BQpeoeaLpLz9NKZeD2Iy2KgM=
 		</data>
 		<key>ios-arm64/OMSDK_Addapptr.framework/Modules/module.modulemap</key>
 		<data>
@@ -70,7 +70,7 @@
 		</data>
 		<key>ios-arm64/OMSDK_Addapptr.framework/OMSDK_Addapptr</key>
 		<data>
-		1NaTYGn6uyL/+cZByZxunt2eWuA=
+		4o3PjHUkSPSOoDFncbhkV4UCjOk=
 		</data>
 		<key>ios-arm64/OMSDK_Addapptr.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -102,7 +102,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/OMSDK_Addapptr.framework/Headers/OMIDJavaScriptSessionService.h</key>
 		<data>
-		XfrShPJIGhEwFRAPRJOKM6cj9RA=
+		7jAG7GJPxzfbE3ogRwhrobkZ1ts=
 		</data>
 		<key>ios-arm64_x86_64-simulator/OMSDK_Addapptr.framework/Headers/OMIDMediaEvents.h</key>
 		<data>
@@ -134,7 +134,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/OMSDK_Addapptr.framework/Info.plist</key>
 		<data>
-		BCL8zuju9EWqEia9DyjV+BOWZvU=
+		HzlK7w7d8ui/Bde2yLPqQ1Ab78k=
 		</data>
 		<key>ios-arm64_x86_64-simulator/OMSDK_Addapptr.framework/Modules/module.modulemap</key>
 		<data>
@@ -142,7 +142,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/OMSDK_Addapptr.framework/OMSDK_Addapptr</key>
 		<data>
-		4vx4UKBEMQ+VNtrUzTQO1dz4RQQ=
+		uWQ7/02RsuT+orM8Q/o1wZH2nq8=
 		</data>
 		<key>ios-arm64_x86_64-simulator/OMSDK_Addapptr.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -150,7 +150,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/OMSDK_Addapptr.framework/_CodeSignature/CodeResources</key>
 		<data>
-		Wffhe3K/+RhjYka5UTxrTMwag40=
+		3tmrosBptmqyrvSF2DeYatqfsTQ=
 		</data>
 		<key>tvos-arm64/OMSDK_Addapptr.framework/Headers/OMIDAdEvents.h</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>tvos-arm64/OMSDK_Addapptr.framework/Headers/OMIDJavaScriptSessionService.h</key>
 		<data>
-		XfrShPJIGhEwFRAPRJOKM6cj9RA=
+		7jAG7GJPxzfbE3ogRwhrobkZ1ts=
 		</data>
 		<key>tvos-arm64/OMSDK_Addapptr.framework/Headers/OMIDMediaEvents.h</key>
 		<data>
@@ -210,7 +210,7 @@
 		</data>
 		<key>tvos-arm64/OMSDK_Addapptr.framework/Info.plist</key>
 		<data>
-		zaSyC4qGlHu6Z76ElDsfD3KGpnE=
+		hqgijmroBHI9GWthsz5zH46pNUg=
 		</data>
 		<key>tvos-arm64/OMSDK_Addapptr.framework/Modules/module.modulemap</key>
 		<data>
@@ -218,7 +218,7 @@
 		</data>
 		<key>tvos-arm64/OMSDK_Addapptr.framework/OMSDK_Addapptr</key>
 		<data>
-		yD89voiPcydxowgKrtqEnicn8is=
+		ll48++kCdfeKPoNpBj4uTt5B6Gs=
 		</data>
 		<key>tvos-arm64/OMSDK_Addapptr.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -250,7 +250,7 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/OMSDK_Addapptr.framework/Headers/OMIDJavaScriptSessionService.h</key>
 		<data>
-		XfrShPJIGhEwFRAPRJOKM6cj9RA=
+		7jAG7GJPxzfbE3ogRwhrobkZ1ts=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/OMSDK_Addapptr.framework/Headers/OMIDMediaEvents.h</key>
 		<data>
@@ -282,7 +282,7 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/OMSDK_Addapptr.framework/Info.plist</key>
 		<data>
-		DvwhMHJ6tM8vPjmlEzigR1/qRqc=
+		OpVr0BlA/0WNnXPLUZTedPxYTcg=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/OMSDK_Addapptr.framework/Modules/module.modulemap</key>
 		<data>
@@ -290,7 +290,7 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/OMSDK_Addapptr.framework/OMSDK_Addapptr</key>
 		<data>
-		FkpVHSd5LngtvHF+EI2EKsBDKcg=
+		HLEHD+u+46qDMB2ZRnXpfg3VIkQ=
 		</data>
 		<key>tvos-arm64_x86_64-simulator/OMSDK_Addapptr.framework/PrivacyInfo.xcprivacy</key>
 		<data>
@@ -298,7 +298,7 @@
 		</data>
 		<key>tvos-arm64_x86_64-simulator/OMSDK_Addapptr.framework/_CodeSignature/CodeResources</key>
 		<data>
-		+QczhDI1Kz4bfg6bR/RhGYHTwR8=
+		svFFPGOcStTzksZeWEsSyL6vYJs=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -373,11 +373,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XfrShPJIGhEwFRAPRJOKM6cj9RA=
+			7jAG7GJPxzfbE3ogRwhrobkZ1ts=
 			</data>
 			<key>hash2</key>
 			<data>
-			rBPOhbwbl9kDBMNbFMr95oiQiFaC22POQjLqhyvxMHY=
+			+Gr7ZnOxXuhU67L0Z3sqpzLF/lrONQio7ldeBFLvELs=
 			</data>
 		</dict>
 		<key>ios-arm64/OMSDK_Addapptr.framework/Headers/OMIDMediaEvents.h</key>
@@ -461,11 +461,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			egawhHN85rDl0MnMwhmIZCX96do=
+			gI8BQpeoeaLpLz9NKZeD2Iy2KgM=
 			</data>
 			<key>hash2</key>
 			<data>
-			thCLIv2NZvq0LLyOzAPStox4mtndB4HJo+lu4sK0rv4=
+			fLv8Twf3INOsCbJ7yoeP177AzEQSGUXO8ZGJdswtzzo=
 			</data>
 		</dict>
 		<key>ios-arm64/OMSDK_Addapptr.framework/Modules/module.modulemap</key>
@@ -483,11 +483,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			1NaTYGn6uyL/+cZByZxunt2eWuA=
+			4o3PjHUkSPSOoDFncbhkV4UCjOk=
 			</data>
 			<key>hash2</key>
 			<data>
-			U5nZS2bEtOvaUjub3Ix06Sj2/j4e424KUeknWO43EVg=
+			X8L2tndd4AGWFs83+4XRMA64AJsPgdVxoU3Ub5KaUDA=
 			</data>
 		</dict>
 		<key>ios-arm64/OMSDK_Addapptr.framework/PrivacyInfo.xcprivacy</key>
@@ -571,11 +571,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XfrShPJIGhEwFRAPRJOKM6cj9RA=
+			7jAG7GJPxzfbE3ogRwhrobkZ1ts=
 			</data>
 			<key>hash2</key>
 			<data>
-			rBPOhbwbl9kDBMNbFMr95oiQiFaC22POQjLqhyvxMHY=
+			+Gr7ZnOxXuhU67L0Z3sqpzLF/lrONQio7ldeBFLvELs=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/OMSDK_Addapptr.framework/Headers/OMIDMediaEvents.h</key>
@@ -659,11 +659,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			BCL8zuju9EWqEia9DyjV+BOWZvU=
+			HzlK7w7d8ui/Bde2yLPqQ1Ab78k=
 			</data>
 			<key>hash2</key>
 			<data>
-			fGxOxU86Mn0bRwmOcQY1+zQBGqMmTUZPOFgLFUK6UL4=
+			rp94B6tBF4EVHYTDpsRzgoRKfCm/y6EGP3ho1gmoIJU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/OMSDK_Addapptr.framework/Modules/module.modulemap</key>
@@ -681,11 +681,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			4vx4UKBEMQ+VNtrUzTQO1dz4RQQ=
+			uWQ7/02RsuT+orM8Q/o1wZH2nq8=
 			</data>
 			<key>hash2</key>
 			<data>
-			sB1NSmUa/PhHDuilsL+/Kute1x6sE/kRrUa2owCfiEo=
+			t75nIHC0eP0CpZmYM2lkEFnO2XjplWvBrozjK9lWCPg=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/OMSDK_Addapptr.framework/PrivacyInfo.xcprivacy</key>
@@ -703,11 +703,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Wffhe3K/+RhjYka5UTxrTMwag40=
+			3tmrosBptmqyrvSF2DeYatqfsTQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			NPi5h/2tMCrdY5OqEpZHS1vpx6B+r5yZaAB34Zay7i0=
+			Ut+TPqh6dReeifdTRHvnywH+zfgoyRa8mvk6G48d2kM=
 			</data>
 		</dict>
 		<key>tvos-arm64/OMSDK_Addapptr.framework/Headers/OMIDAdEvents.h</key>
@@ -780,11 +780,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XfrShPJIGhEwFRAPRJOKM6cj9RA=
+			7jAG7GJPxzfbE3ogRwhrobkZ1ts=
 			</data>
 			<key>hash2</key>
 			<data>
-			rBPOhbwbl9kDBMNbFMr95oiQiFaC22POQjLqhyvxMHY=
+			+Gr7ZnOxXuhU67L0Z3sqpzLF/lrONQio7ldeBFLvELs=
 			</data>
 		</dict>
 		<key>tvos-arm64/OMSDK_Addapptr.framework/Headers/OMIDMediaEvents.h</key>
@@ -868,11 +868,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			zaSyC4qGlHu6Z76ElDsfD3KGpnE=
+			hqgijmroBHI9GWthsz5zH46pNUg=
 			</data>
 			<key>hash2</key>
 			<data>
-			wp8m5MQDvjYtnyLwOh63uNfbyoslncIbzsRdkpjl+6A=
+			liKbk05TnTC3LAEt+qc7cekgKpHZXb8TaXegayXij4k=
 			</data>
 		</dict>
 		<key>tvos-arm64/OMSDK_Addapptr.framework/Modules/module.modulemap</key>
@@ -890,11 +890,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			yD89voiPcydxowgKrtqEnicn8is=
+			ll48++kCdfeKPoNpBj4uTt5B6Gs=
 			</data>
 			<key>hash2</key>
 			<data>
-			rOU9AOiD1mwoHWBdBdp0NyWgTNjenpjGqfWz2+p6KFQ=
+			8MAmF6MAkuERqVoTTBhLm2bSpJSmO+L7pk2pbf8DE3c=
 			</data>
 		</dict>
 		<key>tvos-arm64/OMSDK_Addapptr.framework/PrivacyInfo.xcprivacy</key>
@@ -978,11 +978,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			XfrShPJIGhEwFRAPRJOKM6cj9RA=
+			7jAG7GJPxzfbE3ogRwhrobkZ1ts=
 			</data>
 			<key>hash2</key>
 			<data>
-			rBPOhbwbl9kDBMNbFMr95oiQiFaC22POQjLqhyvxMHY=
+			+Gr7ZnOxXuhU67L0Z3sqpzLF/lrONQio7ldeBFLvELs=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/OMSDK_Addapptr.framework/Headers/OMIDMediaEvents.h</key>
@@ -1066,11 +1066,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			DvwhMHJ6tM8vPjmlEzigR1/qRqc=
+			OpVr0BlA/0WNnXPLUZTedPxYTcg=
 			</data>
 			<key>hash2</key>
 			<data>
-			TX4eXSMW9JwHPU3N0veQeCQOuyyouIS7HEt88ZKu5IM=
+			BbfMb9itmb/87xuZAZC/R9wA4hjR3H3w1fXYSGB93U8=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/OMSDK_Addapptr.framework/Modules/module.modulemap</key>
@@ -1088,11 +1088,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			FkpVHSd5LngtvHF+EI2EKsBDKcg=
+			HLEHD+u+46qDMB2ZRnXpfg3VIkQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			lOJzJ8f+ZwDl5q1+GDOdc19ZkZeEe5yT06t3Tm//vXw=
+			zGJwfYYjGbqS3RA1FWRBGXcpb61v338Yv/+f8kYBM5A=
 			</data>
 		</dict>
 		<key>tvos-arm64_x86_64-simulator/OMSDK_Addapptr.framework/PrivacyInfo.xcprivacy</key>
@@ -1110,11 +1110,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+QczhDI1Kz4bfg6bR/RhGYHTwR8=
+			svFFPGOcStTzksZeWEsSyL6vYJs=
 			</data>
 			<key>hash2</key>
 			<data>
-			DSKKp5v+Ih88ZfgfWOxidZtJz9WI7QFU0vmf4VHjDYM=
+			4lq80nHuZ+H8dRy/kfE52+NHZxlDsl+yP3XigmBd1zs=
 			</data>
 		</dict>
 	</dict>
