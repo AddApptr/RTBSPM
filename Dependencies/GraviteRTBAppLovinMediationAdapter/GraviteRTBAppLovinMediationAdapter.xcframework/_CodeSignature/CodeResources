@@ -6,7 +6,7 @@
 	<dict>
 		<key>ios-arm64/GraviteRTBAppLovinMediationAdapter.framework/GraviteRTBAppLovinMediationAdapter</key>
 		<data>
-		mrwTI9RMMMe4N3ytyCM0AcS+NXo=
+		ZqXmAgFsBv0IVQ7ipYJi726daMk=
 		</data>
 		<key>ios-arm64/GraviteRTBAppLovinMediationAdapter.framework/Headers/GraviteRTBAppLovinMediationAdapter-Swift.h</key>
 		<data>
@@ -18,11 +18,11 @@
 		</data>
 		<key>ios-arm64/GraviteRTBAppLovinMediationAdapter.framework/Info.plist</key>
 		<data>
-		boBLNCOlJdTSQV3HoMBkooyXMrA=
+		SDvFVHyFJDcRnRoX7rA18ESgpdA=
 		</data>
 		<key>ios-arm64/GraviteRTBAppLovinMediationAdapter.framework/Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		0tn1foACxXPT64VPktp6+gBf3wQ=
+		42R9+wHa0DJFclkN0GEW+xTVr3w=
 		</data>
 		<key>ios-arm64/GraviteRTBAppLovinMediationAdapter.framework/Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -42,7 +42,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/GraviteRTBAppLovinMediationAdapter</key>
 		<data>
-		VFM5erOFU2iRLXCk9P61Z2ELMfk=
+		antJ8EzgJKYMVch9t3N/kNBJYtk=
 		</data>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/Headers/GraviteRTBAppLovinMediationAdapter-Swift.h</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/Info.plist</key>
 		<data>
-		/cbcRXltaLGr0RJdM/J2kPNqzVY=
+		rjtX+s4J7Fv1M0oQtJIN2+FAnQo=
 		</data>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		0tn1foACxXPT64VPktp6+gBf3wQ=
+		42R9+wHa0DJFclkN0GEW+xTVr3w=
 		</data>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -74,7 +74,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		0tn1foACxXPT64VPktp6+gBf3wQ=
+		42R9+wHa0DJFclkN0GEW+xTVr3w=
 		</data>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -94,7 +94,7 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		tz9jC4GXW2VHenOBG3f4IuaX1/E=
+		t5O1XRmtGDLRliEIo7rubMwfCyg=
 		</data>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -102,11 +102,11 @@
 		</data>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		+JqjB7xTUrABO1ZhwRtUhgUUwho=
+		3y9Da1TwTeQwEwDL5YqG5jdpMzM=
 		</data>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/_CodeSignature/CodeResources</key>
 		<data>
-		V6JDgMJTEb5MH5d8h5e61uIDo/U=
+		UhvLyN0AZXecWA199/fkKgfVJcY=
 		</data>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/_CodeSignature/CodeSignature</key>
 		<data>
@@ -119,11 +119,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			mrwTI9RMMMe4N3ytyCM0AcS+NXo=
+			ZqXmAgFsBv0IVQ7ipYJi726daMk=
 			</data>
 			<key>hash2</key>
 			<data>
-			EdDl0x3pjCCghMDAGr/Wk+Q4xoJlwTkxBjLCQjgMuS8=
+			byZfT3oqNt1nnmFRwa1S31jmGQpu6awTwNLaPcmbIOg=
 			</data>
 		</dict>
 		<key>ios-arm64/GraviteRTBAppLovinMediationAdapter.framework/Headers/GraviteRTBAppLovinMediationAdapter-Swift.h</key>
@@ -152,22 +152,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			boBLNCOlJdTSQV3HoMBkooyXMrA=
+			SDvFVHyFJDcRnRoX7rA18ESgpdA=
 			</data>
 			<key>hash2</key>
 			<data>
-			2Jd00TJhCuFU/kW5VwrxVDJxIQZomVDEH3cWlpiquHI=
+			HKvSXGnauLMlvZVzqHbbs28XfGL4upVvTGjrkt5AtqI=
 			</data>
 		</dict>
 		<key>ios-arm64/GraviteRTBAppLovinMediationAdapter.framework/Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/arm64-apple-ios.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0tn1foACxXPT64VPktp6+gBf3wQ=
+			42R9+wHa0DJFclkN0GEW+xTVr3w=
 			</data>
 			<key>hash2</key>
 			<data>
-			5hAQS9xxPmFr6Ww0JEV4lUMKyVZRpULfyTZ0zzzFSAo=
+			BZUSgJpcoNKk2Fk6oV8ZPeoeZyY2yOh+C0yyN0o++kY=
 			</data>
 		</dict>
 		<key>ios-arm64/GraviteRTBAppLovinMediationAdapter.framework/Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -218,11 +218,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			VFM5erOFU2iRLXCk9P61Z2ELMfk=
+			antJ8EzgJKYMVch9t3N/kNBJYtk=
 			</data>
 			<key>hash2</key>
 			<data>
-			rPDjMEE3z975MvCUJIc1V/tWqUMzRfVEa77rGRSgzlM=
+			x8CbtkSxR7+xRIVA0uRi2tCzQzvGqQ3VJEWDBMkwM28=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/Headers/GraviteRTBAppLovinMediationAdapter-Swift.h</key>
@@ -251,22 +251,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			/cbcRXltaLGr0RJdM/J2kPNqzVY=
+			rjtX+s4J7Fv1M0oQtJIN2+FAnQo=
 			</data>
 			<key>hash2</key>
 			<data>
-			EAMgBLYwvtHqimXl4lVx6J35UajLDB2bXE3owYHlziM=
+			iDpPkOdNBEr6vF+ASckCu/1YKRjhmTzpp8nwI31s/FU=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0tn1foACxXPT64VPktp6+gBf3wQ=
+			42R9+wHa0DJFclkN0GEW+xTVr3w=
 			</data>
 			<key>hash2</key>
 			<data>
-			5hAQS9xxPmFr6Ww0JEV4lUMKyVZRpULfyTZ0zzzFSAo=
+			BZUSgJpcoNKk2Fk6oV8ZPeoeZyY2yOh+C0yyN0o++kY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -306,11 +306,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0tn1foACxXPT64VPktp6+gBf3wQ=
+			42R9+wHa0DJFclkN0GEW+xTVr3w=
 			</data>
 			<key>hash2</key>
 			<data>
-			5hAQS9xxPmFr6Ww0JEV4lUMKyVZRpULfyTZ0zzzFSAo=
+			BZUSgJpcoNKk2Fk6oV8ZPeoeZyY2yOh+C0yyN0o++kY=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -361,11 +361,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			tz9jC4GXW2VHenOBG3f4IuaX1/E=
+			t5O1XRmtGDLRliEIo7rubMwfCyg=
 			</data>
 			<key>hash2</key>
 			<data>
-			eGfYgQJi66epRWPlNKCRVbrOvh+GNSI00SMuGTEwSjE=
+			cuUTDdx4oqdxeVNBDI6C32OcG10WCAMmFbUs60I+HgQ=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/_CodeSignature/CodeRequirements</key>
@@ -383,22 +383,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			+JqjB7xTUrABO1ZhwRtUhgUUwho=
+			3y9Da1TwTeQwEwDL5YqG5jdpMzM=
 			</data>
 			<key>hash2</key>
 			<data>
-			Uj3afZhV4atn70dkkg2sAffxtns3lyI8RJs9uk64nr8=
+			DpK/hJLh03btizU+GlPAyvzZ+dleYtgK61J+/pL+OL0=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/_CodeSignature/CodeResources</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			V6JDgMJTEb5MH5d8h5e61uIDo/U=
+			UhvLyN0AZXecWA199/fkKgfVJcY=
 			</data>
 			<key>hash2</key>
 			<data>
-			yHBf9y+lnfGrGikBdcijvwebPl4FhOPlet5F3LLOCMM=
+			vsXmTALHEOI52oI07c5iXap6f+VrH8jVSeMyJCx7LzE=
 			</data>
 		</dict>
 		<key>ios-arm64_x86_64-simulator/GraviteRTBAppLovinMediationAdapter.framework/_CodeSignature/CodeSignature</key>
