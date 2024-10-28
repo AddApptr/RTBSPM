@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rjtX+s4J7Fv1M0oQtJIN2+FAnQo=
+		U8RlTD1vb8L4v6VkDqSgvbNb5dE=
 		</data>
 		<key>Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		42R9+wHa0DJFclkN0GEW+xTVr3w=
+		z7J8Q5TU22E96yxNJPHxD8O1P7c=
 		</data>
 		<key>Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Cr2EAaDAETcGbePua4EPOz0jDdM=
+		AJNZrxyJW1owO+1TsH6M7eSSNUo=
 		</data>
 		<key>Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		42R9+wHa0DJFclkN0GEW+xTVr3w=
+		z7J8Q5TU22E96yxNJPHxD8O1P7c=
 		</data>
 		<key>Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		WYlLCllaPJxjhrDsj4/9aRPgseE=
+		vQOKAZF79rD1aWVC/kuz43LC2HE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -89,11 +89,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			42R9+wHa0DJFclkN0GEW+xTVr3w=
+			z7J8Q5TU22E96yxNJPHxD8O1P7c=
 			</data>
 			<key>hash2</key>
 			<data>
-			BZUSgJpcoNKk2Fk6oV8ZPeoeZyY2yOh+C0yyN0o++kY=
+			fqOrliBJ/OjXxLpaHbg5eP5MY/n0z9zowbZsd66Oc+Q=
 			</data>
 		</dict>
 		<key>Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -133,22 +133,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			Cr2EAaDAETcGbePua4EPOz0jDdM=
+			AJNZrxyJW1owO+1TsH6M7eSSNUo=
 			</data>
 			<key>hash2</key>
 			<data>
-			vEhIwC+COUAY9WJhAJMVUpKbPcoVxh0PX6KrsvqEWA8=
+			OkezLwFJvU4DUWTcTmDQKJs792JSZVKugX6kB76g7lQ=
 			</data>
 		</dict>
 		<key>Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			42R9+wHa0DJFclkN0GEW+xTVr3w=
+			z7J8Q5TU22E96yxNJPHxD8O1P7c=
 			</data>
 			<key>hash2</key>
 			<data>
-			BZUSgJpcoNKk2Fk6oV8ZPeoeZyY2yOh+C0yyN0o++kY=
+			fqOrliBJ/OjXxLpaHbg5eP5MY/n0z9zowbZsd66Oc+Q=
 			</data>
 		</dict>
 		<key>Modules/GraviteRTBAppLovinMediationAdapter.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -188,11 +188,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			WYlLCllaPJxjhrDsj4/9aRPgseE=
+			vQOKAZF79rD1aWVC/kuz43LC2HE=
 			</data>
 			<key>hash2</key>
 			<data>
-			UnoCgpmcoExuScsN94zyE7MznVe72bL8Lxs17qGNjRE=
+			GoMpCbf2caI/h9uqvZXDRjhsEhiuCYaXOYeQRMuIn8c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
