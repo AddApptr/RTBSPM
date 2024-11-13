@@ -10448,7 +10448,7 @@
       "kind": "StringLiteral",
       "offset": 1947,
       "length": 7,
-      "value": "\"1.4.5\""
+      "value": "\"1.4.6\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/AdFormats\/RTBDSPSignalCollector.swift",
@@ -11223,394 +11223,429 @@
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2737,
+      "offset": 2200,
+      "length": 16,
+      "value": "\"gravite_rtbsdk\""
+    },
+    {
+      "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2843,
       "length": 3,
       "value": "\"c\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2769,
+      "offset": 2875,
       "length": 5,
       "value": "\"res\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2797,
+      "offset": 2903,
       "length": 3,
       "value": "\"m\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2851,
+      "offset": 2957,
       "length": 4,
       "value": "\"ua\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2886,
+      "offset": 2992,
       "length": 3,
       "value": "\"w\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2921,
+      "offset": 3027,
       "length": 3,
       "value": "\"h\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2974,
+      "offset": 3080,
       "length": 14,
       "value": "\"gdpr_consent\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3014,
+      "offset": 3120,
       "length": 4,
       "value": "\"ip\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3046,
+      "offset": 3152,
       "length": 5,
       "value": "\"app\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3075,
+      "offset": 3181,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3109,
+      "offset": 3215,
       "length": 8,
       "value": "\"bundle\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3138,
+      "offset": 3244,
       "length": 5,
       "value": "\"ifa\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3232,
+      "offset": 3338,
       "length": 5,
       "value": "\"lmt\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3269,
+      "offset": 3375,
       "length": 5,
       "value": "\"hwv\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3300,
+      "offset": 3406,
       "length": 5,
       "value": "\"osv\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3332,
+      "offset": 3438,
       "length": 9,
       "value": "\"macsha1\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3392,
+      "offset": 3498,
       "length": 6,
       "value": "\"paid\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3425,
+      "offset": 3531,
       "length": 5,
       "value": "\"ver\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3493,
+      "offset": 3599,
       "length": 10,
       "value": "\"geo_type\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3528,
+      "offset": 3634,
       "length": 5,
       "value": "\"lat\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3559,
+      "offset": 3665,
       "length": 5,
       "value": "\"lon\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3592,
+      "offset": 3698,
       "length": 4,
       "value": "\"dw\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3625,
+      "offset": 3731,
       "length": 4,
       "value": "\"dh\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3662,
+      "offset": 3768,
       "length": 7,
       "value": "\"coppa\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3694,
+      "offset": 3800,
       "length": 13,
       "value": "\"extsellerid\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3757,
+      "offset": 3863,
       "length": 13,
       "value": "\"extprotocol\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3793,
+      "offset": 3899,
       "length": 8,
       "value": "\"omidpn\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3824,
+      "offset": 3930,
       "length": 8,
       "value": "\"omidpv\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2737,
+      "offset": 3969,
+      "length": 15,
+      "value": "\"extdisplayman\""
+    },
+    {
+      "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 4022,
+      "length": 18,
+      "value": "\"extdisplaymanver\""
+    },
+    {
+      "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 2843,
       "length": 3,
       "value": "\"c\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2769,
+      "offset": 2875,
       "length": 5,
       "value": "\"res\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2797,
+      "offset": 2903,
       "length": 3,
       "value": "\"m\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2851,
+      "offset": 2957,
       "length": 4,
       "value": "\"ua\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2886,
+      "offset": 2992,
       "length": 3,
       "value": "\"w\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2921,
+      "offset": 3027,
       "length": 3,
       "value": "\"h\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 2974,
+      "offset": 3080,
       "length": 14,
       "value": "\"gdpr_consent\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3014,
+      "offset": 3120,
       "length": 4,
       "value": "\"ip\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3046,
+      "offset": 3152,
       "length": 5,
       "value": "\"app\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3075,
+      "offset": 3181,
       "length": 6,
       "value": "\"name\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3109,
+      "offset": 3215,
       "length": 8,
       "value": "\"bundle\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3138,
+      "offset": 3244,
       "length": 5,
       "value": "\"ifa\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3232,
+      "offset": 3338,
       "length": 5,
       "value": "\"lmt\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3269,
+      "offset": 3375,
       "length": 5,
       "value": "\"hwv\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3300,
+      "offset": 3406,
       "length": 5,
       "value": "\"osv\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3332,
+      "offset": 3438,
       "length": 9,
       "value": "\"macsha1\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3392,
+      "offset": 3498,
       "length": 6,
       "value": "\"paid\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3425,
+      "offset": 3531,
       "length": 5,
       "value": "\"ver\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3493,
+      "offset": 3599,
       "length": 10,
       "value": "\"geo_type\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3528,
+      "offset": 3634,
       "length": 5,
       "value": "\"lat\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3559,
+      "offset": 3665,
       "length": 5,
       "value": "\"lon\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3592,
+      "offset": 3698,
       "length": 4,
       "value": "\"dw\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3625,
+      "offset": 3731,
       "length": 4,
       "value": "\"dh\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3662,
+      "offset": 3768,
       "length": 7,
       "value": "\"coppa\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3694,
+      "offset": 3800,
       "length": 13,
       "value": "\"extsellerid\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3757,
+      "offset": 3863,
       "length": 13,
       "value": "\"extprotocol\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3793,
+      "offset": 3899,
       "length": 8,
       "value": "\"omidpn\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
       "kind": "StringLiteral",
-      "offset": 3824,
+      "offset": 3930,
       "length": 8,
       "value": "\"omidpv\""
+    },
+    {
+      "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 3969,
+      "length": 15,
+      "value": "\"extdisplayman\""
+    },
+    {
+      "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/DataModel\/RequestModels\/RTBRequest.swift",
+      "kind": "StringLiteral",
+      "offset": 4022,
+      "length": 18,
+      "value": "\"extdisplaymanver\""
     },
     {
       "filePath": "\/Users\/matloub\/Data\/Projects\/RTBSDK\/RTBSDK\/MRAID\/RTBMRAIDResizeProperties.swift",
