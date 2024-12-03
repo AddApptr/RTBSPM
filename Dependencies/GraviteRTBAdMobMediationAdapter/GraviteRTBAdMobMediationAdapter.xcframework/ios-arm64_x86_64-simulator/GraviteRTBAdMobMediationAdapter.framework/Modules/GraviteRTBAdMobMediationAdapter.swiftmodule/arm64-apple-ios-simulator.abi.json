@@ -1,0 +1,325 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RTBSDK",
+        "printedName": "RTBSDK",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter"
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RTBSDK",
+        "printedName": "RTBSDK",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter"
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RTBSDK",
+        "printedName": "RTBSDK",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter"
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RTBSDK",
+        "printedName": "RTBSDK",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter"
+      },
+      {
+        "kind": "Import",
+        "name": "RTBSDK",
+        "printedName": "RTBSDK",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter"
+      },
+      {
+        "kind": "Import",
+        "name": "RTBSDK",
+        "printedName": "RTBSDK",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter"
+      },
+      {
+        "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RTBAdMobMediationAdapterManager",
+        "printedName": "RTBAdMobMediationAdapterManager",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RTBAdMobMediationAdapterManager",
+                "printedName": "GraviteRTBAdMobMediationAdapter.RTBAdMobMediationAdapterManager",
+                "usr": "c:@M@GraviteRTBAdMobMediationAdapter@objc(cs)RTBAdMobMediationAdapterManager"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@GraviteRTBAdMobMediationAdapter@objc(cs)RTBAdMobMediationAdapterManager(cpy)shared",
+            "mangledName": "$s31GraviteRTBAdMobMediationAdapter0bcdE7ManagerC6sharedACvpZ",
+            "moduleName": "GraviteRTBAdMobMediationAdapter",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RTBAdMobMediationAdapterManager",
+                    "printedName": "GraviteRTBAdMobMediationAdapter.RTBAdMobMediationAdapterManager",
+                    "usr": "c:@M@GraviteRTBAdMobMediationAdapter@objc(cs)RTBAdMobMediationAdapterManager"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@GraviteRTBAdMobMediationAdapter@objc(cs)RTBAdMobMediationAdapterManager(cm)shared",
+                "mangledName": "$s31GraviteRTBAdMobMediationAdapter0bcdE7ManagerC6sharedACvgZ",
+                "moduleName": "GraviteRTBAdMobMediationAdapter",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "setIsGDPRApplies",
+            "printedName": "setIsGDPRApplies(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GraviteRTBAdMobMediationAdapter@objc(cs)RTBAdMobMediationAdapterManager(im)setIsGDPRApplies:",
+            "mangledName": "$s31GraviteRTBAdMobMediationAdapter0bcdE7ManagerC16setIsGDPRAppliesyySbF",
+            "moduleName": "GraviteRTBAdMobMediationAdapter",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setIsChildDirected",
+            "printedName": "setIsChildDirected(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@GraviteRTBAdMobMediationAdapter@objc(cs)RTBAdMobMediationAdapterManager(im)setIsChildDirected:",
+            "mangledName": "$s31GraviteRTBAdMobMediationAdapter0bcdE7ManagerC18setIsChildDirectedyySbF",
+            "moduleName": "GraviteRTBAdMobMediationAdapter",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@GraviteRTBAdMobMediationAdapter@objc(cs)RTBAdMobMediationAdapterManager",
+        "mangledName": "$s31GraviteRTBAdMobMediationAdapter0bcdE7ManagerC",
+        "moduleName": "GraviteRTBAdMobMediationAdapter",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repositories\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/RTBAdMobMediationAdapterManager.swift",
+      "kind": "StringLiteral",
+      "offset": 273,
+      "length": 33,
+      "value": "\"GraviteRTBAdMobMediationAdapter\""
+    }
+  ]
+}

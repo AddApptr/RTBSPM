@@ -1,0 +1,6 @@
+framework module GraviteRTBAdMobMediationAdapter {
+  umbrella header "GraviteRTBAdMobMediationAdapter.h"
+  export *
+
+  module * { export * }
+}
