@@ -86,8 +86,9 @@ extension RTBSDK.RTBBannerSize {
   @objc public var image: Swift.String?
   @objc public var rating: Foundation.NSNumber?
   @objc public var sponsered: Swift.String?
-  @objc public func trackImpression(view: UIKit.UIView)
   @objc deinit
+  @objc public func trackImpression(view: UIKit.UIView)
+  @objc public func trackImpression(view: UIKit.UIView, clickableViews: [UIKit.UIView])
 }
 @objc public class RTBFullscreenRequestConfiguration : ObjectiveC.NSObject {
   @objc public var forceCloseButtonForMraid: Swift.Bool
@@ -232,7 +233,7 @@ extension RTBSDK.RTBFullscreenAd : RTBSDK.RTBDSPInterstitialDelegate {
   @objc func dspAdViewDidResumeAfterAd(_ ad: any RTBSDK.RTBDSPBannerProtocol, networkName: Swift.String)
 }
 @objc @_inheritsConvenienceInitializers public class RTBLogger : ObjectiveC.NSObject {
-  public static func log(level: RTBSDK.RTBLogLevel, message: Swift.String, withoutAATFormatting: Swift.Bool = false, forceLog: Swift.Bool = false, callingMethod: Swift.String = #function, file: Swift.String = #file, tag: Swift.String = "AATKit")
+  public static func log(level: RTBSDK.RTBLogLevel, message: Swift.String, withoutAATFormatting: Swift.Bool = false, forceLog: Swift.Bool = false, callingMethod: Swift.String = #function, file: Swift.String = #file, tag: Swift.String = "RTBSDK")
   @objc override dynamic public init()
   @objc deinit
 }

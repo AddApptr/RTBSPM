@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/RTBSDK-Swift.h</key>
 		<data>
-		eOUNU5cgsqUHTH43QvsBoY24ABg=
+		LLAnJ3aD668BsoaVcXLqJOnUalM=
 		</data>
 		<key>Headers/RTBSDK.h</key>
 		<data>
@@ -14,15 +14,15 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		tKpxQl/U++lkfiBnU6MTcS/qx6k=
+		V8Hg8etRlt0ZvgpGYOWTH/ln83M=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		jB7WyO3lpJ8Yq0xMGG+Fv8WH04g=
+		lB6aMEWxbdcU3V1nUDC1nK2HedQ=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		/c1sX5txvQuKRHPWkG+M7zMV9GU=
+		A6GzruqlNCkVy9CVPtSV1ckEjIg=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,19 +30,19 @@
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		/c1sX5txvQuKRHPWkG+M7zMV9GU=
+		A6GzruqlNCkVy9CVPtSV1ckEjIg=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2q+3xH2kJFtKm2af/xiRzQ7x/8M=
+		S+bDCWMIe0poXkzxPmA5DlUr798=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		jB7WyO3lpJ8Yq0xMGG+Fv8WH04g=
+		lB6aMEWxbdcU3V1nUDC1nK2HedQ=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		SspBt3BTtuROIB4z9C5UiCAxRTs=
+		+wBQfkbTBibxqMB2ypReuUOvBI0=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,11 +50,11 @@
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		SspBt3BTtuROIB4z9C5UiCAxRTs=
+		+wBQfkbTBibxqMB2ypReuUOvBI0=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		XMlyL5/FnFX8q0N53JnC9U5eTzY=
+		bskn+yc9qoKevLR7Q3/3jVj0Lqc=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,7 +79,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YOyMXlbDJV/viXtTA5sFLUeh6sBekcXNxtAd3f8UNz8=
+			C2i1/mLfqOfkaBU2abud6XNX5CHIKkk4ZJ+EDdm6oPk=
 			</data>
 		</dict>
 		<key>Headers/RTBSDK.h</key>
@@ -93,14 +93,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			V6S19U8x7pzQwGe0htWxox2/ydb2URskmZP7JWzD1WM=
+			j/I5rr2pucl4kSgP7PzJs2j7tLcYnDDx9u7vBMdBvq0=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			k4Kac+mYvD3VnEEP+LUdFBF2jgaM6X/fgQ5O6MABVPE=
+			gwL1nYXl2j5sF40OPL8LzDbQ70L5WIY1TK3h3AlqMR8=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -114,28 +114,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			k4Kac+mYvD3VnEEP+LUdFBF2jgaM6X/fgQ5O6MABVPE=
+			gwL1nYXl2j5sF40OPL8LzDbQ70L5WIY1TK3h3AlqMR8=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GM0RH7ckOZcDW8vpfuGU/x2lpoHl0SAzTrXk5qbuhwE=
+			gbzkwjx+Ye9el4dwINr8Pnpl/XKoTEBqjMUdiq/8eRk=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V6S19U8x7pzQwGe0htWxox2/ydb2URskmZP7JWzD1WM=
+			j/I5rr2pucl4kSgP7PzJs2j7tLcYnDDx9u7vBMdBvq0=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			a0hhcniJBVxmNImsNVsROWCzayGz+fjj96bHhWtmRUQ=
+			xLiEIPgrDE44lwn/m0xC+XJW0fkAAxrANeuAzLrw9RY=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -149,14 +149,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			a0hhcniJBVxmNImsNVsROWCzayGz+fjj96bHhWtmRUQ=
+			xLiEIPgrDE44lwn/m0xC+XJW0fkAAxrANeuAzLrw9RY=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aj8U0Is9CLsQ4K2KlzL7ZvhlUG7mDLU8NzrQrpFezxg=
+			wyUXJq2owUQxYPAnA80ZA5Shmk4wm6Qt4PNAC7hclJ0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

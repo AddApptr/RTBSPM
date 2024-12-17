@@ -45,3 +45,18 @@ extension GraviteRTBAppLovinMediationAdapter.RTBAppLovinBannerLoader : RTBSDK.RT
   @objc dynamic public func bannerViewDidPauseForAd(_ bannerView: RTBSDK.RTBBannerView, networkName: Swift.String)
   @objc dynamic public func bannerViewDidResumeAfterAd(_ bannerView: RTBSDK.RTBBannerView, networkName: Swift.String)
 }
+@objc public class RTBAppLovinNativeLoader : ObjectiveC.NSObject {
+  @objc public init(nativeDelegate: (any AppLovinSDK.MANativeAdAdapterDelegate)? = nil)
+  @objc public func load(parameters: any AppLovinSDK.MAAdapterResponseParameters)
+  @objc deinit
+}
+extension GraviteRTBAppLovinMediationAdapter.RTBAppLovinNativeLoader : RTBSDK.RTBNativeAdLoaderDelegate {
+  @objc dynamic public func nativeAdDidReceiveAd(_ nativeAdLoader: RTBSDK.RTBNativeAdLoader, bidInfo: RTBSDK.RTBBidInfo, networkName: Swift.String)
+  @objc dynamic public func nativeAdView(_ nativeAdLoader: RTBSDK.RTBNativeAdLoader, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
+}
+extension GraviteRTBAppLovinMediationAdapter.RTBAppLovinNativeLoader : RTBSDK.RTBNativeAdInteractionDelegate {
+  @objc dynamic public func nativeAdView(_ nativeAd: RTBSDK.RTBNativeAd, didFailToRender errorMessage: Swift.String, networkName: Swift.String)
+  @objc dynamic public func nativeAdDidRecordClick(_ nativeAd: RTBSDK.RTBNativeAd, networkName: Swift.String)
+  @objc dynamic public func nativeAdDidPauseForAd(_ nativeAd: RTBSDK.RTBNativeAd, networkName: Swift.String)
+  @objc dynamic public func nativeAdDidResumeAfterAd(_ nativeAd: RTBSDK.RTBNativeAd, networkName: Swift.String)
+}

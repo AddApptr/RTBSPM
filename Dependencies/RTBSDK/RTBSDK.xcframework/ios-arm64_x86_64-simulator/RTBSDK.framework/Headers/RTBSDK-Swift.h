@@ -653,6 +653,7 @@ SWIFT_CLASS("_TtC6RTBSDK11RTBNativeAd")
 /// Native ad sponsered text
 @property (nonatomic, copy) NSString * _Nullable sponsered;
 - (void)trackImpressionWithView:(UIView * _Nonnull)view;
+- (void)trackImpressionWithView:(UIView * _Nonnull)view clickableViews:(NSArray<UIView *> * _Nonnull)clickableViews;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -1429,6 +1430,7 @@ SWIFT_CLASS("_TtC6RTBSDK11RTBNativeAd")
 /// Native ad sponsered text
 @property (nonatomic, copy) NSString * _Nullable sponsered;
 - (void)trackImpressionWithView:(UIView * _Nonnull)view;
+- (void)trackImpressionWithView:(UIView * _Nonnull)view clickableViews:(NSArray<UIView *> * _Nonnull)clickableViews;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

@@ -361,6 +361,33 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBAppLovinM
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@protocol MANativeAdAdapterDelegate;
+
+SWIFT_CLASS("_TtC34GraviteRTBAppLovinMediationAdapter23RTBAppLovinNativeLoader")
+@interface RTBAppLovinNativeLoader : NSObject
+- (nonnull instancetype)initWithNativeDelegate:(id <MANativeAdAdapterDelegate> _Nullable)nativeDelegate OBJC_DESIGNATED_INITIALIZER;
+- (void)loadWithParameters:(id <MAAdapterResponseParameters> _Nonnull)parameters;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+@class RTBNativeAdLoader;
+
+@interface RTBAppLovinNativeLoader (SWIFT_EXTENSION(GraviteRTBAppLovinMediationAdapter)) <RTBNativeAdLoaderDelegate>
+- (void)nativeAdDidReceiveAd:(RTBNativeAdLoader * _Nonnull)nativeAdLoader bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
+- (void)nativeAdView:(RTBNativeAdLoader * _Nonnull)nativeAdLoader didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
+@end
+
+@class RTBNativeAd;
+
+@interface RTBAppLovinNativeLoader (SWIFT_EXTENSION(GraviteRTBAppLovinMediationAdapter)) <RTBNativeAdInteractionDelegate>
+- (void)nativeAdView:(RTBNativeAd * _Nonnull)nativeAd didFailToRender:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
+- (void)nativeAdDidRecordClick:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
+- (void)nativeAdDidPauseForAd:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
+- (void)nativeAdDidResumeAfterAd:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
+@end
+
 #endif
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
