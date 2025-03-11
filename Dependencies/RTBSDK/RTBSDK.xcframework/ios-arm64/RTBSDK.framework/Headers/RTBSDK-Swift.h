@@ -372,20 +372,29 @@ SWIFT_CLASS("_TtC6RTBSDK12RTBBannerBid")
 @end
 
 @class NSNumber;
+@class RTBUserTargeting;
 
-SWIFT_CLASS("_TtC6RTBSDK29RTBBannerRequestConfiguration")
-@interface RTBBannerRequestConfiguration : NSObject
+SWIFT_CLASS("_TtC6RTBSDK23RTBRequestConfiguration")
+@interface RTBRequestConfiguration : NSObject
 /// Represents the bid floor price in USD.
 @property (nonatomic, strong) NSNumber * _Nullable bidFloor;
 @property (nonatomic, copy) NSString * _Nullable sellerId;
+/// An <code>RTBUserTargeting</code> object that represents the user targeting for this request
+@property (nonatomic, strong) RTBUserTargeting * _Nullable userTargeting;
 /// \param placementId Represents the placement ID on SmartyAd dashboard.
 ///
 /// \param iTunesAppId Represents the AppId on the publisher Apple developer account.
 ///
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
-@property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC6RTBSDK29RTBBannerRequestConfiguration")
+@interface RTBBannerRequestConfiguration : RTBRequestConfiguration
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+- (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
@@ -594,22 +603,20 @@ SWIFT_PROTOCOL("_TtP6RTBSDK21RTBFullscreenDelegate_")
 
 
 SWIFT_CLASS("_TtC6RTBSDK33RTBFullscreenRequestConfiguration")
-@interface RTBFullscreenRequestConfiguration : NSObject
+@interface RTBFullscreenRequestConfiguration : RTBRequestConfiguration
 /// Boolean to force showing the SDK native close button even if the MRAID creative has one
 /// If the MRAID creative has close button and <code>forceCloseButtonForMraid</code> is true, the MRAID creative would have 2 close buttons
 @property (nonatomic) BOOL forceCloseButtonForMraid;
-/// Represents the bid floor price in USD.
-@property (nonatomic, strong) NSNumber * _Nullable bidFloor;
-@property (nonatomic, copy) NSString * _Nullable sellerId;
-/// \param placementId Represents the placement ID on SmartyAd dashboard.
-///
-/// \param iTunesAppId Represents the AppId on the publisher Apple developer account.
-///
-- (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+- (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
 @end
+
+typedef SWIFT_ENUM(NSInteger, RTBGender, open) {
+  RTBGenderMale = 0,
+  RTBGenderFemale = 1,
+  RTBGenderOther = 2,
+  RTBGenderUnknown = 3,
+};
 
 /// Desired log level
 typedef SWIFT_ENUM(NSInteger, RTBLogLevel, open) {
@@ -738,18 +745,11 @@ SWIFT_PROTOCOL("_TtP6RTBSDK25RTBNativeAdLoaderDelegate_")
 
 
 SWIFT_CLASS("_TtC6RTBSDK31RTBNativeAdRequestConfiguration")
-@interface RTBNativeAdRequestConfiguration : NSObject
-/// Represents the bid floor price in USD.
-@property (nonatomic, strong) NSNumber * _Nullable bidFloor;
-@property (nonatomic, copy) NSString * _Nullable sellerId;
-/// \param placementId Represents the placement ID on SmartyAd dashboard.
-///
-/// \param iTunesAppId Represents the AppId on the publisher Apple developer account.
-///
+@interface RTBNativeAdRequestConfiguration : RTBRequestConfiguration
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
-- (nonnull instancetype)init SWIFT_UNAVAILABLE;
-+ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 SWIFT_CLASS("_TtC6RTBSDK13RTBSDKManager")
@@ -761,6 +761,34 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBSDKManage
 /// A bool that indicates whether the SDK should use the geo location or not. Default value is <em>false</em>
 @property (nonatomic) BOOL useGeoLocation;
 @property (nonatomic, readonly, copy) NSString * _Nonnull sdkVersion;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC6RTBSDK16RTBUserTargeting")
+@interface RTBUserTargeting : NSObject
+/// initialize <code>RTBUserTargeting</code>
+/// \param userId user id
+///
+/// \param gender user gender.
+/// <ul>
+///   <li>
+///     <em>Important</em>: The default value is <code>RTBGender.unknown</code> and will be ignored while performing the request.
+///   </li>
+/// </ul>
+///
+/// \param yearOfBirth user year of birth.
+/// <ul>
+///   <li>
+///     <em>Important</em>: it has to be a 4-digit number
+///   </li>
+/// </ul>
+///
+/// \param keywords targeting keywords
+///
+- (nonnull instancetype)initWithUserId:(NSString * _Nullable)userId gender:(enum RTBGender)gender yearOfBirth:(NSNumber * _Nullable)yearOfBirth keywords:(NSArray<NSString *> * _Nullable)keywords OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end

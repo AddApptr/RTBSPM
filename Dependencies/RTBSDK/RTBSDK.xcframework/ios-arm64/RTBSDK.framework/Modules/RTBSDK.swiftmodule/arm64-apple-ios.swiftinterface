@@ -77,6 +77,13 @@ extension RTBSDK.RTBBannerSize {
   @objc public var impressionURL: Swift.String?
   @objc deinit
 }
+@objc public class RTBRequestConfiguration : ObjectiveC.NSObject {
+  @objc public var bidFloor: Foundation.NSNumber?
+  @objc public var sellerId: Swift.String?
+  @objc public var userTargeting: RTBSDK.RTBUserTargeting?
+  @objc public init(placementId: Swift.Int, iTunesAppId: Swift.String)
+  @objc deinit
+}
 @_hasMissingDesignatedInitializers @objc public class RTBNativeAd : ObjectiveC.NSObject {
   @objc weak public var delegate: (any RTBSDK.RTBNativeAdInteractionDelegate)?
   @objc public var title: Swift.String?
@@ -90,12 +97,17 @@ extension RTBSDK.RTBBannerSize {
   @objc public func trackImpression(view: UIKit.UIView)
   @objc public func trackImpression(view: UIKit.UIView, clickableViews: [UIKit.UIView])
 }
-@objc public class RTBFullscreenRequestConfiguration : ObjectiveC.NSObject {
+@_inheritsConvenienceInitializers @objc public class RTBFullscreenRequestConfiguration : RTBSDK.RTBRequestConfiguration {
   @objc public var forceCloseButtonForMraid: Swift.Bool
-  @objc public var bidFloor: Foundation.NSNumber?
-  @objc public var sellerId: Swift.String?
-  @objc public init(placementId: Swift.Int, iTunesAppId: Swift.String)
   @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc override public init(placementId: Swift.Int, iTunesAppId: Swift.String)
+  @objc deinit
+}
+@objc final public class RTBUserTargeting : ObjectiveC.NSObject {
+  @objc public init(userId: Swift.String? = nil, gender: RTBSDK.RTBGender = .unknown, yearOfBirth: Foundation.NSNumber? = nil, keywords: [Swift.String]? = nil)
+  @objc override final public var description: Swift.String {
     @objc get
   }
   @objc deinit
@@ -134,10 +146,11 @@ extension RTBSDK.RTBBannerSize {
   @objc func bannerViewDidPauseForAd(_ bannerView: RTBSDK.RTBBannerView, networkName: Swift.String)
   @objc func bannerViewDidResumeAfterAd(_ bannerView: RTBSDK.RTBBannerView, networkName: Swift.String)
 }
-@objc public class RTBNativeAdRequestConfiguration : ObjectiveC.NSObject {
-  @objc public var bidFloor: Foundation.NSNumber?
-  @objc public var sellerId: Swift.String?
-  @objc public init(placementId: Swift.Int, iTunesAppId: Swift.String)
+@_inheritsConvenienceInitializers @objc public class RTBNativeAdRequestConfiguration : RTBSDK.RTBRequestConfiguration {
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc override public init(placementId: Swift.Int, iTunesAppId: Swift.String)
   @objc deinit
 }
 @objc public protocol RTBDSPProtocol {
@@ -237,15 +250,26 @@ extension RTBSDK.RTBFullscreenAd : RTBSDK.RTBDSPInterstitialDelegate {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc public class RTBBannerRequestConfiguration : ObjectiveC.NSObject {
-  @objc public var bidFloor: Foundation.NSNumber?
-  @objc public var sellerId: Swift.String?
-  @objc public init(placementId: Swift.Int, iTunesAppId: Swift.String)
+@_inheritsConvenienceInitializers @objc public class RTBBannerRequestConfiguration : RTBSDK.RTBRequestConfiguration {
   @objc override dynamic public var description: Swift.String {
     @objc get
   }
+  @objc override public init(placementId: Swift.Int, iTunesAppId: Swift.String)
   @objc deinit
+}
+@objc public enum RTBGender : Swift.Int, Swift.RawRepresentable {
+  public typealias RawValue = Swift.String
+  case male
+  case female
+  case other
+  case unknown
+  public var rawValue: RTBSDK.RTBGender.RawValue {
+    get
+  }
+  public init?(rawValue: RTBSDK.RTBGender.RawValue)
 }
 extension RTBSDK.RTBLogLevel : Swift.Equatable {}
 extension RTBSDK.RTBLogLevel : Swift.Hashable {}
 extension RTBSDK.RTBLogLevel : Swift.RawRepresentable {}
+extension RTBSDK.RTBGender : Swift.Equatable {}
+extension RTBSDK.RTBGender : Swift.Hashable {}

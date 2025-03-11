@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/RTBSDK-Swift.h</key>
 		<data>
-		LLAnJ3aD668BsoaVcXLqJOnUalM=
+		ZXgVe2jnfswlvwPcMfZ4CHGKKZw=
 		</data>
 		<key>Headers/RTBSDK.h</key>
 		<data>
@@ -14,47 +14,47 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		V8Hg8etRlt0ZvgpGYOWTH/ln83M=
+		Um46wkNyQfqhPaE1reYma9OXgIQ=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		lB6aMEWxbdcU3V1nUDC1nK2HedQ=
+		QnzdCCzzHgT0aj42g8WAIhjIND0=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		A6GzruqlNCkVy9CVPtSV1ckEjIg=
+		AUa+5Bv4GKfvKgUSPLxwSvRmYf8=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		NxEnGCfibnmluSBoW5zlpUthvwE=
+		OJA9rf/aFP2skjQR9gAAr0c/c+k=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		A6GzruqlNCkVy9CVPtSV1ckEjIg=
+		AUa+5Bv4GKfvKgUSPLxwSvRmYf8=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		S+bDCWMIe0poXkzxPmA5DlUr798=
+		YLGWU0Xf8lH0vCn0K4NzpiXe8jg=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		lB6aMEWxbdcU3V1nUDC1nK2HedQ=
+		QnzdCCzzHgT0aj42g8WAIhjIND0=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		+wBQfkbTBibxqMB2ypReuUOvBI0=
+		ea6GHVlKT49335047lb2mwv5xko=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		h7xnOKC2XAt6oz4znmSOJPjqUw0=
+		+RwQRdfZ9aPJExaWKOD0bzZ6Xr0=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		+wBQfkbTBibxqMB2ypReuUOvBI0=
+		ea6GHVlKT49335047lb2mwv5xko=
 		</data>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		bskn+yc9qoKevLR7Q3/3jVj0Lqc=
+		JoD++AEYi1iPHzsMYhxOpYSRibI=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,7 +79,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			C2i1/mLfqOfkaBU2abud6XNX5CHIKkk4ZJ+EDdm6oPk=
+			9jERIZEwXv5K0qqzQs+VGVAqlIWdgEA0rbS3CTSfg7s=
 			</data>
 		</dict>
 		<key>Headers/RTBSDK.h</key>
@@ -93,70 +93,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j/I5rr2pucl4kSgP7PzJs2j7tLcYnDDx9u7vBMdBvq0=
+			lJl9vG8yTTn0Kay97EoOnm+wqcgjB7dhfyMiPNeyu/Y=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gwL1nYXl2j5sF40OPL8LzDbQ70L5WIY1TK3h3AlqMR8=
+			DUTeNUKeQAADwe8EimpMACBO95eyOFzue7zoB5SC1J8=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KvbyeYzz+TjZyEiXWba13rTq+u+uamiSqf3s9/Uryl8=
+			etAbKKM0GggmymNAKJUuHcTM8lmnB56NFnUBA0o7IwM=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gwL1nYXl2j5sF40OPL8LzDbQ70L5WIY1TK3h3AlqMR8=
+			DUTeNUKeQAADwe8EimpMACBO95eyOFzue7zoB5SC1J8=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gbzkwjx+Ye9el4dwINr8Pnpl/XKoTEBqjMUdiq/8eRk=
+			zcr2RTYQABs8HzElGOaY2PcbGdYIOB+0QdAjUc4Hdzs=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			j/I5rr2pucl4kSgP7PzJs2j7tLcYnDDx9u7vBMdBvq0=
+			lJl9vG8yTTn0Kay97EoOnm+wqcgjB7dhfyMiPNeyu/Y=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xLiEIPgrDE44lwn/m0xC+XJW0fkAAxrANeuAzLrw9RY=
+			PRaA9Js8XF3DVm+jin3zyANJ/S6ndPkeJHi9626ijqU=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			/1ZgpEquoCxRP1lF6VLiWnJhVH0wzpVXkQrOBi5oTuQ=
+			JCClzl5XAPMY5EgYbW9L4GzCGsu450l047Tmcj5P930=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xLiEIPgrDE44lwn/m0xC+XJW0fkAAxrANeuAzLrw9RY=
+			PRaA9Js8XF3DVm+jin3zyANJ/S6ndPkeJHi9626ijqU=
 			</data>
 		</dict>
 		<key>Modules/RTBSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wyUXJq2owUQxYPAnA80ZA5Shmk4wm6Qt4PNAC7hclJ0=
+			/A0GgTG8DziDH9zWcAEApTE0fP8zWY0PYoC8a8b1b/c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
