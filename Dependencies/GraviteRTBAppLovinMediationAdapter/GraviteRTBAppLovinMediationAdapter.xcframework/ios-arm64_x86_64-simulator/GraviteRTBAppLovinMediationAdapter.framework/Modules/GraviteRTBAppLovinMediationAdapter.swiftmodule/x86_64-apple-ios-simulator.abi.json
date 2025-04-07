@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "GraviteRTBAppLovinMediationAdapter",
+    "printedName": "GraviteRTBAppLovinMediationAdapter",
     "children": [
       {
         "kind": "Import",
@@ -213,6 +213,20 @@
           "ObjectiveC.NSObject"
         ],
         "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
           {
             "kind": "Conformance",
             "name": "Equatable",
@@ -654,10 +668,17 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "RTBFullscreenDelegate",
-            "printedName": "RTBFullscreenDelegate",
-            "usr": "c:@M@RTBSDK@objc(pl)RTBFullscreenDelegate",
-            "mangledName": "$s6RTBSDK21RTBFullscreenDelegateP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -707,6 +728,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RTBFullscreenDelegate",
+            "printedName": "RTBFullscreenDelegate",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBFullscreenDelegate",
+            "mangledName": "$s6RTBSDK21RTBFullscreenDelegateP"
           }
         ]
       },
@@ -1111,10 +1139,17 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "RTBBannerViewDelegate",
-            "printedName": "RTBBannerViewDelegate",
-            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerViewDelegate",
-            "mangledName": "$s6RTBSDK21RTBBannerViewDelegateP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -1164,6 +1199,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RTBBannerViewDelegate",
+            "printedName": "RTBBannerViewDelegate",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBBannerViewDelegate",
+            "mangledName": "$s6RTBSDK21RTBBannerViewDelegateP"
           }
         ]
       },
@@ -1549,17 +1591,17 @@
         "conformances": [
           {
             "kind": "Conformance",
-            "name": "RTBNativeAdLoaderDelegate",
-            "printedName": "RTBNativeAdLoaderDelegate",
-            "usr": "c:@M@RTBSDK@objc(pl)RTBNativeAdLoaderDelegate",
-            "mangledName": "$s6RTBSDK25RTBNativeAdLoaderDelegateP"
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
           },
           {
             "kind": "Conformance",
-            "name": "RTBNativeAdInteractionDelegate",
-            "printedName": "RTBNativeAdInteractionDelegate",
-            "usr": "c:@M@RTBSDK@objc(pl)RTBNativeAdInteractionDelegate",
-            "mangledName": "$s6RTBSDK30RTBNativeAdInteractionDelegateP"
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
           },
           {
             "kind": "Conformance",
@@ -1609,40 +1651,25 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RTBNativeAdLoaderDelegate",
+            "printedName": "RTBNativeAdLoaderDelegate",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBNativeAdLoaderDelegate",
+            "mangledName": "$s6RTBSDK25RTBNativeAdLoaderDelegateP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RTBNativeAdInteractionDelegate",
+            "printedName": "RTBNativeAdInteractionDelegate",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBNativeAdInteractionDelegate",
+            "mangledName": "$s6RTBSDK30RTBNativeAdInteractionDelegateP"
           }
         ]
       }
     ],
     "json_format_version": 8
   },
-  "ConstValues": [
-    {
-      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/GraviteRTBAppLovinMediationAdapter\/RTBAppLovinInterstitialLoader.swift",
-      "kind": "StringLiteral",
-      "offset": 201,
-      "length": 29,
-      "value": "\"GraviteRTBAppLovinMediationAdapter.RTBAppLovinInterstitialLoader\""
-    },
-    {
-      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/GraviteRTBAppLovinMediationAdapter\/RTBAppLovinBannerLoader.swift",
-      "kind": "StringLiteral",
-      "offset": 195,
-      "length": 23,
-      "value": "\"GraviteRTBAppLovinMediationAdapter.RTBAppLovinBannerLoader\""
-    },
-    {
-      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/GraviteRTBAppLovinMediationAdapter\/RTBMANativeAd.swift",
-      "kind": "StringLiteral",
-      "offset": 129,
-      "length": 13,
-      "value": "\"GraviteRTBAppLovinMediationAdapter.RTBMANativeAd\""
-    },
-    {
-      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/GraviteRTBAppLovinMediationAdapter\/RTBAppLovinNativeLoader.swift",
-      "kind": "StringLiteral",
-      "offset": 152,
-      "length": 23,
-      "value": "\"GraviteRTBAppLovinMediationAdapter.RTBAppLovinNativeLoader\""
-    }
-  ]
+  "ConstValues": []
 }

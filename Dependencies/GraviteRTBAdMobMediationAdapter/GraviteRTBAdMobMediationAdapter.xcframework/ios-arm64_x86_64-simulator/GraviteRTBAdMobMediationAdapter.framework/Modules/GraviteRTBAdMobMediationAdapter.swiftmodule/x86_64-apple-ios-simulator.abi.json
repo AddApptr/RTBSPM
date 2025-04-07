@@ -1,8 +1,8 @@
 {
   "ABIRoot": {
     "kind": "Root",
-    "name": "TopLevel",
-    "printedName": "TopLevel",
+    "name": "GraviteRTBAdMobMediationAdapter",
+    "printedName": "GraviteRTBAdMobMediationAdapter",
     "children": [
       {
         "kind": "Import",
@@ -261,6 +261,20 @@
         "conformances": [
           {
             "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
             "name": "Equatable",
             "printedName": "Equatable",
             "usr": "s:SQ",
@@ -315,7 +329,105 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/RTBSDK\/GraviteRTBAdMobMediationAdapter\/RTBAdMobMediationAdapterManager.swift",
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 2367,
+      "length": 14,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 2380,
+      "length": 15,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 2508,
+      "length": 14,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 2521,
+      "length": 15,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 2656,
+      "length": 14,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 2669,
+      "length": 15,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 2921,
+      "length": 14,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 2934,
+      "length": 15,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 3076,
+      "length": 14,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 3089,
+      "length": 15,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 3202,
+      "length": 14,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 3215,
+      "length": 15,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 3341,
+      "length": 14,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/GraviteRTBAdMobMediationAdapterNativeAds+GADMediationNativeAd.swift",
+      "kind": "StringLiteral",
+      "offset": 3354,
+      "length": 15,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Data\/Repos\/rtb-sdk-ios\/GraviteRTBAdMobMediationAdapter\/RTBAdMobMediationAdapterManager.swift",
       "kind": "StringLiteral",
       "offset": 273,
       "length": 33,

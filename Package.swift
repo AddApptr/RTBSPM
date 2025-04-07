@@ -12,8 +12,8 @@ let package = Package(
         .library(name: "RTB_GraviteRTBAdMobMediationAdapter", targets: ["RTB_GraviteRTBAdMobMediationAdapter"]),
     ],
     dependencies: [
-        .package(name: "AppLovinSDK", url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", .exact("13.0.1")),
-        .package(name: "GoogleMobileAds", url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", .exact("11.12.0")),
+        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", Version(13, 2, 0)..<Version(13, 2, 0)),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", Version(12, 2, 0)..<Version(12, 2, 0))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -22,13 +22,18 @@ let package = Package(
         .target(name:"OMSDK",
                 dependencies: ["RTB_OMSDK"],
                 path: "./Sources/RTB_OMSDK"),
-        
+
         .binaryTarget(name: "RTBSPM_core", path: "./Dependencies/RTBSDK/RTBSDK.xcframework"),
         .binaryTarget(name: "RTB_OMSDK", path: "./Dependencies/RTB_OMSDK/OMSDK_Addapptr.xcframework"),
 
         // GraviteRTBAppLovinMediationAdapter target
         .target(name:"RTB_GraviteRTBAppLovinMediationAdapter",
-                dependencies: [ "AppLovinSDK", "RTBSPM_core", "OMSDK", "GraviteRTBAppLovinMediationAdapter"],
+                dependencies: [
+                    .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"), // Explicit dependency on AppLovinSDK product
+                    "RTBSPM_core",
+                    "OMSDK",
+                    "GraviteRTBAppLovinMediationAdapter",
+                ],
                 path: "./Sources/GraviteRTBAppLovinMediationAdapter"),
 
 
@@ -37,7 +42,12 @@ let package = Package(
 
         // GraviteRTBAdMobMediationAdapter target
         .target(name:"RTB_GraviteRTBAdMobMediationAdapter",
-                dependencies: [ "GoogleMobileAds", "RTBSPM_core", "OMSDK", "GraviteRTBAdMobMediationAdapter"],
+                dependencies: [
+                    .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"), // Explicit dependency on GoogleMobileAds product
+                    "RTBSPM_core",
+                    "OMSDK",
+                    "GraviteRTBAdMobMediationAdapter"
+                ],
                 path: "./Sources/GraviteRTBAdMobMediationAdapter"),
 
         // AATAdMobMediationAdapter
