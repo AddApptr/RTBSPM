@@ -12,8 +12,8 @@ let package = Package(
         .library(name: "RTB_GraviteRTBAdMobMediationAdapter", targets: ["RTB_GraviteRTBAdMobMediationAdapter"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", Version(13, 2, 0)..<Version(13, 2, 0)),
-        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", Version(12, 2, 0)..<Version(12, 2, 0))
+        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", .exact("13.2.0")),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", .exact("12.2.0")),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -29,7 +29,7 @@ let package = Package(
         // GraviteRTBAppLovinMediationAdapter target
         .target(name:"RTB_GraviteRTBAppLovinMediationAdapter",
                 dependencies: [
-                    .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"), // Explicit dependency on AppLovinSDK product
+                    .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
                     "RTBSPM_core",
                     "OMSDK",
                     "GraviteRTBAppLovinMediationAdapter",
@@ -43,7 +43,7 @@ let package = Package(
         // GraviteRTBAdMobMediationAdapter target
         .target(name:"RTB_GraviteRTBAdMobMediationAdapter",
                 dependencies: [
-                    .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"), // Explicit dependency on GoogleMobileAds product
+                    .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
                     "RTBSPM_core",
                     "OMSDK",
                     "GraviteRTBAdMobMediationAdapter"
