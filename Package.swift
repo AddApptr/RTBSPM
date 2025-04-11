@@ -9,7 +9,7 @@ let package = Package(
     platforms: [.iOS(.v12)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(name: "RTBSPM", targets: ["RTBSPM_core", "OMSDK"]),
+        .library(name: "RTBSPM", targets: ["RTBSPM_core", "RTBOMSDK"]),
         .library(name: "RTB_GraviteRTBAppLovinMediationAdapter", targets: ["RTB_GraviteRTBAppLovinMediationAdapter"]),
         .library(name: "RTB_GraviteRTBAdMobMediationAdapter", targets: ["RTB_GraviteRTBAdMobMediationAdapter"]),
     ],
@@ -21,7 +21,7 @@ let package = Package(
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
 
-        .target(name:"OMSDK",
+        .target(name:"RTBOMSDK",
                 dependencies: ["RTB_OMSDK"],
                 path: "./Sources/RTB_OMSDK"),
 
@@ -33,7 +33,7 @@ let package = Package(
                 dependencies: [
                     .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
                     "RTBSPM_core",
-                    "OMSDK",
+                    "RTBOMSDK",
                     "GraviteRTBAppLovinMediationAdapter",
                 ],
                 path: "./Sources/GraviteRTBAppLovinMediationAdapter"),
@@ -47,7 +47,7 @@ let package = Package(
                 dependencies: [
                     .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads"),
                     "RTBSPM_core",
-                    "OMSDK",
+                    "RTBOMSDK",
                     "GraviteRTBAdMobMediationAdapter"
                 ],
                 path: "./Sources/GraviteRTBAdMobMediationAdapter"),
