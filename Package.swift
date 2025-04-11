@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "RTBSPM",
     defaultLocalization: "en",
-    platforms: [.iOS(.v12)],
+
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(name: "RTBSPM", targets: ["RTBSPM_core", "RTBOMSDK"]),
@@ -14,8 +14,8 @@ let package = Package(
         .library(name: "RTB_GraviteRTBAdMobMediationAdapter", targets: ["RTB_GraviteRTBAdMobMediationAdapter"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", .exact("13.2.0")),
-        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", .exact("12.2.0")),
+        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: Version(13, 2, 0)),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", exact: Version(12, 2, 0))
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
