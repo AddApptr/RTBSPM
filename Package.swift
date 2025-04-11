@@ -24,10 +24,6 @@ let package = Package(
         .target(name:"RTBOMSDK",
                 dependencies: ["RTB_OMSDK"],
                 path: "./Sources/RTB_OMSDK"),
-
-        .binaryTarget(name: "RTBSPM_core", path: "./Dependencies/RTBSDK/RTBSDK.xcframework"),
-        .binaryTarget(name: "RTB_OMSDK", path: "./Dependencies/RTB_OMSDK/OMSDK_Addapptr.xcframework"),
-
         // GraviteRTBAppLovinMediationAdapter target
         .target(name:"RTB_GraviteRTBAppLovinMediationAdapter",
                 dependencies: [
@@ -37,10 +33,6 @@ let package = Package(
                     "GraviteRTBAppLovinMediationAdapter",
                 ],
                 path: "./Sources/GraviteRTBAppLovinMediationAdapter"),
-
-
-        // AATAppLovinMediationAdapter
-        .binaryTarget(name: "GraviteRTBAppLovinMediationAdapter", path: "./Dependencies/GraviteRTBAppLovinMediationAdapter/GraviteRTBAppLovinMediationAdapter.xcframework"),
 
         // GraviteRTBAdMobMediationAdapter target
         .target(name:"RTB_GraviteRTBAdMobMediationAdapter",
@@ -52,6 +44,11 @@ let package = Package(
                 ],
                 path: "./Sources/GraviteRTBAdMobMediationAdapter"),
 
+        // RTBSDK
+        .binaryTarget(name: "RTBSPM_core", path: "./Dependencies/RTBSDK/RTBSDK.xcframework"),
+        .binaryTarget(name: "RTB_OMSDK", path: "./Dependencies/RTB_OMSDK/OMSDK_Addapptr.xcframework"),
+        // AATAppLovinMediationAdapter
+        .binaryTarget(name: "GraviteRTBAppLovinMediationAdapter", path: "./Dependencies/GraviteRTBAppLovinMediationAdapter/GraviteRTBAppLovinMediationAdapter.xcframework"),
         // AATAdMobMediationAdapter
         .binaryTarget(name: "GraviteRTBAdMobMediationAdapter", path: "./Dependencies/GraviteRTBAdMobMediationAdapter/GraviteRTBAdMobMediationAdapter.xcframework"),
     ]
