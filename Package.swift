@@ -14,13 +14,10 @@ let package = Package(
         .library(name: "RTB_GraviteRTBAdMobMediationAdapter", targets: ["RTB_GraviteRTBAdMobMediationAdapter"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", .exact("13.2.0")),
-        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", .exact("12.2.0")),
+        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: Version(13, 2, 0)),
+        .package(url: "https://github.com/googleads/swift-package-manager-google-mobile-ads.git", exact: Version(12, 2, 0))
     ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-
         .target(name:"RTBOMSDK",
                 dependencies: ["RTB_OMSDK"],
                 path: "./Sources/RTB_OMSDK"),
