@@ -3,6 +3,7 @@
 // swift-module-flags: -target arm64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name RTBSDK
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
 import AVFAudio
+import AVFoundation
 import AdSupport
 import AppTrackingTransparency
 import SystemConfiguration.CaptiveNetwork
@@ -20,6 +21,7 @@ import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
+import libxml2
 @_inheritsConvenienceInitializers @objc public class RTBBannerAdProvider : ObjectiveC.NSObject {
   @objc public static func load(configuration: RTBSDK.RTBBannerRequestConfiguration, size: RTBSDK.RTBBannerSize, userAgent: Swift.String, loadDelegate: any RTBSDK.RTBBannerAdLoadDelegate)
   @objc public static func getBannerView(bannerBid: RTBSDK.RTBBannerBid, delegate: any RTBSDK.RTBBannerAdInteractionDelegate) -> UIKit.UIView?
@@ -81,7 +83,10 @@ extension RTBSDK.RTBBannerSize {
 @objc public class RTBRequestConfiguration : ObjectiveC.NSObject {
   @objc public var bidFloor: Foundation.NSNumber?
   @objc public var sellerId: Swift.String?
-  @objc public var userTargeting: RTBSDK.RTBUserTargeting?
+  @objc public var userTargeting: RTBSDK.RTBUserTargeting? {
+    @objc get
+    @objc set
+  }
   @objc public init(placementId: Swift.Int, iTunesAppId: Swift.String)
   @objc deinit
 }
@@ -120,6 +125,14 @@ extension RTBSDK.RTBBannerSize {
   @objc func unload()
   @objc func pause()
   @objc func resume(controller: UIKit.UIViewController)
+}
+@_inheritsConvenienceInitializers @objc public class RTBRewardedVideoRequestConfiguration : RTBSDK.RTBRequestConfiguration {
+  @objc public var muteOnStart: Swift.Bool
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc override public init(placementId: Swift.Int, iTunesAppId: Swift.String)
+  @objc deinit
 }
 @_hasMissingDesignatedInitializers @objc public class RTBBidInfo : ObjectiveC.NSObject {
   @objc public var priceCPM: Swift.Float
@@ -165,6 +178,14 @@ extension RTBSDK.RTBBannerSize {
   @objc func didCollectSignals(_ dsp: any RTBSDK.RTBDSPProtocol, signals: [Swift.String : Any])
   @objc func didFailToCollectSignals(_ dsp: any RTBSDK.RTBDSPProtocol, error: Swift.String)
 }
+@objc public protocol RTBRewardedVideoAdDelegate {
+  @objc func rewardedVideoAdDidReceiveAd(_ rewardedVideoAd: RTBSDK.RTBRewardedVideoAd, bidInfo: RTBSDK.RTBBidInfo, networkName: Swift.String)
+  @objc func rewardedVideoAd(_ rewardedVideoAd: RTBSDK.RTBRewardedVideoAd, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
+  @objc func rewardedVideoAdDidRecordClick(_ rewardedVideoAd: RTBSDK.RTBRewardedVideoAd, networkName: Swift.String)
+  @objc func rewardedVideoAdDidPauseForAd(_ rewardedVideoAd: RTBSDK.RTBRewardedVideoAd, networkName: Swift.String)
+  @objc func rewardedVideoAdDidResumeAfterAd(_ rewardedVideoAd: RTBSDK.RTBRewardedVideoAd, networkName: Swift.String)
+  @objc func rewardedVideoAdDidReceiveReward(_ rewardedVideoAd: RTBSDK.RTBRewardedVideoAd, networkName: Swift.String)
+}
 @objc public protocol RTBBannerAdLoadDelegate {
   @objc func bannerAdDidReceiveAd(bannerBid: RTBSDK.RTBBannerBid)
   @objc func bannerAdDidFailToReceiveAd(errorMessage: Swift.String)
@@ -187,6 +208,15 @@ extension RTBSDK.RTBBannerSize {
   @objc func bannerAdDidPauseForAd()
   @objc func bannerAdDidResumeAfterAd()
   @objc func bannerAdDidFailToRender(error: Swift.String)
+}
+@_inheritsConvenienceInitializers @objc public class RTBRewardedVideoAd : ObjectiveC.NSObject {
+  @objc weak public var delegate: (any RTBSDK.RTBRewardedVideoAdDelegate)?
+  @objc override dynamic public init()
+  @discardableResult
+  @objc public func load(configuration: RTBSDK.RTBRewardedVideoRequestConfiguration) -> Swift.Bool
+  @discardableResult
+  @objc public func show(viewController: UIKit.UIViewController) -> Swift.Bool
+  @objc deinit
 }
 @_inheritsConvenienceInitializers @objc public class RTBFullscreenAd : ObjectiveC.NSObject {
   @objc weak public var delegate: (any RTBSDK.RTBFullscreenDelegate)?
@@ -251,6 +281,48 @@ extension RTBSDK.RTBFullscreenAd : RTBSDK.RTBDSPInterstitialDelegate {
   @objc override dynamic public init()
   @objc deinit
 }
+public let kRTBErrorDomain: Swift.String
+public enum RTBErrorCode : Swift.Int {
+  case noFill
+  case parse
+  case server
+  case invalidAsset
+  case unsupportedAsset
+  case nullAd
+  case invalidAd
+  case invalidZoneId
+  case invalidSignalData
+  case notInitialised
+  case auctionNoAd
+  case renderingBanner
+  case renderingInterstitial
+  case renderingRewarded
+  case mraidPlayer
+  case vastPlayer
+  case trackingUrl
+  case trackingJS
+  case invalidUrl
+  case internalErrorCode
+  case unknown
+  case disabledFormat
+  case disabledRenderingEngine
+  case expiredAd
+  case vastParserSchemaValidation
+  case vastParserTooManyWrappers
+  case vastParserNoCompatibleMediaFile
+  case vastParserNoInternetConnection
+  case vastParserMovieTooShort
+  case adFeedbackFormNotLoaded
+  case invalidHTML
+  case vastParserNoAdResponse
+  case vastParserBothAdAndErrorPresentInRootResponse
+  case invalidRemoteConfigData
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
 @_inheritsConvenienceInitializers @objc public class RTBBannerRequestConfiguration : RTBSDK.RTBRequestConfiguration {
   @objc override dynamic public var description: Swift.String {
     @objc get
@@ -258,6 +330,50 @@ extension RTBSDK.RTBFullscreenAd : RTBSDK.RTBDSPInterstitialDelegate {
   @objc override public init(placementId: Swift.Int, iTunesAppId: Swift.String)
   @objc deinit
 }
+@_hasMissingDesignatedInitializers open class NetworkReachabilityManager {
+  public enum NetworkReachabilityStatus {
+    case unknown
+    case notReachable
+    case reachable(RTBSDK.NetworkReachabilityManager.ConnectionType)
+  }
+  public enum ConnectionType {
+    case ethernetOrWiFi
+    case wwan
+    public static func == (a: RTBSDK.NetworkReachabilityManager.ConnectionType, b: RTBSDK.NetworkReachabilityManager.ConnectionType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public typealias Listener = (RTBSDK.NetworkReachabilityManager.NetworkReachabilityStatus) -> Swift.Void
+  open var isReachable: Swift.Bool {
+    get
+  }
+  open var isReachableOnWWAN: Swift.Bool {
+    get
+  }
+  open var isReachableOnEthernetOrWiFi: Swift.Bool {
+    get
+  }
+  open var networkReachabilityStatus: RTBSDK.NetworkReachabilityManager.NetworkReachabilityStatus {
+    get
+  }
+  open var listenerQueue: Dispatch.DispatchQueue
+  open var listener: RTBSDK.NetworkReachabilityManager.Listener?
+  open var flags: SystemConfiguration.SCNetworkReachabilityFlags? {
+    get
+  }
+  open var previousFlags: SystemConfiguration.SCNetworkReachabilityFlags
+  convenience public init?(host: Swift.String)
+  convenience public init?()
+  @objc deinit
+  @discardableResult
+  open func startListening() -> Swift.Bool
+  open func stopListening()
+}
+extension RTBSDK.NetworkReachabilityManager.NetworkReachabilityStatus : Swift.Equatable {
+}
+public func == (lhs: RTBSDK.NetworkReachabilityManager.NetworkReachabilityStatus, rhs: RTBSDK.NetworkReachabilityManager.NetworkReachabilityStatus) -> Swift.Bool
 @objc public enum RTBGender : Swift.Int, Swift.RawRepresentable {
   public typealias RawValue = Swift.String
   case male
@@ -272,5 +388,10 @@ extension RTBSDK.RTBFullscreenAd : RTBSDK.RTBDSPInterstitialDelegate {
 extension RTBSDK.RTBLogLevel : Swift.Equatable {}
 extension RTBSDK.RTBLogLevel : Swift.Hashable {}
 extension RTBSDK.RTBLogLevel : Swift.RawRepresentable {}
+extension RTBSDK.RTBErrorCode : Swift.Equatable {}
+extension RTBSDK.RTBErrorCode : Swift.Hashable {}
+extension RTBSDK.RTBErrorCode : Swift.RawRepresentable {}
+extension RTBSDK.NetworkReachabilityManager.ConnectionType : Swift.Equatable {}
+extension RTBSDK.NetworkReachabilityManager.ConnectionType : Swift.Hashable {}
 extension RTBSDK.RTBGender : Swift.Equatable {}
 extension RTBSDK.RTBGender : Swift.Hashable {}

@@ -305,6 +305,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
+
 @class NSString;
 
 SWIFT_PROTOCOL("_TtP6RTBSDK30RTBBannerAdInteractionDelegate_")
@@ -584,23 +585,33 @@ SWIFT_PROTOCOL("_TtP6RTBSDK21RTBFullscreenDelegate_")
 ///
 /// \param bidInfo an instance of <code>RTBBidInfo</code> representing bid price and and bidder name
 ///
+/// \param networkName networtk name for the loaded ad
+///
 - (void)fullscreenAdDidReceiveAd:(RTBFullscreenAd * _Nonnull)fullscreenAd bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
 /// Called when the ad loading is failed
 /// \param fullscreenAd The <code>RTBFullscreenAd</code> that failed to load
 ///
 /// \param errorMessage A message describing the reason for the failure
 ///
+/// \param networkName networtk name for the loaded ad
+///
 - (void)fullscreenAd:(RTBFullscreenAd * _Nonnull)fullscreenAd didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
 /// Called when the use clicks on the fullscreen ad
 /// \param fullscreenAd The <code>RTBFullscreenAd</code> that received the click
 ///
+/// \param networkName networtk name for the loaded ad
+///
 - (void)fullscreenAdDidRecordClick:(RTBFullscreenAd * _Nonnull)fullscreenAd networkName:(NSString * _Nonnull)networkName;
 /// Called when the fullscreen ad has been displayed
-/// \param fullscreenAd The <code>RTBFullscreenAd</code> that has been shown
+/// \param fullscreenAd The <code>RTBFullscreenAd</code> that received the click
+///
+/// \param networkName networtk name for the loaded ad
 ///
 - (void)fullscreenAdDidPauseForAd:(RTBFullscreenAd * _Nonnull)fullscreenAd networkName:(NSString * _Nonnull)networkName;
 /// Called when the fullscreen ad has been dismisseed
-/// \param fullscreenAd The <code>RTBFullscreenAd</code> that has been dismissed
+/// \param fullscreenAd The <code>RTBFullscreenAd</code> that received the click
+///
+/// \param networkName networtk name for the loaded ad
 ///
 - (void)fullscreenAdDidResumeAfterAd:(RTBFullscreenAd * _Nonnull)fullscreenAd networkName:(NSString * _Nonnull)networkName;
 @end
@@ -755,6 +766,79 @@ SWIFT_CLASS("_TtC6RTBSDK31RTBNativeAdRequestConfiguration")
 @end
 
 
+@protocol RTBRewardedVideoAdDelegate;
+@class RTBRewardedVideoRequestConfiguration;
+
+SWIFT_CLASS("_TtC6RTBSDK18RTBRewardedVideoAd")
+@interface RTBRewardedVideoAd : NSObject
+/// The delegate the will be notified with the different events
+@property (nonatomic, weak) id <RTBRewardedVideoAdDelegate> _Nullable delegate;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Start loading a rewarded video ad
+/// \param configuration Rewarded video request configuration that is needed to request a new Ad, see <code>RTBRewardedVideoRequestConfiguration</code>
+///
+- (BOOL)loadWithConfiguration:(RTBRewardedVideoRequestConfiguration * _Nonnull)configuration;
+/// Show the loaded rewarded video ad
+/// \param viewController The view controller that will be used to present the rewarded video ad
+///
+- (BOOL)showWithViewController:(UIViewController * _Nonnull)viewController;
+@end
+
+
+
+
+SWIFT_PROTOCOL("_TtP6RTBSDK26RTBRewardedVideoAdDelegate_")
+@protocol RTBRewardedVideoAdDelegate
+/// Called when the rewarded video ad has been loaded and ready to be shown
+/// \param rewardedVideoAd The loaded <code>RTBRewardedVideoAd</code>
+///
+/// \param bidInfo an instance of <code>RTBBidInfo</code> representing bid price and and bidder name
+///
+/// \param networkName networtk name for the loaded ad
+///
+- (void)rewardedVideoAdDidReceiveAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
+/// Called when the rewarded video ad loading is failed
+/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that failed to load
+///
+/// \param errorMessage A message describing the reason for the failure
+///
+/// \param networkName networtk name for the loaded ad
+///
+- (void)rewardedVideoAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
+/// Called when the use clicks on the rewarded video ad
+/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+///
+/// \param networkName networtk name for the loaded ad
+///
+- (void)rewardedVideoAdDidRecordClick:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
+/// Called when the rewarded video ad has been displayed and video has just started
+/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+///
+/// \param networkName networtk name for the loaded ad
+///
+- (void)rewardedVideoAdDidPauseForAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
+/// Called when the rewarded video ad has been dismisseed
+/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+///
+/// \param networkName networtk name for the loaded ad
+///
+- (void)rewardedVideoAdDidResumeAfterAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
+/// Called when the use receives a reward after watching the ad
+/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+///
+/// \param networkName networtk name for the loaded ad
+///
+- (void)rewardedVideoAdDidReceiveReward:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
+@end
+
+
+SWIFT_CLASS("_TtC6RTBSDK36RTBRewardedVideoRequestConfiguration")
+@interface RTBRewardedVideoRequestConfiguration : RTBRequestConfiguration
+@property (nonatomic) BOOL muteOnStart;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+- (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC6RTBSDK13RTBSDKManager")
 @interface RTBSDKManager : NSObject
@@ -796,6 +880,7 @@ SWIFT_CLASS("_TtC6RTBSDK16RTBUserTargeting")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 
@@ -1114,6 +1199,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
+
 @class NSString;
 
 SWIFT_PROTOCOL("_TtP6RTBSDK30RTBBannerAdInteractionDelegate_")
@@ -1393,23 +1479,33 @@ SWIFT_PROTOCOL("_TtP6RTBSDK21RTBFullscreenDelegate_")
 ///
 /// \param bidInfo an instance of <code>RTBBidInfo</code> representing bid price and and bidder name
 ///
+/// \param networkName networtk name for the loaded ad
+///
 - (void)fullscreenAdDidReceiveAd:(RTBFullscreenAd * _Nonnull)fullscreenAd bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
 /// Called when the ad loading is failed
 /// \param fullscreenAd The <code>RTBFullscreenAd</code> that failed to load
 ///
 /// \param errorMessage A message describing the reason for the failure
 ///
+/// \param networkName networtk name for the loaded ad
+///
 - (void)fullscreenAd:(RTBFullscreenAd * _Nonnull)fullscreenAd didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
 /// Called when the use clicks on the fullscreen ad
 /// \param fullscreenAd The <code>RTBFullscreenAd</code> that received the click
 ///
+/// \param networkName networtk name for the loaded ad
+///
 - (void)fullscreenAdDidRecordClick:(RTBFullscreenAd * _Nonnull)fullscreenAd networkName:(NSString * _Nonnull)networkName;
 /// Called when the fullscreen ad has been displayed
-/// \param fullscreenAd The <code>RTBFullscreenAd</code> that has been shown
+/// \param fullscreenAd The <code>RTBFullscreenAd</code> that received the click
+///
+/// \param networkName networtk name for the loaded ad
 ///
 - (void)fullscreenAdDidPauseForAd:(RTBFullscreenAd * _Nonnull)fullscreenAd networkName:(NSString * _Nonnull)networkName;
 /// Called when the fullscreen ad has been dismisseed
-/// \param fullscreenAd The <code>RTBFullscreenAd</code> that has been dismissed
+/// \param fullscreenAd The <code>RTBFullscreenAd</code> that received the click
+///
+/// \param networkName networtk name for the loaded ad
 ///
 - (void)fullscreenAdDidResumeAfterAd:(RTBFullscreenAd * _Nonnull)fullscreenAd networkName:(NSString * _Nonnull)networkName;
 @end
@@ -1564,6 +1660,79 @@ SWIFT_CLASS("_TtC6RTBSDK31RTBNativeAdRequestConfiguration")
 @end
 
 
+@protocol RTBRewardedVideoAdDelegate;
+@class RTBRewardedVideoRequestConfiguration;
+
+SWIFT_CLASS("_TtC6RTBSDK18RTBRewardedVideoAd")
+@interface RTBRewardedVideoAd : NSObject
+/// The delegate the will be notified with the different events
+@property (nonatomic, weak) id <RTBRewardedVideoAdDelegate> _Nullable delegate;
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+/// Start loading a rewarded video ad
+/// \param configuration Rewarded video request configuration that is needed to request a new Ad, see <code>RTBRewardedVideoRequestConfiguration</code>
+///
+- (BOOL)loadWithConfiguration:(RTBRewardedVideoRequestConfiguration * _Nonnull)configuration;
+/// Show the loaded rewarded video ad
+/// \param viewController The view controller that will be used to present the rewarded video ad
+///
+- (BOOL)showWithViewController:(UIViewController * _Nonnull)viewController;
+@end
+
+
+
+
+SWIFT_PROTOCOL("_TtP6RTBSDK26RTBRewardedVideoAdDelegate_")
+@protocol RTBRewardedVideoAdDelegate
+/// Called when the rewarded video ad has been loaded and ready to be shown
+/// \param rewardedVideoAd The loaded <code>RTBRewardedVideoAd</code>
+///
+/// \param bidInfo an instance of <code>RTBBidInfo</code> representing bid price and and bidder name
+///
+/// \param networkName networtk name for the loaded ad
+///
+- (void)rewardedVideoAdDidReceiveAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
+/// Called when the rewarded video ad loading is failed
+/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that failed to load
+///
+/// \param errorMessage A message describing the reason for the failure
+///
+/// \param networkName networtk name for the loaded ad
+///
+- (void)rewardedVideoAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
+/// Called when the use clicks on the rewarded video ad
+/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+///
+/// \param networkName networtk name for the loaded ad
+///
+- (void)rewardedVideoAdDidRecordClick:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
+/// Called when the rewarded video ad has been displayed and video has just started
+/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+///
+/// \param networkName networtk name for the loaded ad
+///
+- (void)rewardedVideoAdDidPauseForAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
+/// Called when the rewarded video ad has been dismisseed
+/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+///
+/// \param networkName networtk name for the loaded ad
+///
+- (void)rewardedVideoAdDidResumeAfterAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
+/// Called when the use receives a reward after watching the ad
+/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+///
+/// \param networkName networtk name for the loaded ad
+///
+- (void)rewardedVideoAdDidReceiveReward:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
+@end
+
+
+SWIFT_CLASS("_TtC6RTBSDK36RTBRewardedVideoRequestConfiguration")
+@interface RTBRewardedVideoRequestConfiguration : RTBRequestConfiguration
+@property (nonatomic) BOOL muteOnStart;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+- (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
+@end
+
 
 SWIFT_CLASS("_TtC6RTBSDK13RTBSDKManager")
 @interface RTBSDKManager : NSObject
@@ -1605,6 +1774,7 @@ SWIFT_CLASS("_TtC6RTBSDK16RTBUserTargeting")
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
+
 
 
 

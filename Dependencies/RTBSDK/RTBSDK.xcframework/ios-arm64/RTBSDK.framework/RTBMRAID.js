@@ -67,7 +67,7 @@
 
     var VERSION = "3.0";
 
-    var SDK = "HyBid";
+    var SDK = "RTBSDK";
 
     var STATES = mraid.STATES = {
         "LOADING": "loading",
