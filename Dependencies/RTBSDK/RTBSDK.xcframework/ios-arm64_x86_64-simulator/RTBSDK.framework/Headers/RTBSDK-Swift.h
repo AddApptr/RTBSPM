@@ -547,6 +547,31 @@ SWIFT_PROTOCOL("_TtP6RTBSDK26RTBDSPInterstitialProtocol_")
 @end
 
 
+@protocol RTBDSPRewardedVideoProtocol;
+@class RTBReward;
+
+SWIFT_PROTOCOL("_TtP6RTBSDK27RTBDSPRewardedVideoDelegate_")
+@protocol RTBDSPRewardedVideoDelegate
+/// Tells the delegate that an ad request successfully received an ad. The delegate may want to add
+- (void)dspAdViewDidReceiveAd:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that an ad request failed.
+- (void)dspAdView:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that a click has been recorded for the ad.
+- (void)dspAdViewDidRecordClick:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that ad has opened external browser.
+- (void)dspAdViewDidPauseForAd:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that Ad has been dismissed.
+- (void)dspAdViewDidResumeAfterAd:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+- (void)dspAdViewDidRecieveReward:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad reward:(RTBReward * _Nonnull)reward networkName:(NSString * _Nonnull)networkName;
+@end
+
+
+SWIFT_PROTOCOL("_TtP6RTBSDK27RTBDSPRewardedVideoProtocol_")
+@protocol RTBDSPRewardedVideoProtocol <RTBDSAdPProtocol>
+@property (nonatomic, strong) id <RTBDSPRewardedVideoDelegate> _Nullable adDelegate;
+- (BOOL)showWithViewController:(UIViewController * _Nonnull)viewController;
+@end
+
 @protocol RTBFullscreenDelegate;
 @class RTBFullscreenRequestConfiguration;
 
@@ -766,6 +791,24 @@ SWIFT_CLASS("_TtC6RTBSDK31RTBNativeAdRequestConfiguration")
 @end
 
 
+
+SWIFT_CLASS("_TtC6RTBSDK9RTBReward")
+@interface RTBReward : NSObject
+/// String represents the reward name
+@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+/// String represents the reward value
+@property (nonatomic, readonly, copy) NSString * _Nonnull value;
+/// Creates an instance of <code>RTBReward</code>
+/// \param name The reward name
+///
+/// \param value The reward value
+///
+- (nonnull instancetype)initWithName:(NSString * _Nonnull)name value:(NSString * _Nonnull)value OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @protocol RTBRewardedVideoAdDelegate;
 @class RTBRewardedVideoRequestConfiguration;
 
@@ -784,6 +827,16 @@ SWIFT_CLASS("_TtC6RTBSDK18RTBRewardedVideoAd")
 - (BOOL)showWithViewController:(UIViewController * _Nonnull)viewController;
 @end
 
+
+
+@interface RTBRewardedVideoAd (SWIFT_EXTENSION(RTBSDK)) <RTBDSPRewardedVideoDelegate>
+- (void)dspAdViewDidReceiveAd:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+- (void)dspAdView:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
+- (void)dspAdViewDidRecordClick:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+- (void)dspAdViewDidPauseForAd:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+- (void)dspAdViewDidResumeAfterAd:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+- (void)dspAdViewDidRecieveReward:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad reward:(RTBReward * _Nonnull)reward networkName:(NSString * _Nonnull)networkName;
+@end
 
 
 
@@ -1441,6 +1494,31 @@ SWIFT_PROTOCOL("_TtP6RTBSDK26RTBDSPInterstitialProtocol_")
 @end
 
 
+@protocol RTBDSPRewardedVideoProtocol;
+@class RTBReward;
+
+SWIFT_PROTOCOL("_TtP6RTBSDK27RTBDSPRewardedVideoDelegate_")
+@protocol RTBDSPRewardedVideoDelegate
+/// Tells the delegate that an ad request successfully received an ad. The delegate may want to add
+- (void)dspAdViewDidReceiveAd:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that an ad request failed.
+- (void)dspAdView:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that a click has been recorded for the ad.
+- (void)dspAdViewDidRecordClick:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that ad has opened external browser.
+- (void)dspAdViewDidPauseForAd:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+/// Tells the delegate that Ad has been dismissed.
+- (void)dspAdViewDidResumeAfterAd:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+- (void)dspAdViewDidRecieveReward:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad reward:(RTBReward * _Nonnull)reward networkName:(NSString * _Nonnull)networkName;
+@end
+
+
+SWIFT_PROTOCOL("_TtP6RTBSDK27RTBDSPRewardedVideoProtocol_")
+@protocol RTBDSPRewardedVideoProtocol <RTBDSAdPProtocol>
+@property (nonatomic, strong) id <RTBDSPRewardedVideoDelegate> _Nullable adDelegate;
+- (BOOL)showWithViewController:(UIViewController * _Nonnull)viewController;
+@end
+
 @protocol RTBFullscreenDelegate;
 @class RTBFullscreenRequestConfiguration;
 
@@ -1660,6 +1738,24 @@ SWIFT_CLASS("_TtC6RTBSDK31RTBNativeAdRequestConfiguration")
 @end
 
 
+
+SWIFT_CLASS("_TtC6RTBSDK9RTBReward")
+@interface RTBReward : NSObject
+/// String represents the reward name
+@property (nonatomic, readonly, copy) NSString * _Nonnull name;
+/// String represents the reward value
+@property (nonatomic, readonly, copy) NSString * _Nonnull value;
+/// Creates an instance of <code>RTBReward</code>
+/// \param name The reward name
+///
+/// \param value The reward value
+///
+- (nonnull instancetype)initWithName:(NSString * _Nonnull)name value:(NSString * _Nonnull)value OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic, readonly, copy) NSString * _Nonnull description;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
 @protocol RTBRewardedVideoAdDelegate;
 @class RTBRewardedVideoRequestConfiguration;
 
@@ -1678,6 +1774,16 @@ SWIFT_CLASS("_TtC6RTBSDK18RTBRewardedVideoAd")
 - (BOOL)showWithViewController:(UIViewController * _Nonnull)viewController;
 @end
 
+
+
+@interface RTBRewardedVideoAd (SWIFT_EXTENSION(RTBSDK)) <RTBDSPRewardedVideoDelegate>
+- (void)dspAdViewDidReceiveAd:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+- (void)dspAdView:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
+- (void)dspAdViewDidRecordClick:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+- (void)dspAdViewDidPauseForAd:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+- (void)dspAdViewDidResumeAfterAd:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad networkName:(NSString * _Nonnull)networkName;
+- (void)dspAdViewDidRecieveReward:(id <RTBDSPRewardedVideoProtocol> _Nonnull)ad reward:(RTBReward * _Nonnull)reward networkName:(NSString * _Nonnull)networkName;
+@end
 
 
 

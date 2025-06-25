@@ -392,6 +392,29 @@ SWIFT_CLASS("_TtC34GraviteRTBAppLovinMediationAdapter23RTBAppLovinNativeLoader")
 - (void)nativeAdDidResumeAfterAd:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
 @end
 
+@protocol MARewardedAdapterDelegate;
+
+SWIFT_CLASS("_TtC34GraviteRTBAppLovinMediationAdapter30RTBAppLovinRewardedVideoLoader")
+@interface RTBAppLovinRewardedVideoLoader : NSObject
+- (nonnull instancetype)initWithRewardedAdDelegate:(id <MARewardedAdapterDelegate> _Nullable)rewardedAdDelegate OBJC_DESIGNATED_INITIALIZER;
+- (void)loadWithParameters:(id <MAAdapterResponseParameters> _Nonnull)parameters;
+- (void)showWithController:(UIViewController * _Nullable)controller;
+- (void)destroy;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+@class RTBRewardedVideoAd;
+
+@interface RTBAppLovinRewardedVideoLoader (SWIFT_EXTENSION(GraviteRTBAppLovinMediationAdapter)) <RTBRewardedVideoAdDelegate>
+- (void)rewardedVideoAdDidReceiveAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
+- (void)rewardedVideoAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
+- (void)rewardedVideoAdDidRecordClick:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
+- (void)rewardedVideoAdDidPauseForAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
+- (void)rewardedVideoAdDidResumeAfterAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
+- (void)rewardedVideoAdDidReceiveReward:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
+@end
+
 #endif
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

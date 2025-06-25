@@ -84,6 +84,23 @@
       },
       {
         "kind": "Import",
+        "name": "GoogleMobileAds",
+        "printedName": "GoogleMobileAds",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "RTBSDK",
+        "printedName": "RTBSDK",
+        "declKind": "Import",
+        "moduleName": "GraviteRTBAdMobMediationAdapter"
+      },
+      {
+        "kind": "Import",
         "name": "RTBSDK",
         "printedName": "RTBSDK",
         "declKind": "Import",

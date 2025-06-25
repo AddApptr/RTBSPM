@@ -2821,6 +2821,315 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "RTBSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RTBReward",
+        "printedName": "RTBReward",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "name",
+            "printedName": "name",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBReward(py)name",
+            "mangledName": "$s6RTBSDK9RTBRewardC4nameSSvp",
+            "moduleName": "RTBSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBReward(im)name",
+                "mangledName": "$s6RTBSDK9RTBRewardC4nameSSvg",
+                "moduleName": "RTBSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "value",
+            "printedName": "value",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBReward(py)value",
+            "mangledName": "$s6RTBSDK9RTBRewardC5valueSSvp",
+            "moduleName": "RTBSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBReward(im)value",
+                "mangledName": "$s6RTBSDK9RTBRewardC5valueSSvg",
+                "moduleName": "RTBSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(name:value:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RTBReward",
+                "printedName": "RTBSDK.RTBReward",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBReward"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBReward(im)initWithName:value:",
+            "mangledName": "$s6RTBSDK9RTBRewardC4name5valueACSS_SStcfc",
+            "moduleName": "RTBSDK",
+            "objc_name": "initWithName:value:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBReward(py)description",
+            "mangledName": "$s6RTBSDK9RTBRewardC11descriptionSSvp",
+            "moduleName": "RTBSDK",
+            "overriding": true,
+            "objc_name": "description",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBReward(im)description",
+                "mangledName": "$s6RTBSDK9RTBRewardC11descriptionSSvg",
+                "moduleName": "RTBSDK",
+                "overriding": true,
+                "objc_name": "description",
+                "declAttributes": [
+                  "Dynamic",
+                  "ObjC"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "RTBReward",
+                "printedName": "RTBSDK.RTBReward",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBReward"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@RTBSDK@objc(cs)RTBReward(im)init",
+            "mangledName": "$s6RTBSDK9RTBRewardCACycfc",
+            "moduleName": "RTBSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@RTBSDK@objc(cs)RTBReward",
+        "mangledName": "$s6RTBSDK9RTBRewardC",
+        "moduleName": "RTBSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -7182,6 +7491,463 @@
       },
       {
         "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "RTBSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RTBDSPRewardedVideoProtocol",
+        "printedName": "RTBDSPRewardedVideoProtocol",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "adDelegate",
+            "printedName": "adDelegate",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(any RTBSDK.RTBDSPRewardedVideoDelegate)?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RTBDSPRewardedVideoDelegate",
+                    "printedName": "any RTBSDK.RTBDSPRewardedVideoDelegate",
+                    "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoDelegate"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol(py)adDelegate",
+            "mangledName": "$s6RTBSDK27RTBDSPRewardedVideoProtocolP10adDelegateAA0bcF0_pSgvp",
+            "moduleName": "RTBSDK",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any RTBSDK.RTBDSPRewardedVideoDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RTBDSPRewardedVideoDelegate",
+                        "printedName": "any RTBSDK.RTBDSPRewardedVideoDelegate",
+                        "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol(im)adDelegate",
+                "mangledName": "$s6RTBSDK27RTBDSPRewardedVideoProtocolP10adDelegateAA0bcF0_pSgvg",
+                "moduleName": "RTBSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBDSPRewardedVideoProtocol>",
+                "sugared_genericSig": "<Self where Self : RTBSDK.RTBDSPRewardedVideoProtocol>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "(any RTBSDK.RTBDSPRewardedVideoDelegate)?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "RTBDSPRewardedVideoDelegate",
+                        "printedName": "any RTBSDK.RTBDSPRewardedVideoDelegate",
+                        "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoDelegate"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol(im)setAdDelegate:",
+                "mangledName": "$s6RTBSDK27RTBDSPRewardedVideoProtocolP10adDelegateAA0bcF0_pSgvs",
+                "moduleName": "RTBSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBDSPRewardedVideoProtocol>",
+                "sugared_genericSig": "<Self where Self : RTBSDK.RTBDSPRewardedVideoProtocol>",
+                "protocolReq": true,
+                "declAttributes": [
+                  "ObjC"
+                ],
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "show",
+            "printedName": "show(viewController:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol(im)showWithViewController:",
+            "mangledName": "$s6RTBSDK27RTBDSPRewardedVideoProtocolP4show14viewControllerSbSo06UIViewG0C_tF",
+            "moduleName": "RTBSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBDSPRewardedVideoProtocol>",
+            "sugared_genericSig": "<Self where Self : RTBSDK.RTBDSPRewardedVideoProtocol>",
+            "protocolReq": true,
+            "declAttributes": [
+              "DiscardableResult",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol",
+        "mangledName": "$s6RTBSDK27RTBDSPRewardedVideoProtocolP",
+        "moduleName": "RTBSDK",
+        "genericSig": "<τ_0_0 : RTBSDK.RTBDSAdPProtocol>",
+        "sugared_genericSig": "<Self : RTBSDK.RTBDSAdPProtocol>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RTBDSAdPProtocol",
+            "printedName": "RTBDSAdPProtocol",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBDSAdPProtocol",
+            "mangledName": "$s6RTBSDK16RTBDSAdPProtocolP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RTBDSPProtocol",
+            "printedName": "RTBDSPProtocol",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBDSPProtocol",
+            "mangledName": "$s6RTBSDK14RTBDSPProtocolP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "RTBDSPRewardedVideoDelegate",
+        "printedName": "RTBDSPRewardedVideoDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "dspAdViewDidReceiveAd",
+            "printedName": "dspAdViewDidReceiveAd(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBDSPRewardedVideoProtocol",
+                "printedName": "any RTBSDK.RTBDSPRewardedVideoProtocol",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoDelegate(im)dspAdViewDidReceiveAd:networkName:",
+            "mangledName": "$s6RTBSDK27RTBDSPRewardedVideoDelegateP019dspAdViewDidReceiveF0_11networkNameyAA0bC8Protocol_p_SStF",
+            "moduleName": "RTBSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBDSPRewardedVideoDelegate>",
+            "sugared_genericSig": "<Self where Self : RTBSDK.RTBDSPRewardedVideoDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dspAdView",
+            "printedName": "dspAdView(_:didFailToReceiveAd:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBDSPRewardedVideoProtocol",
+                "printedName": "any RTBSDK.RTBDSPRewardedVideoProtocol",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoDelegate(im)dspAdView:didFailToReceiveAd:networkName:",
+            "mangledName": "$s6RTBSDK27RTBDSPRewardedVideoDelegateP9dspAdView_016didFailToReceiveF011networkNameyAA0bC8Protocol_p_S2StF",
+            "moduleName": "RTBSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBDSPRewardedVideoDelegate>",
+            "sugared_genericSig": "<Self where Self : RTBSDK.RTBDSPRewardedVideoDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dspAdViewDidRecordClick",
+            "printedName": "dspAdViewDidRecordClick(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBDSPRewardedVideoProtocol",
+                "printedName": "any RTBSDK.RTBDSPRewardedVideoProtocol",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoDelegate(im)dspAdViewDidRecordClick:networkName:",
+            "mangledName": "$s6RTBSDK27RTBDSPRewardedVideoDelegateP23dspAdViewDidRecordClick_11networkNameyAA0bC8Protocol_p_SStF",
+            "moduleName": "RTBSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBDSPRewardedVideoDelegate>",
+            "sugared_genericSig": "<Self where Self : RTBSDK.RTBDSPRewardedVideoDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dspAdViewDidPauseForAd",
+            "printedName": "dspAdViewDidPauseForAd(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBDSPRewardedVideoProtocol",
+                "printedName": "any RTBSDK.RTBDSPRewardedVideoProtocol",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoDelegate(im)dspAdViewDidPauseForAd:networkName:",
+            "mangledName": "$s6RTBSDK27RTBDSPRewardedVideoDelegateP020dspAdViewDidPauseForF0_11networkNameyAA0bC8Protocol_p_SStF",
+            "moduleName": "RTBSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBDSPRewardedVideoDelegate>",
+            "sugared_genericSig": "<Self where Self : RTBSDK.RTBDSPRewardedVideoDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dspAdViewDidResumeAfterAd",
+            "printedName": "dspAdViewDidResumeAfterAd(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBDSPRewardedVideoProtocol",
+                "printedName": "any RTBSDK.RTBDSPRewardedVideoProtocol",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoDelegate(im)dspAdViewDidResumeAfterAd:networkName:",
+            "mangledName": "$s6RTBSDK27RTBDSPRewardedVideoDelegateP023dspAdViewDidResumeAfterF0_11networkNameyAA0bC8Protocol_p_SStF",
+            "moduleName": "RTBSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBDSPRewardedVideoDelegate>",
+            "sugared_genericSig": "<Self where Self : RTBSDK.RTBDSPRewardedVideoDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment",
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dspAdViewDidRecieveReward",
+            "printedName": "dspAdViewDidRecieveReward(_:reward:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBDSPRewardedVideoProtocol",
+                "printedName": "any RTBSDK.RTBDSPRewardedVideoProtocol",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBReward",
+                "printedName": "RTBSDK.RTBReward",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBReward"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoDelegate(im)dspAdViewDidRecieveReward:reward:networkName:",
+            "mangledName": "$s6RTBSDK27RTBDSPRewardedVideoDelegateP25dspAdViewDidRecieveReward_6reward11networkNameyAA0bC8Protocol_p_AA9RTBRewardCSStF",
+            "moduleName": "RTBSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : RTBSDK.RTBDSPRewardedVideoDelegate>",
+            "sugared_genericSig": "<Self where Self : RTBSDK.RTBDSPRewardedVideoDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "ObjC"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoDelegate",
+        "mangledName": "$s6RTBSDK27RTBDSPRewardedVideoDelegateP",
+        "moduleName": "RTBSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -9664,6 +10430,268 @@
               "RawDocComment"
             ],
             "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setDSPAdapters",
+            "printedName": "setDSPAdapters(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[any RTBSDK.RTBDSPRewardedVideoProtocol]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "RTBDSPRewardedVideoProtocol",
+                    "printedName": "any RTBSDK.RTBDSPRewardedVideoProtocol",
+                    "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:6RTBSDK18RTBRewardedVideoAdC14setDSPAdaptersyySayAA014RTBDSPRewardedC8Protocol_pGF",
+            "mangledName": "$s6RTBSDK18RTBRewardedVideoAdC14setDSPAdaptersyySayAA014RTBDSPRewardedC8Protocol_pGF",
+            "moduleName": "RTBSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dspAdViewDidReceiveAd",
+            "printedName": "dspAdViewDidReceiveAd(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBDSPRewardedVideoProtocol",
+                "printedName": "any RTBSDK.RTBDSPRewardedVideoProtocol",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@RTBSDK@objc(cs)RTBRewardedVideoAd(im)dspAdViewDidReceiveAd:networkName:",
+            "mangledName": "$s6RTBSDK18RTBRewardedVideoAdC03dspd14ViewDidReceiveD0_11networkNameyAA014RTBDSPRewardedC8Protocol_p_SStF",
+            "moduleName": "RTBSDK",
+            "objc_name": "dspAdViewDidReceiveAd:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dspAdView",
+            "printedName": "dspAdView(_:didFailToReceiveAd:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBDSPRewardedVideoProtocol",
+                "printedName": "any RTBSDK.RTBDSPRewardedVideoProtocol",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@RTBSDK@objc(cs)RTBRewardedVideoAd(im)dspAdView:didFailToReceiveAd:networkName:",
+            "mangledName": "$s6RTBSDK18RTBRewardedVideoAdC03dspD4View_016didFailToReceiveD011networkNameyAA014RTBDSPRewardedC8Protocol_p_S2StF",
+            "moduleName": "RTBSDK",
+            "objc_name": "dspAdView:didFailToReceiveAd:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dspAdViewDidRecordClick",
+            "printedName": "dspAdViewDidRecordClick(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBDSPRewardedVideoProtocol",
+                "printedName": "any RTBSDK.RTBDSPRewardedVideoProtocol",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@RTBSDK@objc(cs)RTBRewardedVideoAd(im)dspAdViewDidRecordClick:networkName:",
+            "mangledName": "$s6RTBSDK18RTBRewardedVideoAdC03dspD18ViewDidRecordClick_11networkNameyAA014RTBDSPRewardedC8Protocol_p_SStF",
+            "moduleName": "RTBSDK",
+            "objc_name": "dspAdViewDidRecordClick:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dspAdViewDidPauseForAd",
+            "printedName": "dspAdViewDidPauseForAd(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBDSPRewardedVideoProtocol",
+                "printedName": "any RTBSDK.RTBDSPRewardedVideoProtocol",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@RTBSDK@objc(cs)RTBRewardedVideoAd(im)dspAdViewDidPauseForAd:networkName:",
+            "mangledName": "$s6RTBSDK18RTBRewardedVideoAdC03dspd15ViewDidPauseForD0_11networkNameyAA014RTBDSPRewardedC8Protocol_p_SStF",
+            "moduleName": "RTBSDK",
+            "objc_name": "dspAdViewDidPauseForAd:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dspAdViewDidResumeAfterAd",
+            "printedName": "dspAdViewDidResumeAfterAd(_:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBDSPRewardedVideoProtocol",
+                "printedName": "any RTBSDK.RTBDSPRewardedVideoProtocol",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@RTBSDK@objc(cs)RTBRewardedVideoAd(im)dspAdViewDidResumeAfterAd:networkName:",
+            "mangledName": "$s6RTBSDK18RTBRewardedVideoAdC03dspd18ViewDidResumeAfterD0_11networkNameyAA014RTBDSPRewardedC8Protocol_p_SStF",
+            "moduleName": "RTBSDK",
+            "objc_name": "dspAdViewDidResumeAfterAd:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "dspAdViewDidRecieveReward",
+            "printedName": "dspAdViewDidRecieveReward(_:reward:networkName:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBDSPRewardedVideoProtocol",
+                "printedName": "any RTBSDK.RTBDSPRewardedVideoProtocol",
+                "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoProtocol"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "RTBReward",
+                "printedName": "RTBSDK.RTBReward",
+                "usr": "c:@M@RTBSDK@objc(cs)RTBReward"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@RTBSDK@objc(cs)RTBRewardedVideoAd(im)dspAdViewDidRecieveReward:reward:networkName:",
+            "mangledName": "$s6RTBSDK18RTBRewardedVideoAdC03dspD20ViewDidRecieveReward_6reward11networkNameyAA014RTBDSPRewardedC8Protocol_p_AA9RTBRewardCSStF",
+            "moduleName": "RTBSDK",
+            "objc_name": "dspAdViewDidRecieveReward:reward:networkName:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Class",
@@ -9742,6 +10770,13 @@
             "printedName": "CustomDebugStringConvertible",
             "usr": "s:s28CustomDebugStringConvertibleP",
             "mangledName": "$ss28CustomDebugStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RTBDSPRewardedVideoDelegate",
+            "printedName": "RTBDSPRewardedVideoDelegate",
+            "usr": "c:@M@RTBSDK@objc(pl)RTBDSPRewardedVideoDelegate",
+            "mangledName": "$s6RTBSDK27RTBDSPRewardedVideoDelegateP"
           }
         ]
       },
@@ -15246,63 +16281,63 @@
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/MRAID\/RTBMRAIDView.swift",
       "kind": "StringLiteral",
-      "offset": 1914,
+      "offset": 1919,
       "length": 67,
       "value": "\"New rootViewController: \""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/MRAID\/RTBMRAIDView.swift",
       "kind": "StringLiteral",
-      "offset": 1980,
+      "offset": 1985,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/MRAID\/RTBMRAIDView.swift",
       "kind": "StringLiteral",
-      "offset": 2197,
+      "offset": 2202,
       "length": 51,
       "value": "\"isViewable is: \""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/MRAID\/RTBMRAIDView.swift",
       "kind": "StringLiteral",
-      "offset": 2246,
+      "offset": 2251,
       "length": 2,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/MRAID\/RTBMRAIDView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2026,
+      "offset": 2031,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/MRAID\/RTBMRAIDView.swift",
       "kind": "FloatLiteral",
-      "offset": 2364,
+      "offset": 2369,
       "length": 3,
       "value": "0.5"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/MRAID\/RTBMRAIDView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2543,
+      "offset": 2548,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/MRAID\/RTBMRAIDView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2575,
+      "offset": 2580,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/MRAID\/RTBMRAIDView.swift",
       "kind": "IntegerLiteral",
-      "offset": 4777,
+      "offset": 4782,
       "length": 1,
       "value": "0"
     },
@@ -15422,8 +16457,8 @@
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/RTBSDKManager.swift",
       "kind": "StringLiteral",
       "offset": 1985,
-      "length": 13,
-      "value": "\"1.7.0-beta1\""
+      "length": 7,
+      "value": "\"1.7.0\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBContentInfoView.swift",
@@ -15578,6 +16613,27 @@
       "offset": 604,
       "length": 2,
       "value": "90"
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/AdFormats\/RewardedVideo\/RTBReward.swift",
+      "kind": "StringLiteral",
+      "offset": 607,
+      "length": 49,
+      "value": "\"RTBReward{ \n name=\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/AdFormats\/RewardedVideo\/RTBReward.swift",
+      "kind": "StringLiteral",
+      "offset": 634,
+      "length": 1,
+      "value": "\" \n, value=\""
+    },
+    {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/AdFormats\/RewardedVideo\/RTBReward.swift",
+      "kind": "StringLiteral",
+      "offset": 653,
+      "length": 1,
+      "value": "\" }\""
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/Consent\/RTBGDPRConsentImplementation.swift",
@@ -16093,7 +17149,7 @@
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTPlayerViewController.swift",
       "kind": "BooleanLiteral",
-      "offset": 38135,
+      "offset": 38165,
       "length": 4,
       "value": "true"
     },
@@ -18002,6 +19058,13 @@
       "value": "2"
     },
     {
+      "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/AdFormats\/RewardedVideo\/RTBRewardedVideoAd.swift",
+      "kind": "Array",
+      "offset": 687,
+      "length": 2,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/AdFormats\/Fullscreen\/RTBFullscreenAd.swift",
       "kind": "Array",
       "offset": 538,
@@ -18522,98 +19585,98 @@
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "BooleanLiteral",
-      "offset": 662,
+      "offset": 667,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "Array",
-      "offset": 764,
+      "offset": 769,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "Array",
-      "offset": 829,
+      "offset": 834,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1036,
+      "offset": 1041,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1156,
+      "offset": 1161,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1205,
+      "offset": 1210,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1253,
+      "offset": 1258,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1301,
+      "offset": 1306,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "BooleanLiteral",
-      "offset": 1345,
+      "offset": 1350,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "IntegerLiteral",
-      "offset": 1394,
+      "offset": 1399,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "Array",
-      "offset": 1487,
+      "offset": 1492,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "Array",
-      "offset": 1547,
+      "offset": 1552,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "Array",
-      "offset": 1602,
+      "offset": 1607,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/mahmoudamer\/Desktop\/Disk\/Repos\/rtb-sdk-ios\/RTBSDK\/VAST\/RTBVASTEndCardView.swift",
       "kind": "StringLiteral",
-      "offset": 1792,
+      "offset": 1797,
       "length": 51,
       "value": "\"com.addapptr.RTBSDK.observeOrientationChangeQueue\""
     },

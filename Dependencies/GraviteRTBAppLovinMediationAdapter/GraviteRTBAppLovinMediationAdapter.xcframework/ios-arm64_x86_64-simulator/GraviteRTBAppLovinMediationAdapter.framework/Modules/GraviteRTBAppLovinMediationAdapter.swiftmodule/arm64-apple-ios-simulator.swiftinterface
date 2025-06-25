@@ -46,6 +46,21 @@ extension GraviteRTBAppLovinMediationAdapter.RTBAppLovinBannerLoader : RTBSDK.RT
   @objc dynamic public func bannerViewDidPauseForAd(_ bannerView: RTBSDK.RTBBannerView, networkName: Swift.String)
   @objc dynamic public func bannerViewDidResumeAfterAd(_ bannerView: RTBSDK.RTBBannerView, networkName: Swift.String)
 }
+@objc public class RTBAppLovinRewardedVideoLoader : ObjectiveC.NSObject {
+  @objc public init(rewardedAdDelegate: (any AppLovinSDK.MARewardedAdapterDelegate)? = nil)
+  @objc public func load(parameters: any AppLovinSDK.MAAdapterResponseParameters)
+  @objc public func show(controller: UIKit.UIViewController?)
+  @objc public func destroy()
+  @objc deinit
+}
+extension GraviteRTBAppLovinMediationAdapter.RTBAppLovinRewardedVideoLoader : RTBSDK.RTBRewardedVideoAdDelegate {
+  @objc dynamic public func rewardedVideoAdDidReceiveAd(_ rewardedVideoAd: RTBSDK.RTBRewardedVideoAd, bidInfo: RTBSDK.RTBBidInfo, networkName: Swift.String)
+  @objc dynamic public func rewardedVideoAd(_ rewardedVideoAd: RTBSDK.RTBRewardedVideoAd, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
+  @objc dynamic public func rewardedVideoAdDidRecordClick(_ rewardedVideoAd: RTBSDK.RTBRewardedVideoAd, networkName: Swift.String)
+  @objc dynamic public func rewardedVideoAdDidPauseForAd(_ rewardedVideoAd: RTBSDK.RTBRewardedVideoAd, networkName: Swift.String)
+  @objc dynamic public func rewardedVideoAdDidResumeAfterAd(_ rewardedVideoAd: RTBSDK.RTBRewardedVideoAd, networkName: Swift.String)
+  @objc dynamic public func rewardedVideoAdDidReceiveReward(_ rewardedVideoAd: RTBSDK.RTBRewardedVideoAd, networkName: Swift.String)
+}
 @objc public class RTBAppLovinNativeLoader : ObjectiveC.NSObject {
   @objc public init(nativeDelegate: (any AppLovinSDK.MANativeAdAdapterDelegate)? = nil)
   @objc public func load(parameters: any AppLovinSDK.MAAdapterResponseParameters)

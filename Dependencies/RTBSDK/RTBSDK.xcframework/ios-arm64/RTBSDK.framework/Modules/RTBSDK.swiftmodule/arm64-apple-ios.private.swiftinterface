@@ -80,6 +80,15 @@ extension RTBSDK.RTBBannerSize {
   @objc public var impressionURL: Swift.String?
   @objc deinit
 }
+@objc public class RTBReward : ObjectiveC.NSObject {
+  @objc final public let name: Swift.String
+  @objc final public let value: Swift.String
+  @objc public init(name: Swift.String, value: Swift.String)
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
 @objc public class RTBRequestConfiguration : ObjectiveC.NSObject {
   @objc public var bidFloor: Foundation.NSNumber?
   @objc public var sellerId: Swift.String?
@@ -152,6 +161,19 @@ extension RTBSDK.RTBBannerSize {
   @objc override dynamic public init()
   @objc deinit
 }
+@objc public protocol RTBDSPRewardedVideoProtocol : RTBSDK.RTBDSAdPProtocol {
+  @objc var adDelegate: (any RTBSDK.RTBDSPRewardedVideoDelegate)? { get set }
+  @objc @discardableResult
+  func show(viewController: UIKit.UIViewController) -> Swift.Bool
+}
+@objc public protocol RTBDSPRewardedVideoDelegate {
+  @objc func dspAdViewDidReceiveAd(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, networkName: Swift.String)
+  @objc func dspAdView(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
+  @objc func dspAdViewDidRecordClick(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, networkName: Swift.String)
+  @objc func dspAdViewDidPauseForAd(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, networkName: Swift.String)
+  @objc func dspAdViewDidResumeAfterAd(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, networkName: Swift.String)
+  @objc func dspAdViewDidRecieveReward(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, reward: RTBSDK.RTBReward, networkName: Swift.String)
+}
 @objc public protocol RTBBannerViewDelegate {
   @objc func bannerViewDidReceiveAd(_ bannerView: RTBSDK.RTBBannerView, bidInfo: RTBSDK.RTBBidInfo, networkName: Swift.String)
   @objc func bannerView(_ bannerView: RTBSDK.RTBBannerView, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
@@ -216,7 +238,16 @@ extension RTBSDK.RTBBannerSize {
   @objc public func load(configuration: RTBSDK.RTBRewardedVideoRequestConfiguration) -> Swift.Bool
   @discardableResult
   @objc public func show(viewController: UIKit.UIViewController) -> Swift.Bool
+  public func setDSPAdapters(_ adapters: [any RTBSDK.RTBDSPRewardedVideoProtocol])
   @objc deinit
+}
+extension RTBSDK.RTBRewardedVideoAd : RTBSDK.RTBDSPRewardedVideoDelegate {
+  @objc dynamic public func dspAdViewDidReceiveAd(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, networkName: Swift.String)
+  @objc dynamic public func dspAdView(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
+  @objc dynamic public func dspAdViewDidRecordClick(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, networkName: Swift.String)
+  @objc dynamic public func dspAdViewDidPauseForAd(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, networkName: Swift.String)
+  @objc dynamic public func dspAdViewDidResumeAfterAd(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, networkName: Swift.String)
+  @objc dynamic public func dspAdViewDidRecieveReward(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, reward: RTBSDK.RTBReward, networkName: Swift.String)
 }
 @_inheritsConvenienceInitializers @objc public class RTBFullscreenAd : ObjectiveC.NSObject {
   @objc weak public var delegate: (any RTBSDK.RTBFullscreenDelegate)?
