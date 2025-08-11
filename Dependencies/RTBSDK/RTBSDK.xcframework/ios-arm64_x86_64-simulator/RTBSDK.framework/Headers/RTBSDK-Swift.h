@@ -308,26 +308,40 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class NSString;
 
+/// A delegate protocol for receiving banner ad interaction events.
+/// Implement this protocol to handle user interactions and rendering lifecycle events
+/// for banner ads provided by the RTB SDK.
 SWIFT_PROTOCOL("_TtP6RTBSDK30RTBBannerAdInteractionDelegate_")
 @protocol RTBBannerAdInteractionDelegate
-/// Tells the delegate that a click has been recorded for the ad.
+/// Called when the banner ad is clicked.
+/// Use this to track user engagement or pause in-app activity if needed.
 - (void)bannerAdDidRecordClick;
-/// Tells the delegate that ad has opened external browser.
+/// Called when the ad causes the app to pause, such as when opening an external browser.
+/// Use this to temporarily pause any relevant in-app content or animations.
 - (void)bannerAdDidPauseForAd;
-/// Tells the delegate that Ad has been dismissed.
+/// Called when the app resumes after the ad activity has ended.
+/// Use this to resume paused in-app content or UI updates.
 - (void)bannerAdDidResumeAfterAd;
-/// Tells the delegate that an ad rendering failed.
+/// Called when the banner ad fails to render.
+/// \param error A string describing the rendering failure reason.
+///
 - (void)bannerAdDidFailToRenderWithError:(NSString * _Nonnull)error;
 @end
 
 @class RTBBannerBid;
 
+/// A delegate protocol for receiving the result of a banner ad load request.
+/// Implement this protocol to be notified when a banner ad either successfully loads
+/// or fails to load.
 SWIFT_PROTOCOL("_TtP6RTBSDK23RTBBannerAdLoadDelegate_")
 @protocol RTBBannerAdLoadDelegate
-/// Tells the delegate that an ad request successfully received an ad.
-/// @param bannerBid Information about the bid.
+/// Called when a banner ad is successfully loaded.
+/// \param bannerBid An instance of <code>RTBBannerBid</code> containing the bid and ad metadata.
+///
 - (void)bannerAdDidReceiveAdWithBannerBid:(RTBBannerBid * _Nonnull)bannerBid;
-/// Tells the delegate that an ad request failed.
+/// Called when the banner ad request fails.
+/// \param errorMessage A message describing why the ad failed to load.
+///
 - (void)bannerAdDidFailToReceiveAdWithErrorMessage:(NSString * _Nonnull)errorMessage;
 @end
 
@@ -335,43 +349,55 @@ SWIFT_PROTOCOL("_TtP6RTBSDK23RTBBannerAdLoadDelegate_")
 @class RTBBannerSize;
 @class UIView;
 
+/// An object responsible for loading and displaying RTB banner ads.
 SWIFT_CLASS("_TtC6RTBSDK19RTBBannerAdProvider")
 @interface RTBBannerAdProvider : NSObject
-/// Load a new banner ad with  configuration
-/// \param configuration banner request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
+/// Loads a new banner ad with the specified configuration.
+/// This method fetches a banner ad using the provided request configuration, banner size, and user agent string.
+/// The result of the ad load (success or failure) is reported via the supplied delegate.
+/// \param configuration An instance of <code>RTBBannerRequestConfiguration</code> containing all necessary ad request details.
 ///
-/// \param size banner size
+/// \param size The desired banner size (see <code>RTBBannerSize</code>).
 ///
-/// \param userAgent user agent
+/// \param userAgent The User-Agent string to be used for the ad request.
 ///
-/// \param loadDelegate the <code>RTBBannerAdLoadDelegate</code> that will be notified with the load result
+/// \param loadDelegate A delegate conforming to <code>RTBBannerAdLoadDelegate</code> that will be notified of the load result.
 ///
 + (void)loadWithConfiguration:(RTBBannerRequestConfiguration * _Nonnull)configuration size:(RTBBannerSize * _Nonnull)size userAgent:(NSString * _Nonnull)userAgent loadDelegate:(id <RTBBannerAdLoadDelegate> _Nonnull)loadDelegate;
-/// Get the banner view using a previously loaded bid info
-/// \param bannerBid An instance of <code>RTBBannerBid</code>
+/// Returns a banner view configured with the provided bid information and interaction delegate.
+/// This method must be called on the main thread, as it involves creating and rendering UI elements.
+/// \param bannerBid An instance of <code>RTBBannerBid</code> obtained from a successful banner load.
 ///
-/// \param delegate The <code>RTBBannerAdInteractionDelegate</code> that will be notified with the ad interactions like clicks, pause, etc.
+/// \param delegate A delegate conforming to <code>RTBBannerAdInteractionDelegate</code> to handle ad interactions such as clicks or pauses.
 ///
 ///
 /// returns:
-/// A view to be rendered
+/// A <code>UIView</code> that displays the banner ad, or <code>nil</code> if called from a background thread.
 + (UIView * _Nullable)getBannerViewWithBannerBid:(RTBBannerBid * _Nonnull)bannerBid delegate:(id <RTBBannerAdInteractionDelegate> _Nonnull)delegate SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// An object representing metadata about a received bid in an RTB auction.
 SWIFT_CLASS("_TtC6RTBSDK10RTBBidInfo")
 @interface RTBBidInfo : NSObject
+/// The bid price in cost per mille (CPM).
 @property (nonatomic) float priceCPM;
+/// The name or identifier of the bidder.
 @property (nonatomic, copy) NSString * _Nonnull bidder;
+/// The creative ID associated with the ad.
 @property (nonatomic, copy) NSString * _Nullable creativeId;
+/// The campaign ID associated with the bid.
 @property (nonatomic, copy) NSString * _Nullable campaignId;
+/// A string representation of the bid info, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+/// Represents a banner ad bid, including its creative response and size.
+/// This class extends <code>RTBBidInfo</code> by adding details specific to banner ads.
 SWIFT_CLASS("_TtC6RTBSDK12RTBBannerBid")
 @interface RTBBannerBid : RTBBidInfo
 @end
@@ -379,16 +405,19 @@ SWIFT_CLASS("_TtC6RTBSDK12RTBBannerBid")
 @class NSNumber;
 @class RTBUserTargeting;
 
+/// A configuration object for making ad requests through RTBSDK.
 SWIFT_CLASS("_TtC6RTBSDK23RTBRequestConfiguration")
 @interface RTBRequestConfiguration : NSObject
-/// Represents the bid floor price in USD.
+/// The minimum bid floor price in USD.
 @property (nonatomic, strong) NSNumber * _Nullable bidFloor;
+/// The seller ID associated with the ad inventory.
 @property (nonatomic, copy) NSString * _Nullable sellerId;
-/// An <code>RTBUserTargeting</code> object that represents the user targeting for this request
+/// An object representing user targeting parameters for this request.
 @property (nonatomic, strong) RTBUserTargeting * _Nullable userTargeting;
-/// \param placementId Represents the placement ID on SmartyAd dashboard.
+@property (nonatomic, copy) NSString * _Nullable gpid;
+/// \param placementId The placement ID as defined on the TeqBlaze dashboard.
 ///
-/// \param iTunesAppId Represents the AppId on the publisher Apple developer account.
+/// \param iTunesAppId The App Store app ID from the publisher’s Apple Developer account.
 ///
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -396,15 +425,24 @@ SWIFT_CLASS("_TtC6RTBSDK23RTBRequestConfiguration")
 @end
 
 
+/// Configuration object for requesting banner ads.
+/// Inherits from <code>RTBRequestConfiguration</code> and extends it with banner-specific details.
 SWIFT_CLASS("_TtC6RTBSDK29RTBBannerRequestConfiguration")
 @interface RTBBannerRequestConfiguration : RTBRequestConfiguration
+/// A string representation of the banner request configuration, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// Represents the size of a banner ad with width and height dimensions.
 SWIFT_CLASS("_TtC6RTBSDK13RTBBannerSize")
 @interface RTBBannerSize : NSObject
+/// Initializes a new banner size with the specified width and height.
+/// \param width The width of the banner.
+///
+/// \param height The height of the banner.
+///
 - (nonnull instancetype)initWithWidth:(CGFloat)width height:(CGFloat)height OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -412,51 +450,94 @@ SWIFT_CLASS("_TtC6RTBSDK13RTBBannerSize")
 
 
 @interface RTBBannerSize (SWIFT_EXTENSION(RTBSDK))
+/// Standard banner size: 320x50 points.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBBannerSize * _Nonnull banner320x50;)
 + (RTBBannerSize * _Nonnull)banner320x50 SWIFT_WARN_UNUSED_RESULT;
+/// Medium rectangle banner size: 300x250 points.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBBannerSize * _Nonnull banner300x250;)
 + (RTBBannerSize * _Nonnull)banner300x250 SWIFT_WARN_UNUSED_RESULT;
+/// Leaderboard banner size: 728x90 points.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBBannerSize * _Nonnull banner728x90;)
 + (RTBBannerSize * _Nonnull)banner728x90 SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @protocol RTBBannerViewDelegate;
 @class NSCoder;
-@protocol RTBDSPBannerProtocol;
 
+/// A view that displays banner ads using the RTB SDK.
+/// Use this view to load and display banner ads with a specific size and configuration.
 SWIFT_CLASS("_TtC6RTBSDK13RTBBannerView")
 @interface RTBBannerView : UIView
+/// The delegate that receives banner ad lifecycle events.
 @property (nonatomic, weak) id <RTBBannerViewDelegate> _Nullable delegate;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+/// Initializes a new banner view with a given banner size.
+/// \param size The desired banner ad size.
+///
 - (nonnull instancetype)initWithSize:(RTBBannerSize * _Nonnull)size OBJC_DESIGNATED_INITIALIZER;
-/// load a new ad with  configuration
-/// \param configuration banner request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
+/// Loads a new banner ad using the provided configuration.
+/// \param configuration An instance of <code>RTBBannerRequestConfiguration</code>.
 ///
 - (void)loadWithConfiguration:(RTBBannerRequestConfiguration * _Nonnull)configuration;
-- (void)setDSPAdapters:(NSArray<id <RTBDSPBannerProtocol>> * _Nonnull)adapters;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
+@protocol RTBDSPBannerProtocol;
+
+@interface RTBBannerView (SWIFT_EXTENSION(RTBSDK))
+- (void)setDSPAdapters:(NSArray<id <RTBDSPBannerProtocol>> * _Nonnull)adapters;
+@end
 
 
+/// Delegate protocol for receiving updates about banner ad lifecycle events.
+/// Implement this protocol to be notified when ads are successfully loaded, fail to load,
+/// fail to render, are clicked, or when the user interacts with the ad by opening and returning
+/// from external content.
 SWIFT_PROTOCOL("_TtP6RTBSDK21RTBBannerViewDelegate_")
 @protocol RTBBannerViewDelegate
-/// Tells the delegate that an ad request successfully received an ad. The delegate may want to add
-/// \param bannerView the banner view to the view hierarchy if it hasn’t been added yet
+/// Called when the banner view successfully receives an ad.
+/// The delegate may want to add the banner view to the view hierarchy if it hasn’t been added yet.
+/// \param bannerView The <code>RTBBannerView</code> instance that received the ad.
 ///
-/// \param bidInfo an instance of <code>RTBBidInfo</code> representing bid price and and bidder name
+/// \param bidInfo An instance of <code>RTBBidInfo</code> containing bid price and bidder details.
+///
+/// \param networkName The name of the ad network that provided the ad.
 ///
 - (void)bannerViewDidReceiveAd:(RTBBannerView * _Nonnull)bannerView bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that an ad request failed
+/// Called when the banner view fails to receive an ad.
+/// \param bannerView The <code>RTBBannerView</code> instance that failed to load the ad.
+///
+/// \param errorMessage A description of the failure.
+///
+/// \param networkName The name of the ad network that failed to provide the ad.
+///
 - (void)bannerView:(RTBBannerView * _Nonnull)bannerView didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that an ad coudln’t be rendered.
+/// Called when the banner view fails to render the received ad.
+/// \param bannerView The <code>RTBBannerView</code> instance that failed to render the ad.
+///
+/// \param errorMessage A description of the render failure.
+///
+/// \param networkName The name of the ad network involved.
+///
 - (void)bannerView:(RTBBannerView * _Nonnull)bannerView didFailToRender:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that a click has been recorded for the ad.
+/// Called when a click has been recorded on the banner ad.
+/// \param bannerView The <code>RTBBannerView</code> instance where the click occurred.
+///
+/// \param networkName The name of the ad network whose ad was clicked.
+///
 - (void)bannerViewDidRecordClick:(RTBBannerView * _Nonnull)bannerView networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that ad has opened external browser
+/// Called when the ad causes the app to open an external browser.
+/// \param bannerView The <code>RTBBannerView</code> instance that triggered external navigation.
+///
+/// \param networkName The name of the ad network responsible for this action.
+///
 - (void)bannerViewDidPauseForAd:(RTBBannerView * _Nonnull)bannerView networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that Ad has been dismissed
+/// Called when the user returns to the app after viewing the external ad.
+/// \param bannerView The <code>RTBBannerView</code> instance that resumed.
+///
+/// \param networkName The name of the ad network involved.
+///
 - (void)bannerViewDidResumeAfterAd:(RTBBannerView * _Nonnull)bannerView networkName:(NSString * _Nonnull)networkName;
 @end
 
@@ -485,9 +566,7 @@ SWIFT_PROTOCOL("_TtP6RTBSDK14RTBDSPProtocol_")
 
 SWIFT_PROTOCOL("_TtP6RTBSDK16RTBDSAdPProtocol_")
 @protocol RTBDSAdPProtocol <RTBDSPProtocol>
-@property (nonatomic, copy) NSString * _Nullable requestId;
 @property (nonatomic, strong) UIViewController * _Nullable viewController;
-@property (nonatomic, copy) NSString * _Nullable adID;
 - (void)unload;
 - (void)pause;
 - (void)resumeWithController:(UIViewController * _Nonnull)controller;
@@ -575,18 +654,26 @@ SWIFT_PROTOCOL("_TtP6RTBSDK27RTBDSPRewardedVideoProtocol_")
 @protocol RTBFullscreenDelegate;
 @class RTBFullscreenRequestConfiguration;
 
+/// Represents a fullscreen interstitial ad that can be loaded and presented.
 SWIFT_CLASS("_TtC6RTBSDK15RTBFullscreenAd")
 @interface RTBFullscreenAd : NSObject
-/// The delegate the will be notified with the different events
+/// Delegate to receive fullscreen ad lifecycle events.
 @property (nonatomic, weak) id <RTBFullscreenDelegate> _Nullable delegate;
+/// Initializes a new fullscreen ad instance.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// Start loading a fullscreen ad
-/// \param configuration Fullscreen request configuration that is needed to request a new Ad, see <code>RTBFullscreenRequestConfiguration</code>
+/// Starts loading a fullscreen ad with the given request configuration.
+/// \param configuration The fullscreen ad request configuration.
 ///
+///
+/// returns:
+/// <code>true</code> if loading started successfully, <code>false</code> if an ad is already loaded and ready.
 - (BOOL)loadWithConfiguration:(RTBFullscreenRequestConfiguration * _Nonnull)configuration;
-/// Show the loaded fullscreen ad
-/// \param viewController The view controller that will be used to present the fullscreen ad
+/// Presents the loaded fullscreen ad from the specified view controller.
+/// \param viewController The view controller to present the ad from.
 ///
+///
+/// returns:
+/// <code>true</code> if the ad was presented, <code>false</code> otherwise.
 - (BOOL)showWithViewController:(UIViewController * _Nonnull)viewController;
 @end
 
@@ -642,33 +729,49 @@ SWIFT_PROTOCOL("_TtP6RTBSDK21RTBFullscreenDelegate_")
 @end
 
 
+/// Configuration settings used when requesting a fullscreen ad.
+/// Inherits from <code>RTBRequestConfiguration</code> and adds options specific to fullscreen ads.
 SWIFT_CLASS("_TtC6RTBSDK33RTBFullscreenRequestConfiguration")
 @interface RTBFullscreenRequestConfiguration : RTBRequestConfiguration
-/// Boolean to force showing the SDK native close button even if the MRAID creative has one
+/// A flag to determine whether the SDK should force displaying its native close button
+/// even if the MRAID creative already contains one.
 /// If the MRAID creative has close button and <code>forceCloseButtonForMraid</code> is true, the MRAID creative would have 2 close buttons
 @property (nonatomic) BOOL forceCloseButtonForMraid;
+/// A string representation of the fullscreen request configuration, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
 @end
 
+/// Represents the gender of the user for targeting purposes.
 typedef SWIFT_ENUM(NSInteger, RTBGender, open) {
+/// Male gender.
   RTBGenderMale = 0,
+/// Female gender.
   RTBGenderFemale = 1,
+/// Other gender.
   RTBGenderOther = 2,
+/// Unknown or unspecified gender.
   RTBGenderUnknown = 3,
 };
 
-/// Desired log level
+/// Represents the desired log level for the RTB SDK logging system.
+/// This enum defines various levels of logging verbosity. Use the appropriate level
+/// depending on the environment and troubleshooting needs.
 typedef SWIFT_ENUM(NSInteger, RTBLogLevel, open) {
-/// Verbose-level messages are intended to capture verbose, debug, info, warning and error messages. It’s convenient in an intensive development environment.
+/// Verbose-level messages capture verbose, debug, info, warning, and error messages.
+/// Suitable for intensive development and debugging scenarios.
   RTBLogLevelVerbose = 1,
-/// Debug-level messages are intended to capture debug, info, warning and error messages. It’s convenient in a normal development environment.
+/// Debug-level messages capture debug, info, warning, and error messages.
+/// Suitable for normal development use.
   RTBLogLevelDebug = 2,
-/// Info-level messages are intended to capture info, warning and error messages. Info-level may be helpful but isn’t enough for troubleshooting.
+/// Info-level messages capture info, warning, and error messages.
+/// Useful for general informational logging but not detailed troubleshooting.
   RTBLogLevelInfo = 3,
-/// Warn-level messages are intended to capture warning and error messages only.
+/// Warn-level messages capture warning and error messages only.
+/// Suitable for highlighting potential issues without too much noise.
   RTBLogLevelWarn = 4,
-/// Error-level messages are intended to capture error messages only.
+/// Error-level messages capture error messages only.
+/// Recommended for production environments to minimize log output.
   RTBLogLevelError = 5,
 };
 
@@ -681,57 +784,69 @@ SWIFT_CLASS("_TtC6RTBSDK9RTBLogger")
 
 @protocol RTBNativeAdInteractionDelegate;
 
+/// Represents a loaded native ad and handles impression and click tracking.
 SWIFT_CLASS("_TtC6RTBSDK11RTBNativeAd")
 @interface RTBNativeAd : NSObject
-/// The <code>RTBNativeAdInteractionDelegate</code> that will be notified with ad interaction events
+/// Delegate to notify about native ad interaction events.
 @property (nonatomic, weak) id <RTBNativeAdInteractionDelegate> _Nullable delegate;
-/// Native ad title
+/// The title of the native ad.
 @property (nonatomic, copy) NSString * _Nullable title;
-/// Native ad call to action text
+/// The call-to-action text of the native ad.
 @property (nonatomic, copy) NSString * _Nullable callToAction;
-/// Native ad body text
+/// The body text of the native ad.
 @property (nonatomic, copy) NSString * _Nullable body;
-/// Native ad icon url
+/// URL string of the native ad’s icon image.
 @property (nonatomic, copy) NSString * _Nullable icon;
-/// Native ad main image url
+/// URL string of the native ad’s main image.
 @property (nonatomic, copy) NSString * _Nullable image;
-/// Native ad rating
+/// The rating of the native ad (optional).
 @property (nonatomic, strong) NSNumber * _Nullable rating;
-/// Native ad sponsered text
+/// The sponsored text of the native ad.
 @property (nonatomic, copy) NSString * _Nullable sponsered;
+/// Starts tracking an impression for the native ad on the given view.
+/// \param view The main view displaying the native ad.
+///
 - (void)trackImpressionWithView:(UIView * _Nonnull)view;
+/// Starts tracking an impression and user clicks on specified clickable views.
+/// \param view The main view displaying the native ad.
+///
+/// \param clickableViews The views that should be tappable to register clicks.
+///
 - (void)trackImpressionWithView:(UIView * _Nonnull)view clickableViews:(NSArray<UIView *> * _Nonnull)clickableViews;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+/// Delegate protocol to receive interaction events for a native ad.
+/// Implement this protocol to handle native ad rendering errors, user interactions
+/// such as clicks, and app lifecycle changes related to the ad (pausing and resuming).
 SWIFT_PROTOCOL("_TtP6RTBSDK30RTBNativeAdInteractionDelegate_")
 @protocol RTBNativeAdInteractionDelegate
-/// Tells the delegate that an ad coudln’t be rendered.
-/// \param nativeAd The <code>RTBNativeAd</code>
+/// Called when the native ad couldn’t be rendered.
+/// \param nativeAd The <code>RTBNativeAd</code> that failed to render
 ///
-/// \param errorMessage The error message
+/// \param errorMessage A message describing the reason for the failure
 ///
-/// \param networkName The biddder name
+/// \param networkName Network name for the ad
 ///
 - (void)nativeAdView:(RTBNativeAd * _Nonnull)nativeAd didFailToRender:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that a click has been recorded for the ad.
-/// \param nativeAd The <code>RTBNativeAd</code>
+/// Called when the user clicks on the native ad.
+/// \param nativeAd The <code>RTBNativeAd</code> that received the click
 ///
-/// \param networkName The biddder name
+/// \param networkName Network name for the ad
 ///
 - (void)nativeAdDidRecordClick:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that ad has opened external browser
-/// \param nativeAd The <code>RTBNativeAd</code>
+/// Called when the native ad opens an external browser and the app is paused for the ad.
+/// \param nativeAd The <code>RTBNativeAd</code> that caused the pause
 ///
-/// \param networkName The biddder name
+/// \param networkName Network name for the ad
 ///
 - (void)nativeAdDidPauseForAd:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that Ad has been dismissed
-/// \param nativeAd The <code>RTBNativeAd</code> that contains all ad assets
+/// Called when the native ad has been dismissed and the app resumes after the ad.
+/// \param nativeAd The <code>RTBNativeAd</code> that was dismissed
 ///
-/// \param networkName The bidder name
+/// \param networkName Network name for the ad
 ///
 - (void)nativeAdDidResumeAfterAd:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
 @end
@@ -739,71 +854,82 @@ SWIFT_PROTOCOL("_TtP6RTBSDK30RTBNativeAdInteractionDelegate_")
 @protocol RTBNativeAdLoaderDelegate;
 @class RTBNativeAdRequestConfiguration;
 
+/// Responsible for loading native ads and notifying the delegate about load events.
 SWIFT_CLASS("_TtC6RTBSDK17RTBNativeAdLoader")
 @interface RTBNativeAdLoader : NSObject
-/// The <code>RTBNativeAdLoaderDelegate</code> that will be notified with the load events
+/// The delegate that will receive native ad load event callbacks.
 @property (nonatomic, weak) id <RTBNativeAdLoaderDelegate> _Nullable delegate;
-/// load a new native ad with  configuration. Can be called from background threads.
-/// \param configuration native ad request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
+/// Loads a new native ad using the specified configuration and user agent.
+/// This method can be called from background threads.
+/// \param configuration The native ad request configuration required to request a new ad. See <code>RTBNativeAdRequestConfiguration</code>.
 ///
-/// \param userAgent user agent
+/// \param userAgent The user agent string to be used in the ad request.
 ///
 - (void)loadWithConfiguration:(RTBNativeAdRequestConfiguration * _Nonnull)configuration userAgent:(NSString * _Nonnull)userAgent;
-/// load a new native ad with  configuration. Must be called from the main thread.
-/// \param configuration native ad request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
+/// Loads a new native ad using the specified configuration.
+/// This method <em>must</em> be called on the main thread. If called from a background thread,
+/// it will log an error and notify the delegate of the failure.
+/// \param configuration The native ad request configuration required to request a new ad. See <code>RTBNativeAdRequestConfiguration</code>.
 ///
 - (void)loadWithConfiguration:(RTBNativeAdRequestConfiguration * _Nonnull)configuration;
-/// Gets the native ad data
+/// Returns the currently loaded native ad data, if available.
 ///
 /// returns:
-/// An instance of <code>RTBNativeAd</code>
+/// An optional <code>RTBNativeAd</code> instance representing the loaded native ad.
 - (RTBNativeAd * _Nullable)getNativeAd SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 
+/// Delegate protocol for receiving native ad load events.
 SWIFT_PROTOCOL("_TtP6RTBSDK25RTBNativeAdLoaderDelegate_")
 @protocol RTBNativeAdLoaderDelegate
-/// Tells the delegate that an ad request successfully received an ad. The delegate may want to add
-/// \param nativeAdLoader the <code>RTBNativeAd</code> that loaded the native ad
+/// Called when the native ad loader successfully loads a native ad.
+/// \param nativeAdLoader The <code>RTBNativeAdLoader</code> instance that loaded the native ad.
 ///
-/// \param bidInfo an instance of <code>RTBBidInfo</code> representing bid price and and bidder name
+/// \param bidInfo An instance of <code>RTBBidInfo</code> containing bid price and bidder information.
 ///
-/// \param networkName The biddder name
+/// \param networkName The name of the bidder/network that provided the ad.
 ///
 - (void)nativeAdDidReceiveAd:(RTBNativeAdLoader * _Nonnull)nativeAdLoader bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that an ad request failed
-/// \param nativeAdLoader The <code>nativeAdLoader</code> that failed to load an ad
+/// Called when the native ad loader fails to load an ad.
+/// \param nativeAdLoader The <code>RTBNativeAdLoader</code> instance that failed to load the ad.
 ///
-/// \param errorMessage Error message
+/// \param errorMessage A descriptive error message explaining the failure.
 ///
-/// \param networkName The biddder name
+/// \param networkName The name of the bidder/network that failed to load the ad.
 ///
 - (void)nativeAdView:(RTBNativeAdLoader * _Nonnull)nativeAdLoader didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
 @end
 
 
+/// Configuration class for native ad requests.
+/// Inherits from <code>RTBRequestConfiguration</code> and adds native ads specific options.
 SWIFT_CLASS("_TtC6RTBSDK31RTBNativeAdRequestConfiguration")
 @interface RTBNativeAdRequestConfiguration : RTBRequestConfiguration
+/// A string representation of <code>RTBNativeAdRequestConfiguration</code>, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 
+/// Represents a reward that can be granted to the user,
+/// Contains a name and a value describing the reward.
 SWIFT_CLASS("_TtC6RTBSDK9RTBReward")
 @interface RTBReward : NSObject
-/// String represents the reward name
+/// The name of the reward.
 @property (nonatomic, readonly, copy) NSString * _Nonnull name;
-/// String represents the reward value
+/// The value associated with the reward.
 @property (nonatomic, readonly, copy) NSString * _Nonnull value;
-/// Creates an instance of <code>RTBReward</code>
-/// \param name The reward name
+/// Initializes a new reward instance.
+/// \param name The reward’s name.
 ///
-/// \param value The reward value
+/// \param value The reward’s value.
 ///
 - (nonnull instancetype)initWithName:(NSString * _Nonnull)name value:(NSString * _Nonnull)value OBJC_DESIGNATED_INITIALIZER;
+/// A string representation of <code>RTBReward</code>, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -812,18 +938,27 @@ SWIFT_CLASS("_TtC6RTBSDK9RTBReward")
 @protocol RTBRewardedVideoAdDelegate;
 @class RTBRewardedVideoRequestConfiguration;
 
+/// Represents a rewarded video ad that can be loaded and presented to the user.
 SWIFT_CLASS("_TtC6RTBSDK18RTBRewardedVideoAd")
 @interface RTBRewardedVideoAd : NSObject
-/// The delegate the will be notified with the different events
+/// The delegate object that receives rewarded video ad event callbacks.
+/// Use this to track ad lifecycle events such as loading success, failure, reward granting, clicks, and ad presentation states.
 @property (nonatomic, weak) id <RTBRewardedVideoAdDelegate> _Nullable delegate;
+/// Initializes a new instance of <code>RTBRewardedVideoAd</code>.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// Start loading a rewarded video ad
-/// \param configuration Rewarded video request configuration that is needed to request a new Ad, see <code>RTBRewardedVideoRequestConfiguration</code>
+/// Loads a rewarded video ad with the specified request configuration.
+/// \param configuration Configuration settings required to request a rewarded video ad.
 ///
+///
+/// returns:
+/// <code>true</code> if the loading request was initiated successfully; <code>false</code> if an ad is already loaded and ready to be shown.
 - (BOOL)loadWithConfiguration:(RTBRewardedVideoRequestConfiguration * _Nonnull)configuration;
-/// Show the loaded rewarded video ad
-/// \param viewController The view controller that will be used to present the rewarded video ad
+/// Presents the loaded rewarded video ad from the given view controller.
+/// \param viewController The <code>UIViewController</code> instance that will present the rewarded video ad.
 ///
+///
+/// returns:
+/// <code>true</code> if the ad was successfully shown; <code>false</code> otherwise.
 - (BOOL)showWithViewController:(UIViewController * _Nonnull)viewController;
 @end
 
@@ -840,66 +975,82 @@ SWIFT_CLASS("_TtC6RTBSDK18RTBRewardedVideoAd")
 
 
 
+/// Delegate protocol for receiving rewarded video ad lifecycle events.
+/// Implement this protocol to get notified about ad loading, presentation, user interactions, and rewards.
 SWIFT_PROTOCOL("_TtP6RTBSDK26RTBRewardedVideoAdDelegate_")
 @protocol RTBRewardedVideoAdDelegate
-/// Called when the rewarded video ad has been loaded and ready to be shown
-/// \param rewardedVideoAd The loaded <code>RTBRewardedVideoAd</code>
+/// Called when the rewarded video ad has successfully loaded and is ready to be shown.
+/// \param rewardedVideoAd The rewarded video ad instance that was loaded.
 ///
-/// \param bidInfo an instance of <code>RTBBidInfo</code> representing bid price and and bidder name
+/// \param bidInfo Contains bid price, bidder name, and related metadata.
 ///
-/// \param networkName networtk name for the loaded ad
+/// \param networkName The ad network name that provided the loaded ad.
 ///
 - (void)rewardedVideoAdDidReceiveAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
-/// Called when the rewarded video ad loading is failed
-/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that failed to load
+/// Called when the rewarded video ad failed to load.
+/// \param rewardedVideoAd The rewarded video ad instance that failed to load.
 ///
-/// \param errorMessage A message describing the reason for the failure
+/// \param errorMessage A descriptive message explaining the failure reason.
 ///
-/// \param networkName networtk name for the loaded ad
+/// \param networkName The ad network name associated with the failed load attempt.
 ///
 - (void)rewardedVideoAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
-/// Called when the use clicks on the rewarded video ad
-/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+/// Called when the user clicks on the rewarded video ad.
+/// \param rewardedVideoAd The rewarded video ad instance that was clicked.
 ///
-/// \param networkName networtk name for the loaded ad
+/// \param networkName The ad network name associated with the clicked ad.
 ///
 - (void)rewardedVideoAdDidRecordClick:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
-/// Called when the rewarded video ad has been displayed and video has just started
-/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+/// Called when the rewarded video ad is displayed and the video playback starts.
+/// \param rewardedVideoAd The rewarded video ad instance that started playing.
 ///
-/// \param networkName networtk name for the loaded ad
+/// \param networkName The ad network name associated with the playing ad.
 ///
 - (void)rewardedVideoAdDidPauseForAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
-/// Called when the rewarded video ad has been dismisseed
-/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+/// Called when the rewarded video ad is dismissed and the app resumes its normal state.
+/// \param rewardedVideoAd The rewarded video ad instance that was dismissed.
 ///
-/// \param networkName networtk name for the loaded ad
+/// \param networkName The ad network name associated with the dismissed ad.
 ///
 - (void)rewardedVideoAdDidResumeAfterAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
-/// Called when the use receives a reward after watching the ad
-/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+/// Called when the user has earned a reward after watching the ad.
+/// \param rewardedVideoAd The rewarded video ad instance that granted the reward.
 ///
-/// \param networkName networtk name for the loaded ad
+/// \param networkName The ad network name associated with the rewarded ad.
 ///
 - (void)rewardedVideoAdDidReceiveReward:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
 @end
 
 
+/// Configuration class for rewarded video ad requests.
+/// Inherits from <code>RTBRequestConfiguration</code> and adds rewarded video specific options.
 SWIFT_CLASS("_TtC6RTBSDK36RTBRewardedVideoRequestConfiguration")
 @interface RTBRewardedVideoRequestConfiguration : RTBRequestConfiguration
+/// Indicates whether the rewarded video ad should start muted.
+/// Defaults to <code>false</code>. Set to <code>true</code> if you want the ad to play without sound initially.
 @property (nonatomic) BOOL muteOnStart;
+/// A string representation of <code>RTBRewardedVideoRequestConfiguration</code>, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// A shared manager that controls global RTBSDK settings and behaviors.
 SWIFT_CLASS("_TtC6RTBSDK13RTBSDKManager")
 @interface RTBSDKManager : NSObject
+/// The shared singleton instance of <code>RTBSDKManager</code>.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBSDKManager * _Nonnull shared;)
 + (RTBSDKManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+/// The Objective-C compatible version of <code>isChildDirected-1gse</code>.
 @property (nonatomic, strong) NSNumber * _Nullable isChildDirected;
+/// The Objective-C compatible version of <code>isGDPRApplies-3wc4x</code>.
 @property (nonatomic, strong) NSNumber * _Nullable isGDPRApplies;
-/// A bool that indicates whether the SDK should use the geo location or not. Default value is <em>false</em>
+/// A bool that indicates whether the test mode is enabled or not. Default value is <em>false</em>
+@property (nonatomic) BOOL testModeEnabled;
+/// A <code>RTBLogLevel</code> that represents the SDK internal log level. Default value is <code>RTBLogLevel.info</code>
+@property (nonatomic) enum RTBLogLevel logLevel;
+/// Indicates whether the SDK is allowed to access the user’s geographic location.
+/// Default value is <code>false</code>.
 @property (nonatomic) BOOL useGeoLocation;
 @property (nonatomic, readonly, copy) NSString * _Nonnull sdkVersion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -907,28 +1058,32 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBSDKManage
 @end
 
 
+/// Represents user targeting information to refine ad requests.
 SWIFT_CLASS("_TtC6RTBSDK16RTBUserTargeting")
 @interface RTBUserTargeting : NSObject
-/// initialize <code>RTBUserTargeting</code>
-/// \param userId user id
+/// Initializes a new instance of <code>RTBUserTargeting</code>.
+/// \param userId The user identifier.
 ///
-/// \param gender user gender.
+/// \param gender The user’s gender.
 /// <ul>
 ///   <li>
-///     <em>Important</em>: The default value is <code>RTBGender.unknown</code> and will be ignored while performing the request.
+///     <em>Important:</em> The default value is <code>RTBGender/unknown</code> and will be ignored in requests.
 ///   </li>
 /// </ul>
 ///
-/// \param yearOfBirth user year of birth.
+/// \param yearOfBirth The user’s year of birth.
 /// <ul>
 ///   <li>
-///     <em>Important</em>: it has to be a 4-digit number
+///     <em>Important:</em> Must be a 4-digit number (e.g., 1985). Invalid values are ignored with a logged error.
 ///   </li>
 /// </ul>
 ///
-/// \param keywords targeting keywords
+/// \param keywords An array of targeting keywords associated with the user.
 ///
-- (nonnull instancetype)initWithUserId:(NSString * _Nullable)userId gender:(enum RTBGender)gender yearOfBirth:(NSNumber * _Nullable)yearOfBirth keywords:(NSArray<NSString *> * _Nullable)keywords OBJC_DESIGNATED_INITIALIZER;
+/// \param utiqAdtechpass Optional string for additional ad tech targeting parameters.
+///
+- (nonnull instancetype)initWithUserId:(NSString * _Nullable)userId gender:(enum RTBGender)gender yearOfBirth:(NSNumber * _Nullable)yearOfBirth keywords:(NSArray<NSString *> * _Nullable)keywords utiqAdtechpass:(NSString * _Nullable)utiqAdtechpass OBJC_DESIGNATED_INITIALIZER;
+/// A string representation of <code>RTBUserTargeting</code>, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1255,26 +1410,40 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 
 @class NSString;
 
+/// A delegate protocol for receiving banner ad interaction events.
+/// Implement this protocol to handle user interactions and rendering lifecycle events
+/// for banner ads provided by the RTB SDK.
 SWIFT_PROTOCOL("_TtP6RTBSDK30RTBBannerAdInteractionDelegate_")
 @protocol RTBBannerAdInteractionDelegate
-/// Tells the delegate that a click has been recorded for the ad.
+/// Called when the banner ad is clicked.
+/// Use this to track user engagement or pause in-app activity if needed.
 - (void)bannerAdDidRecordClick;
-/// Tells the delegate that ad has opened external browser.
+/// Called when the ad causes the app to pause, such as when opening an external browser.
+/// Use this to temporarily pause any relevant in-app content or animations.
 - (void)bannerAdDidPauseForAd;
-/// Tells the delegate that Ad has been dismissed.
+/// Called when the app resumes after the ad activity has ended.
+/// Use this to resume paused in-app content or UI updates.
 - (void)bannerAdDidResumeAfterAd;
-/// Tells the delegate that an ad rendering failed.
+/// Called when the banner ad fails to render.
+/// \param error A string describing the rendering failure reason.
+///
 - (void)bannerAdDidFailToRenderWithError:(NSString * _Nonnull)error;
 @end
 
 @class RTBBannerBid;
 
+/// A delegate protocol for receiving the result of a banner ad load request.
+/// Implement this protocol to be notified when a banner ad either successfully loads
+/// or fails to load.
 SWIFT_PROTOCOL("_TtP6RTBSDK23RTBBannerAdLoadDelegate_")
 @protocol RTBBannerAdLoadDelegate
-/// Tells the delegate that an ad request successfully received an ad.
-/// @param bannerBid Information about the bid.
+/// Called when a banner ad is successfully loaded.
+/// \param bannerBid An instance of <code>RTBBannerBid</code> containing the bid and ad metadata.
+///
 - (void)bannerAdDidReceiveAdWithBannerBid:(RTBBannerBid * _Nonnull)bannerBid;
-/// Tells the delegate that an ad request failed.
+/// Called when the banner ad request fails.
+/// \param errorMessage A message describing why the ad failed to load.
+///
 - (void)bannerAdDidFailToReceiveAdWithErrorMessage:(NSString * _Nonnull)errorMessage;
 @end
 
@@ -1282,43 +1451,55 @@ SWIFT_PROTOCOL("_TtP6RTBSDK23RTBBannerAdLoadDelegate_")
 @class RTBBannerSize;
 @class UIView;
 
+/// An object responsible for loading and displaying RTB banner ads.
 SWIFT_CLASS("_TtC6RTBSDK19RTBBannerAdProvider")
 @interface RTBBannerAdProvider : NSObject
-/// Load a new banner ad with  configuration
-/// \param configuration banner request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
+/// Loads a new banner ad with the specified configuration.
+/// This method fetches a banner ad using the provided request configuration, banner size, and user agent string.
+/// The result of the ad load (success or failure) is reported via the supplied delegate.
+/// \param configuration An instance of <code>RTBBannerRequestConfiguration</code> containing all necessary ad request details.
 ///
-/// \param size banner size
+/// \param size The desired banner size (see <code>RTBBannerSize</code>).
 ///
-/// \param userAgent user agent
+/// \param userAgent The User-Agent string to be used for the ad request.
 ///
-/// \param loadDelegate the <code>RTBBannerAdLoadDelegate</code> that will be notified with the load result
+/// \param loadDelegate A delegate conforming to <code>RTBBannerAdLoadDelegate</code> that will be notified of the load result.
 ///
 + (void)loadWithConfiguration:(RTBBannerRequestConfiguration * _Nonnull)configuration size:(RTBBannerSize * _Nonnull)size userAgent:(NSString * _Nonnull)userAgent loadDelegate:(id <RTBBannerAdLoadDelegate> _Nonnull)loadDelegate;
-/// Get the banner view using a previously loaded bid info
-/// \param bannerBid An instance of <code>RTBBannerBid</code>
+/// Returns a banner view configured with the provided bid information and interaction delegate.
+/// This method must be called on the main thread, as it involves creating and rendering UI elements.
+/// \param bannerBid An instance of <code>RTBBannerBid</code> obtained from a successful banner load.
 ///
-/// \param delegate The <code>RTBBannerAdInteractionDelegate</code> that will be notified with the ad interactions like clicks, pause, etc.
+/// \param delegate A delegate conforming to <code>RTBBannerAdInteractionDelegate</code> to handle ad interactions such as clicks or pauses.
 ///
 ///
 /// returns:
-/// A view to be rendered
+/// A <code>UIView</code> that displays the banner ad, or <code>nil</code> if called from a background thread.
 + (UIView * _Nullable)getBannerViewWithBannerBid:(RTBBannerBid * _Nonnull)bannerBid delegate:(id <RTBBannerAdInteractionDelegate> _Nonnull)delegate SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// An object representing metadata about a received bid in an RTB auction.
 SWIFT_CLASS("_TtC6RTBSDK10RTBBidInfo")
 @interface RTBBidInfo : NSObject
+/// The bid price in cost per mille (CPM).
 @property (nonatomic) float priceCPM;
+/// The name or identifier of the bidder.
 @property (nonatomic, copy) NSString * _Nonnull bidder;
+/// The creative ID associated with the ad.
 @property (nonatomic, copy) NSString * _Nullable creativeId;
+/// The campaign ID associated with the bid.
 @property (nonatomic, copy) NSString * _Nullable campaignId;
+/// A string representation of the bid info, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+/// Represents a banner ad bid, including its creative response and size.
+/// This class extends <code>RTBBidInfo</code> by adding details specific to banner ads.
 SWIFT_CLASS("_TtC6RTBSDK12RTBBannerBid")
 @interface RTBBannerBid : RTBBidInfo
 @end
@@ -1326,16 +1507,19 @@ SWIFT_CLASS("_TtC6RTBSDK12RTBBannerBid")
 @class NSNumber;
 @class RTBUserTargeting;
 
+/// A configuration object for making ad requests through RTBSDK.
 SWIFT_CLASS("_TtC6RTBSDK23RTBRequestConfiguration")
 @interface RTBRequestConfiguration : NSObject
-/// Represents the bid floor price in USD.
+/// The minimum bid floor price in USD.
 @property (nonatomic, strong) NSNumber * _Nullable bidFloor;
+/// The seller ID associated with the ad inventory.
 @property (nonatomic, copy) NSString * _Nullable sellerId;
-/// An <code>RTBUserTargeting</code> object that represents the user targeting for this request
+/// An object representing user targeting parameters for this request.
 @property (nonatomic, strong) RTBUserTargeting * _Nullable userTargeting;
-/// \param placementId Represents the placement ID on SmartyAd dashboard.
+@property (nonatomic, copy) NSString * _Nullable gpid;
+/// \param placementId The placement ID as defined on the TeqBlaze dashboard.
 ///
-/// \param iTunesAppId Represents the AppId on the publisher Apple developer account.
+/// \param iTunesAppId The App Store app ID from the publisher’s Apple Developer account.
 ///
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1343,15 +1527,24 @@ SWIFT_CLASS("_TtC6RTBSDK23RTBRequestConfiguration")
 @end
 
 
+/// Configuration object for requesting banner ads.
+/// Inherits from <code>RTBRequestConfiguration</code> and extends it with banner-specific details.
 SWIFT_CLASS("_TtC6RTBSDK29RTBBannerRequestConfiguration")
 @interface RTBBannerRequestConfiguration : RTBRequestConfiguration
+/// A string representation of the banner request configuration, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// Represents the size of a banner ad with width and height dimensions.
 SWIFT_CLASS("_TtC6RTBSDK13RTBBannerSize")
 @interface RTBBannerSize : NSObject
+/// Initializes a new banner size with the specified width and height.
+/// \param width The width of the banner.
+///
+/// \param height The height of the banner.
+///
 - (nonnull instancetype)initWithWidth:(CGFloat)width height:(CGFloat)height OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1359,51 +1552,94 @@ SWIFT_CLASS("_TtC6RTBSDK13RTBBannerSize")
 
 
 @interface RTBBannerSize (SWIFT_EXTENSION(RTBSDK))
+/// Standard banner size: 320x50 points.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBBannerSize * _Nonnull banner320x50;)
 + (RTBBannerSize * _Nonnull)banner320x50 SWIFT_WARN_UNUSED_RESULT;
+/// Medium rectangle banner size: 300x250 points.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBBannerSize * _Nonnull banner300x250;)
 + (RTBBannerSize * _Nonnull)banner300x250 SWIFT_WARN_UNUSED_RESULT;
+/// Leaderboard banner size: 728x90 points.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBBannerSize * _Nonnull banner728x90;)
 + (RTBBannerSize * _Nonnull)banner728x90 SWIFT_WARN_UNUSED_RESULT;
 @end
 
 @protocol RTBBannerViewDelegate;
 @class NSCoder;
-@protocol RTBDSPBannerProtocol;
 
+/// A view that displays banner ads using the RTB SDK.
+/// Use this view to load and display banner ads with a specific size and configuration.
 SWIFT_CLASS("_TtC6RTBSDK13RTBBannerView")
 @interface RTBBannerView : UIView
+/// The delegate that receives banner ad lifecycle events.
 @property (nonatomic, weak) id <RTBBannerViewDelegate> _Nullable delegate;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+/// Initializes a new banner view with a given banner size.
+/// \param size The desired banner ad size.
+///
 - (nonnull instancetype)initWithSize:(RTBBannerSize * _Nonnull)size OBJC_DESIGNATED_INITIALIZER;
-/// load a new ad with  configuration
-/// \param configuration banner request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
+/// Loads a new banner ad using the provided configuration.
+/// \param configuration An instance of <code>RTBBannerRequestConfiguration</code>.
 ///
 - (void)loadWithConfiguration:(RTBBannerRequestConfiguration * _Nonnull)configuration;
-- (void)setDSPAdapters:(NSArray<id <RTBDSPBannerProtocol>> * _Nonnull)adapters;
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
+@protocol RTBDSPBannerProtocol;
+
+@interface RTBBannerView (SWIFT_EXTENSION(RTBSDK))
+- (void)setDSPAdapters:(NSArray<id <RTBDSPBannerProtocol>> * _Nonnull)adapters;
+@end
 
 
+/// Delegate protocol for receiving updates about banner ad lifecycle events.
+/// Implement this protocol to be notified when ads are successfully loaded, fail to load,
+/// fail to render, are clicked, or when the user interacts with the ad by opening and returning
+/// from external content.
 SWIFT_PROTOCOL("_TtP6RTBSDK21RTBBannerViewDelegate_")
 @protocol RTBBannerViewDelegate
-/// Tells the delegate that an ad request successfully received an ad. The delegate may want to add
-/// \param bannerView the banner view to the view hierarchy if it hasn’t been added yet
+/// Called when the banner view successfully receives an ad.
+/// The delegate may want to add the banner view to the view hierarchy if it hasn’t been added yet.
+/// \param bannerView The <code>RTBBannerView</code> instance that received the ad.
 ///
-/// \param bidInfo an instance of <code>RTBBidInfo</code> representing bid price and and bidder name
+/// \param bidInfo An instance of <code>RTBBidInfo</code> containing bid price and bidder details.
+///
+/// \param networkName The name of the ad network that provided the ad.
 ///
 - (void)bannerViewDidReceiveAd:(RTBBannerView * _Nonnull)bannerView bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that an ad request failed
+/// Called when the banner view fails to receive an ad.
+/// \param bannerView The <code>RTBBannerView</code> instance that failed to load the ad.
+///
+/// \param errorMessage A description of the failure.
+///
+/// \param networkName The name of the ad network that failed to provide the ad.
+///
 - (void)bannerView:(RTBBannerView * _Nonnull)bannerView didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that an ad coudln’t be rendered.
+/// Called when the banner view fails to render the received ad.
+/// \param bannerView The <code>RTBBannerView</code> instance that failed to render the ad.
+///
+/// \param errorMessage A description of the render failure.
+///
+/// \param networkName The name of the ad network involved.
+///
 - (void)bannerView:(RTBBannerView * _Nonnull)bannerView didFailToRender:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that a click has been recorded for the ad.
+/// Called when a click has been recorded on the banner ad.
+/// \param bannerView The <code>RTBBannerView</code> instance where the click occurred.
+///
+/// \param networkName The name of the ad network whose ad was clicked.
+///
 - (void)bannerViewDidRecordClick:(RTBBannerView * _Nonnull)bannerView networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that ad has opened external browser
+/// Called when the ad causes the app to open an external browser.
+/// \param bannerView The <code>RTBBannerView</code> instance that triggered external navigation.
+///
+/// \param networkName The name of the ad network responsible for this action.
+///
 - (void)bannerViewDidPauseForAd:(RTBBannerView * _Nonnull)bannerView networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that Ad has been dismissed
+/// Called when the user returns to the app after viewing the external ad.
+/// \param bannerView The <code>RTBBannerView</code> instance that resumed.
+///
+/// \param networkName The name of the ad network involved.
+///
 - (void)bannerViewDidResumeAfterAd:(RTBBannerView * _Nonnull)bannerView networkName:(NSString * _Nonnull)networkName;
 @end
 
@@ -1432,9 +1668,7 @@ SWIFT_PROTOCOL("_TtP6RTBSDK14RTBDSPProtocol_")
 
 SWIFT_PROTOCOL("_TtP6RTBSDK16RTBDSAdPProtocol_")
 @protocol RTBDSAdPProtocol <RTBDSPProtocol>
-@property (nonatomic, copy) NSString * _Nullable requestId;
 @property (nonatomic, strong) UIViewController * _Nullable viewController;
-@property (nonatomic, copy) NSString * _Nullable adID;
 - (void)unload;
 - (void)pause;
 - (void)resumeWithController:(UIViewController * _Nonnull)controller;
@@ -1522,18 +1756,26 @@ SWIFT_PROTOCOL("_TtP6RTBSDK27RTBDSPRewardedVideoProtocol_")
 @protocol RTBFullscreenDelegate;
 @class RTBFullscreenRequestConfiguration;
 
+/// Represents a fullscreen interstitial ad that can be loaded and presented.
 SWIFT_CLASS("_TtC6RTBSDK15RTBFullscreenAd")
 @interface RTBFullscreenAd : NSObject
-/// The delegate the will be notified with the different events
+/// Delegate to receive fullscreen ad lifecycle events.
 @property (nonatomic, weak) id <RTBFullscreenDelegate> _Nullable delegate;
+/// Initializes a new fullscreen ad instance.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// Start loading a fullscreen ad
-/// \param configuration Fullscreen request configuration that is needed to request a new Ad, see <code>RTBFullscreenRequestConfiguration</code>
+/// Starts loading a fullscreen ad with the given request configuration.
+/// \param configuration The fullscreen ad request configuration.
 ///
+///
+/// returns:
+/// <code>true</code> if loading started successfully, <code>false</code> if an ad is already loaded and ready.
 - (BOOL)loadWithConfiguration:(RTBFullscreenRequestConfiguration * _Nonnull)configuration;
-/// Show the loaded fullscreen ad
-/// \param viewController The view controller that will be used to present the fullscreen ad
+/// Presents the loaded fullscreen ad from the specified view controller.
+/// \param viewController The view controller to present the ad from.
 ///
+///
+/// returns:
+/// <code>true</code> if the ad was presented, <code>false</code> otherwise.
 - (BOOL)showWithViewController:(UIViewController * _Nonnull)viewController;
 @end
 
@@ -1589,33 +1831,49 @@ SWIFT_PROTOCOL("_TtP6RTBSDK21RTBFullscreenDelegate_")
 @end
 
 
+/// Configuration settings used when requesting a fullscreen ad.
+/// Inherits from <code>RTBRequestConfiguration</code> and adds options specific to fullscreen ads.
 SWIFT_CLASS("_TtC6RTBSDK33RTBFullscreenRequestConfiguration")
 @interface RTBFullscreenRequestConfiguration : RTBRequestConfiguration
-/// Boolean to force showing the SDK native close button even if the MRAID creative has one
+/// A flag to determine whether the SDK should force displaying its native close button
+/// even if the MRAID creative already contains one.
 /// If the MRAID creative has close button and <code>forceCloseButtonForMraid</code> is true, the MRAID creative would have 2 close buttons
 @property (nonatomic) BOOL forceCloseButtonForMraid;
+/// A string representation of the fullscreen request configuration, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
 @end
 
+/// Represents the gender of the user for targeting purposes.
 typedef SWIFT_ENUM(NSInteger, RTBGender, open) {
+/// Male gender.
   RTBGenderMale = 0,
+/// Female gender.
   RTBGenderFemale = 1,
+/// Other gender.
   RTBGenderOther = 2,
+/// Unknown or unspecified gender.
   RTBGenderUnknown = 3,
 };
 
-/// Desired log level
+/// Represents the desired log level for the RTB SDK logging system.
+/// This enum defines various levels of logging verbosity. Use the appropriate level
+/// depending on the environment and troubleshooting needs.
 typedef SWIFT_ENUM(NSInteger, RTBLogLevel, open) {
-/// Verbose-level messages are intended to capture verbose, debug, info, warning and error messages. It’s convenient in an intensive development environment.
+/// Verbose-level messages capture verbose, debug, info, warning, and error messages.
+/// Suitable for intensive development and debugging scenarios.
   RTBLogLevelVerbose = 1,
-/// Debug-level messages are intended to capture debug, info, warning and error messages. It’s convenient in a normal development environment.
+/// Debug-level messages capture debug, info, warning, and error messages.
+/// Suitable for normal development use.
   RTBLogLevelDebug = 2,
-/// Info-level messages are intended to capture info, warning and error messages. Info-level may be helpful but isn’t enough for troubleshooting.
+/// Info-level messages capture info, warning, and error messages.
+/// Useful for general informational logging but not detailed troubleshooting.
   RTBLogLevelInfo = 3,
-/// Warn-level messages are intended to capture warning and error messages only.
+/// Warn-level messages capture warning and error messages only.
+/// Suitable for highlighting potential issues without too much noise.
   RTBLogLevelWarn = 4,
-/// Error-level messages are intended to capture error messages only.
+/// Error-level messages capture error messages only.
+/// Recommended for production environments to minimize log output.
   RTBLogLevelError = 5,
 };
 
@@ -1628,57 +1886,69 @@ SWIFT_CLASS("_TtC6RTBSDK9RTBLogger")
 
 @protocol RTBNativeAdInteractionDelegate;
 
+/// Represents a loaded native ad and handles impression and click tracking.
 SWIFT_CLASS("_TtC6RTBSDK11RTBNativeAd")
 @interface RTBNativeAd : NSObject
-/// The <code>RTBNativeAdInteractionDelegate</code> that will be notified with ad interaction events
+/// Delegate to notify about native ad interaction events.
 @property (nonatomic, weak) id <RTBNativeAdInteractionDelegate> _Nullable delegate;
-/// Native ad title
+/// The title of the native ad.
 @property (nonatomic, copy) NSString * _Nullable title;
-/// Native ad call to action text
+/// The call-to-action text of the native ad.
 @property (nonatomic, copy) NSString * _Nullable callToAction;
-/// Native ad body text
+/// The body text of the native ad.
 @property (nonatomic, copy) NSString * _Nullable body;
-/// Native ad icon url
+/// URL string of the native ad’s icon image.
 @property (nonatomic, copy) NSString * _Nullable icon;
-/// Native ad main image url
+/// URL string of the native ad’s main image.
 @property (nonatomic, copy) NSString * _Nullable image;
-/// Native ad rating
+/// The rating of the native ad (optional).
 @property (nonatomic, strong) NSNumber * _Nullable rating;
-/// Native ad sponsered text
+/// The sponsored text of the native ad.
 @property (nonatomic, copy) NSString * _Nullable sponsered;
+/// Starts tracking an impression for the native ad on the given view.
+/// \param view The main view displaying the native ad.
+///
 - (void)trackImpressionWithView:(UIView * _Nonnull)view;
+/// Starts tracking an impression and user clicks on specified clickable views.
+/// \param view The main view displaying the native ad.
+///
+/// \param clickableViews The views that should be tappable to register clicks.
+///
 - (void)trackImpressionWithView:(UIView * _Nonnull)view clickableViews:(NSArray<UIView *> * _Nonnull)clickableViews;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
 
 
+/// Delegate protocol to receive interaction events for a native ad.
+/// Implement this protocol to handle native ad rendering errors, user interactions
+/// such as clicks, and app lifecycle changes related to the ad (pausing and resuming).
 SWIFT_PROTOCOL("_TtP6RTBSDK30RTBNativeAdInteractionDelegate_")
 @protocol RTBNativeAdInteractionDelegate
-/// Tells the delegate that an ad coudln’t be rendered.
-/// \param nativeAd The <code>RTBNativeAd</code>
+/// Called when the native ad couldn’t be rendered.
+/// \param nativeAd The <code>RTBNativeAd</code> that failed to render
 ///
-/// \param errorMessage The error message
+/// \param errorMessage A message describing the reason for the failure
 ///
-/// \param networkName The biddder name
+/// \param networkName Network name for the ad
 ///
 - (void)nativeAdView:(RTBNativeAd * _Nonnull)nativeAd didFailToRender:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that a click has been recorded for the ad.
-/// \param nativeAd The <code>RTBNativeAd</code>
+/// Called when the user clicks on the native ad.
+/// \param nativeAd The <code>RTBNativeAd</code> that received the click
 ///
-/// \param networkName The biddder name
+/// \param networkName Network name for the ad
 ///
 - (void)nativeAdDidRecordClick:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that ad has opened external browser
-/// \param nativeAd The <code>RTBNativeAd</code>
+/// Called when the native ad opens an external browser and the app is paused for the ad.
+/// \param nativeAd The <code>RTBNativeAd</code> that caused the pause
 ///
-/// \param networkName The biddder name
+/// \param networkName Network name for the ad
 ///
 - (void)nativeAdDidPauseForAd:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that Ad has been dismissed
-/// \param nativeAd The <code>RTBNativeAd</code> that contains all ad assets
+/// Called when the native ad has been dismissed and the app resumes after the ad.
+/// \param nativeAd The <code>RTBNativeAd</code> that was dismissed
 ///
-/// \param networkName The bidder name
+/// \param networkName Network name for the ad
 ///
 - (void)nativeAdDidResumeAfterAd:(RTBNativeAd * _Nonnull)nativeAd networkName:(NSString * _Nonnull)networkName;
 @end
@@ -1686,71 +1956,82 @@ SWIFT_PROTOCOL("_TtP6RTBSDK30RTBNativeAdInteractionDelegate_")
 @protocol RTBNativeAdLoaderDelegate;
 @class RTBNativeAdRequestConfiguration;
 
+/// Responsible for loading native ads and notifying the delegate about load events.
 SWIFT_CLASS("_TtC6RTBSDK17RTBNativeAdLoader")
 @interface RTBNativeAdLoader : NSObject
-/// The <code>RTBNativeAdLoaderDelegate</code> that will be notified with the load events
+/// The delegate that will receive native ad load event callbacks.
 @property (nonatomic, weak) id <RTBNativeAdLoaderDelegate> _Nullable delegate;
-/// load a new native ad with  configuration. Can be called from background threads.
-/// \param configuration native ad request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
+/// Loads a new native ad using the specified configuration and user agent.
+/// This method can be called from background threads.
+/// \param configuration The native ad request configuration required to request a new ad. See <code>RTBNativeAdRequestConfiguration</code>.
 ///
-/// \param userAgent user agent
+/// \param userAgent The user agent string to be used in the ad request.
 ///
 - (void)loadWithConfiguration:(RTBNativeAdRequestConfiguration * _Nonnull)configuration userAgent:(NSString * _Nonnull)userAgent;
-/// load a new native ad with  configuration. Must be called from the main thread.
-/// \param configuration native ad request configuration that is needed to request a new Ad, see <code>RTBBannerRequestConfiguration</code>
+/// Loads a new native ad using the specified configuration.
+/// This method <em>must</em> be called on the main thread. If called from a background thread,
+/// it will log an error and notify the delegate of the failure.
+/// \param configuration The native ad request configuration required to request a new ad. See <code>RTBNativeAdRequestConfiguration</code>.
 ///
 - (void)loadWithConfiguration:(RTBNativeAdRequestConfiguration * _Nonnull)configuration;
-/// Gets the native ad data
+/// Returns the currently loaded native ad data, if available.
 ///
 /// returns:
-/// An instance of <code>RTBNativeAd</code>
+/// An optional <code>RTBNativeAd</code> instance representing the loaded native ad.
 - (RTBNativeAd * _Nullable)getNativeAd SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 
+/// Delegate protocol for receiving native ad load events.
 SWIFT_PROTOCOL("_TtP6RTBSDK25RTBNativeAdLoaderDelegate_")
 @protocol RTBNativeAdLoaderDelegate
-/// Tells the delegate that an ad request successfully received an ad. The delegate may want to add
-/// \param nativeAdLoader the <code>RTBNativeAd</code> that loaded the native ad
+/// Called when the native ad loader successfully loads a native ad.
+/// \param nativeAdLoader The <code>RTBNativeAdLoader</code> instance that loaded the native ad.
 ///
-/// \param bidInfo an instance of <code>RTBBidInfo</code> representing bid price and and bidder name
+/// \param bidInfo An instance of <code>RTBBidInfo</code> containing bid price and bidder information.
 ///
-/// \param networkName The biddder name
+/// \param networkName The name of the bidder/network that provided the ad.
 ///
 - (void)nativeAdDidReceiveAd:(RTBNativeAdLoader * _Nonnull)nativeAdLoader bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
-/// Tells the delegate that an ad request failed
-/// \param nativeAdLoader The <code>nativeAdLoader</code> that failed to load an ad
+/// Called when the native ad loader fails to load an ad.
+/// \param nativeAdLoader The <code>RTBNativeAdLoader</code> instance that failed to load the ad.
 ///
-/// \param errorMessage Error message
+/// \param errorMessage A descriptive error message explaining the failure.
 ///
-/// \param networkName The biddder name
+/// \param networkName The name of the bidder/network that failed to load the ad.
 ///
 - (void)nativeAdView:(RTBNativeAdLoader * _Nonnull)nativeAdLoader didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
 @end
 
 
+/// Configuration class for native ad requests.
+/// Inherits from <code>RTBRequestConfiguration</code> and adds native ads specific options.
 SWIFT_CLASS("_TtC6RTBSDK31RTBNativeAdRequestConfiguration")
 @interface RTBNativeAdRequestConfiguration : RTBRequestConfiguration
+/// A string representation of <code>RTBNativeAdRequestConfiguration</code>, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
 
+/// Represents a reward that can be granted to the user,
+/// Contains a name and a value describing the reward.
 SWIFT_CLASS("_TtC6RTBSDK9RTBReward")
 @interface RTBReward : NSObject
-/// String represents the reward name
+/// The name of the reward.
 @property (nonatomic, readonly, copy) NSString * _Nonnull name;
-/// String represents the reward value
+/// The value associated with the reward.
 @property (nonatomic, readonly, copy) NSString * _Nonnull value;
-/// Creates an instance of <code>RTBReward</code>
-/// \param name The reward name
+/// Initializes a new reward instance.
+/// \param name The reward’s name.
 ///
-/// \param value The reward value
+/// \param value The reward’s value.
 ///
 - (nonnull instancetype)initWithName:(NSString * _Nonnull)name value:(NSString * _Nonnull)value OBJC_DESIGNATED_INITIALIZER;
+/// A string representation of <code>RTBReward</code>, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
@@ -1759,18 +2040,27 @@ SWIFT_CLASS("_TtC6RTBSDK9RTBReward")
 @protocol RTBRewardedVideoAdDelegate;
 @class RTBRewardedVideoRequestConfiguration;
 
+/// Represents a rewarded video ad that can be loaded and presented to the user.
 SWIFT_CLASS("_TtC6RTBSDK18RTBRewardedVideoAd")
 @interface RTBRewardedVideoAd : NSObject
-/// The delegate the will be notified with the different events
+/// The delegate object that receives rewarded video ad event callbacks.
+/// Use this to track ad lifecycle events such as loading success, failure, reward granting, clicks, and ad presentation states.
 @property (nonatomic, weak) id <RTBRewardedVideoAdDelegate> _Nullable delegate;
+/// Initializes a new instance of <code>RTBRewardedVideoAd</code>.
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
-/// Start loading a rewarded video ad
-/// \param configuration Rewarded video request configuration that is needed to request a new Ad, see <code>RTBRewardedVideoRequestConfiguration</code>
+/// Loads a rewarded video ad with the specified request configuration.
+/// \param configuration Configuration settings required to request a rewarded video ad.
 ///
+///
+/// returns:
+/// <code>true</code> if the loading request was initiated successfully; <code>false</code> if an ad is already loaded and ready to be shown.
 - (BOOL)loadWithConfiguration:(RTBRewardedVideoRequestConfiguration * _Nonnull)configuration;
-/// Show the loaded rewarded video ad
-/// \param viewController The view controller that will be used to present the rewarded video ad
+/// Presents the loaded rewarded video ad from the given view controller.
+/// \param viewController The <code>UIViewController</code> instance that will present the rewarded video ad.
 ///
+///
+/// returns:
+/// <code>true</code> if the ad was successfully shown; <code>false</code> otherwise.
 - (BOOL)showWithViewController:(UIViewController * _Nonnull)viewController;
 @end
 
@@ -1787,66 +2077,82 @@ SWIFT_CLASS("_TtC6RTBSDK18RTBRewardedVideoAd")
 
 
 
+/// Delegate protocol for receiving rewarded video ad lifecycle events.
+/// Implement this protocol to get notified about ad loading, presentation, user interactions, and rewards.
 SWIFT_PROTOCOL("_TtP6RTBSDK26RTBRewardedVideoAdDelegate_")
 @protocol RTBRewardedVideoAdDelegate
-/// Called when the rewarded video ad has been loaded and ready to be shown
-/// \param rewardedVideoAd The loaded <code>RTBRewardedVideoAd</code>
+/// Called when the rewarded video ad has successfully loaded and is ready to be shown.
+/// \param rewardedVideoAd The rewarded video ad instance that was loaded.
 ///
-/// \param bidInfo an instance of <code>RTBBidInfo</code> representing bid price and and bidder name
+/// \param bidInfo Contains bid price, bidder name, and related metadata.
 ///
-/// \param networkName networtk name for the loaded ad
+/// \param networkName The ad network name that provided the loaded ad.
 ///
 - (void)rewardedVideoAdDidReceiveAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd bidInfo:(RTBBidInfo * _Nonnull)bidInfo networkName:(NSString * _Nonnull)networkName;
-/// Called when the rewarded video ad loading is failed
-/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that failed to load
+/// Called when the rewarded video ad failed to load.
+/// \param rewardedVideoAd The rewarded video ad instance that failed to load.
 ///
-/// \param errorMessage A message describing the reason for the failure
+/// \param errorMessage A descriptive message explaining the failure reason.
 ///
-/// \param networkName networtk name for the loaded ad
+/// \param networkName The ad network name associated with the failed load attempt.
 ///
 - (void)rewardedVideoAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd didFailToReceiveAd:(NSString * _Nonnull)errorMessage networkName:(NSString * _Nonnull)networkName;
-/// Called when the use clicks on the rewarded video ad
-/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+/// Called when the user clicks on the rewarded video ad.
+/// \param rewardedVideoAd The rewarded video ad instance that was clicked.
 ///
-/// \param networkName networtk name for the loaded ad
+/// \param networkName The ad network name associated with the clicked ad.
 ///
 - (void)rewardedVideoAdDidRecordClick:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
-/// Called when the rewarded video ad has been displayed and video has just started
-/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+/// Called when the rewarded video ad is displayed and the video playback starts.
+/// \param rewardedVideoAd The rewarded video ad instance that started playing.
 ///
-/// \param networkName networtk name for the loaded ad
+/// \param networkName The ad network name associated with the playing ad.
 ///
 - (void)rewardedVideoAdDidPauseForAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
-/// Called when the rewarded video ad has been dismisseed
-/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+/// Called when the rewarded video ad is dismissed and the app resumes its normal state.
+/// \param rewardedVideoAd The rewarded video ad instance that was dismissed.
 ///
-/// \param networkName networtk name for the loaded ad
+/// \param networkName The ad network name associated with the dismissed ad.
 ///
 - (void)rewardedVideoAdDidResumeAfterAd:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
-/// Called when the use receives a reward after watching the ad
-/// \param rewardedVideoAd The <code>RTBRewardedVideoAd</code> that received the click
+/// Called when the user has earned a reward after watching the ad.
+/// \param rewardedVideoAd The rewarded video ad instance that granted the reward.
 ///
-/// \param networkName networtk name for the loaded ad
+/// \param networkName The ad network name associated with the rewarded ad.
 ///
 - (void)rewardedVideoAdDidReceiveReward:(RTBRewardedVideoAd * _Nonnull)rewardedVideoAd networkName:(NSString * _Nonnull)networkName;
 @end
 
 
+/// Configuration class for rewarded video ad requests.
+/// Inherits from <code>RTBRequestConfiguration</code> and adds rewarded video specific options.
 SWIFT_CLASS("_TtC6RTBSDK36RTBRewardedVideoRequestConfiguration")
 @interface RTBRewardedVideoRequestConfiguration : RTBRequestConfiguration
+/// Indicates whether the rewarded video ad should start muted.
+/// Defaults to <code>false</code>. Set to <code>true</code> if you want the ad to play without sound initially.
 @property (nonatomic) BOOL muteOnStart;
+/// A string representation of <code>RTBRewardedVideoRequestConfiguration</code>, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)initWithPlacementId:(NSInteger)placementId iTunesAppId:(NSString * _Nonnull)iTunesAppId OBJC_DESIGNATED_INITIALIZER;
 @end
 
 
+/// A shared manager that controls global RTBSDK settings and behaviors.
 SWIFT_CLASS("_TtC6RTBSDK13RTBSDKManager")
 @interface RTBSDKManager : NSObject
+/// The shared singleton instance of <code>RTBSDKManager</code>.
 SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBSDKManager * _Nonnull shared;)
 + (RTBSDKManager * _Nonnull)shared SWIFT_WARN_UNUSED_RESULT;
+/// The Objective-C compatible version of <code>isChildDirected-1gse</code>.
 @property (nonatomic, strong) NSNumber * _Nullable isChildDirected;
+/// The Objective-C compatible version of <code>isGDPRApplies-3wc4x</code>.
 @property (nonatomic, strong) NSNumber * _Nullable isGDPRApplies;
-/// A bool that indicates whether the SDK should use the geo location or not. Default value is <em>false</em>
+/// A bool that indicates whether the test mode is enabled or not. Default value is <em>false</em>
+@property (nonatomic) BOOL testModeEnabled;
+/// A <code>RTBLogLevel</code> that represents the SDK internal log level. Default value is <code>RTBLogLevel.info</code>
+@property (nonatomic) enum RTBLogLevel logLevel;
+/// Indicates whether the SDK is allowed to access the user’s geographic location.
+/// Default value is <code>false</code>.
 @property (nonatomic) BOOL useGeoLocation;
 @property (nonatomic, readonly, copy) NSString * _Nonnull sdkVersion;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -1854,28 +2160,32 @@ SWIFT_CLASS_PROPERTY(@property (nonatomic, class, readonly, strong) RTBSDKManage
 @end
 
 
+/// Represents user targeting information to refine ad requests.
 SWIFT_CLASS("_TtC6RTBSDK16RTBUserTargeting")
 @interface RTBUserTargeting : NSObject
-/// initialize <code>RTBUserTargeting</code>
-/// \param userId user id
+/// Initializes a new instance of <code>RTBUserTargeting</code>.
+/// \param userId The user identifier.
 ///
-/// \param gender user gender.
+/// \param gender The user’s gender.
 /// <ul>
 ///   <li>
-///     <em>Important</em>: The default value is <code>RTBGender.unknown</code> and will be ignored while performing the request.
+///     <em>Important:</em> The default value is <code>RTBGender/unknown</code> and will be ignored in requests.
 ///   </li>
 /// </ul>
 ///
-/// \param yearOfBirth user year of birth.
+/// \param yearOfBirth The user’s year of birth.
 /// <ul>
 ///   <li>
-///     <em>Important</em>: it has to be a 4-digit number
+///     <em>Important:</em> Must be a 4-digit number (e.g., 1985). Invalid values are ignored with a logged error.
 ///   </li>
 /// </ul>
 ///
-/// \param keywords targeting keywords
+/// \param keywords An array of targeting keywords associated with the user.
 ///
-- (nonnull instancetype)initWithUserId:(NSString * _Nullable)userId gender:(enum RTBGender)gender yearOfBirth:(NSNumber * _Nullable)yearOfBirth keywords:(NSArray<NSString *> * _Nullable)keywords OBJC_DESIGNATED_INITIALIZER;
+/// \param utiqAdtechpass Optional string for additional ad tech targeting parameters.
+///
+- (nonnull instancetype)initWithUserId:(NSString * _Nullable)userId gender:(enum RTBGender)gender yearOfBirth:(NSNumber * _Nullable)yearOfBirth keywords:(NSArray<NSString *> * _Nullable)keywords utiqAdtechpass:(NSString * _Nullable)utiqAdtechpass OBJC_DESIGNATED_INITIALIZER;
+/// A string representation of <code>RTBUserTargeting</code>, useful for debugging and logging.
 @property (nonatomic, readonly, copy) NSString * _Nonnull description;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");

@@ -28,12 +28,12 @@ import libxml2
   @objc override dynamic public init()
   @objc deinit
 }
-@objc public protocol RTBDSPInterstitialProtocol : RTBSDK.RTBDSAdPProtocol {
+@_documentation(visibility: internal) @objc public protocol RTBDSPInterstitialProtocol : RTBSDK.RTBDSAdPProtocol {
   @objc var adDelegate: (any RTBSDK.RTBDSPInterstitialDelegate)? { get set }
   @objc @discardableResult
   func show(viewController: UIKit.UIViewController) -> Swift.Bool
 }
-@objc public protocol RTBDSPInterstitialDelegate {
+@_documentation(visibility: internal) @objc public protocol RTBDSPInterstitialDelegate {
   @objc func dspAdViewDidReceiveAd(_ ad: any RTBSDK.RTBDSPInterstitialProtocol, networkName: Swift.String)
   @objc func dspAdView(_ ad: any RTBSDK.RTBDSPInterstitialProtocol, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
   @objc func dspAdViewDidRecordClick(_ ad: any RTBSDK.RTBDSPInterstitialProtocol, networkName: Swift.String)
@@ -53,10 +53,10 @@ import libxml2
     @objc get
     @objc set
   }
-  final public var testModeEnabled: Swift.Bool?
-  final public var logLevel: RTBSDK.RTBLogLevel? {
-    get
-    set
+  @objc final public var testModeEnabled: Swift.Bool
+  @objc final public var logLevel: RTBSDK.RTBLogLevel {
+    @objc get
+    @objc set
   }
   @objc final public var useGeoLocation: Swift.Bool
   @objc final public let sdkVersion: Swift.String
@@ -75,7 +75,7 @@ extension RTBSDK.RTBBannerSize {
   @objc public static let banner300x250: RTBSDK.RTBBannerSize
   @objc public static let banner728x90: RTBSDK.RTBBannerSize
 }
-@_hasMissingDesignatedInitializers @objc public class RTBBidderExtraInfo : ObjectiveC.NSObject {
+@_hasMissingDesignatedInitializers @_documentation(visibility: internal) @objc public class RTBBidderExtraInfo : ObjectiveC.NSObject {
   @objc public var clickURL: Swift.String?
   @objc public var impressionURL: Swift.String?
   @objc deinit
@@ -92,10 +92,8 @@ extension RTBSDK.RTBBannerSize {
 @objc public class RTBRequestConfiguration : ObjectiveC.NSObject {
   @objc public var bidFloor: Foundation.NSNumber?
   @objc public var sellerId: Swift.String?
-  @objc public var userTargeting: RTBSDK.RTBUserTargeting? {
-    @objc get
-    @objc set
-  }
+  @objc public var userTargeting: RTBSDK.RTBUserTargeting?
+  @objc public var gpid: Swift.String?
   @objc public init(placementId: Swift.Int, iTunesAppId: Swift.String)
   @objc deinit
 }
@@ -121,16 +119,14 @@ extension RTBSDK.RTBBannerSize {
   @objc deinit
 }
 @objc final public class RTBUserTargeting : ObjectiveC.NSObject {
-  @objc public init(userId: Swift.String? = nil, gender: RTBSDK.RTBGender = .unknown, yearOfBirth: Foundation.NSNumber? = nil, keywords: [Swift.String]? = nil)
+  @objc public init(userId: Swift.String? = nil, gender: RTBSDK.RTBGender = .unknown, yearOfBirth: Foundation.NSNumber? = nil, keywords: [Swift.String]? = nil, utiqAdtechpass: Swift.String? = nil)
   @objc override final public var description: Swift.String {
     @objc get
   }
   @objc deinit
 }
-@objc public protocol RTBDSAdPProtocol : RTBSDK.RTBDSPProtocol {
-  @objc var requestId: Swift.String? { get set }
+@_documentation(visibility: internal) @objc public protocol RTBDSAdPProtocol : RTBSDK.RTBDSPProtocol {
   @objc var viewController: UIKit.UIViewController? { get set }
-  @objc var adID: Swift.String? { get set }
   @objc func unload()
   @objc func pause()
   @objc func resume(controller: UIKit.UIViewController)
@@ -161,12 +157,12 @@ extension RTBSDK.RTBBannerSize {
   @objc override dynamic public init()
   @objc deinit
 }
-@objc public protocol RTBDSPRewardedVideoProtocol : RTBSDK.RTBDSAdPProtocol {
+@_documentation(visibility: internal) @objc public protocol RTBDSPRewardedVideoProtocol : RTBSDK.RTBDSAdPProtocol {
   @objc var adDelegate: (any RTBSDK.RTBDSPRewardedVideoDelegate)? { get set }
   @objc @discardableResult
   func show(viewController: UIKit.UIViewController) -> Swift.Bool
 }
-@objc public protocol RTBDSPRewardedVideoDelegate {
+@_documentation(visibility: internal) @objc public protocol RTBDSPRewardedVideoDelegate {
   @objc func dspAdViewDidReceiveAd(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, networkName: Swift.String)
   @objc func dspAdView(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
   @objc func dspAdViewDidRecordClick(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, networkName: Swift.String)
@@ -189,14 +185,14 @@ extension RTBSDK.RTBBannerSize {
   @objc override public init(placementId: Swift.Int, iTunesAppId: Swift.String)
   @objc deinit
 }
-@objc public protocol RTBDSPProtocol {
+@_documentation(visibility: internal) @objc public protocol RTBDSPProtocol {
   @objc var bidderName: Swift.String { get }
   @objc var signalsDelegate: (any RTBSDK.RTBDSPDelegate)? { get set }
   @objc init()
   @objc func loadSignals()
   @objc func renderCreative(_ creative: Swift.String, extraInfo: RTBSDK.RTBBidderExtraInfo)
 }
-@objc public protocol RTBDSPDelegate {
+@_documentation(visibility: internal) @objc public protocol RTBDSPDelegate {
   @objc func didCollectSignals(_ dsp: any RTBSDK.RTBDSPProtocol, signals: [Swift.String : Any])
   @objc func didFailToCollectSignals(_ dsp: any RTBSDK.RTBDSPProtocol, error: Swift.String)
 }
@@ -216,8 +212,10 @@ extension RTBSDK.RTBBannerSize {
   @objc @_Concurrency.MainActor @preconcurrency weak public var delegate: (any RTBSDK.RTBBannerViewDelegate)?
   @objc @_Concurrency.MainActor @preconcurrency public init(size: RTBSDK.RTBBannerSize)
   @objc @_Concurrency.MainActor @preconcurrency public func load(configuration: RTBSDK.RTBBannerRequestConfiguration)
-  @objc @_Concurrency.MainActor @preconcurrency public func setDSPAdapters(_ adapters: [any RTBSDK.RTBDSPBannerProtocol])
   @objc deinit
+}
+@_documentation(visibility: internal) extension RTBSDK.RTBBannerView {
+  @objc @_Concurrency.MainActor @preconcurrency dynamic public func setDSPAdapters(_ adapters: [any RTBSDK.RTBDSPBannerProtocol])
 }
 @objc public protocol RTBNativeAdInteractionDelegate {
   @objc func nativeAdView(_ nativeAd: RTBSDK.RTBNativeAd, didFailToRender errorMessage: Swift.String, networkName: Swift.String)
@@ -238,8 +236,10 @@ extension RTBSDK.RTBBannerSize {
   @objc public func load(configuration: RTBSDK.RTBRewardedVideoRequestConfiguration) -> Swift.Bool
   @discardableResult
   @objc public func show(viewController: UIKit.UIViewController) -> Swift.Bool
-  public func setDSPAdapters(_ adapters: [any RTBSDK.RTBDSPRewardedVideoProtocol])
   @objc deinit
+}
+@_documentation(visibility: internal) extension RTBSDK.RTBRewardedVideoAd {
+  public func setDSPAdapters(_ adapters: [any RTBSDK.RTBDSPRewardedVideoProtocol])
 }
 extension RTBSDK.RTBRewardedVideoAd : RTBSDK.RTBDSPRewardedVideoDelegate {
   @objc dynamic public func dspAdViewDidReceiveAd(_ ad: any RTBSDK.RTBDSPRewardedVideoProtocol, networkName: Swift.String)
@@ -256,10 +256,12 @@ extension RTBSDK.RTBRewardedVideoAd : RTBSDK.RTBDSPRewardedVideoDelegate {
   @objc public func load(configuration: RTBSDK.RTBFullscreenRequestConfiguration) -> Swift.Bool
   @discardableResult
   @objc public func show(viewController: UIKit.UIViewController) -> Swift.Bool
-  public func setDSPAdapters(_ adapters: [any RTBSDK.RTBDSPInterstitialProtocol])
   @objc deinit
 }
-extension RTBSDK.RTBFullscreenAd : RTBSDK.RTBDSPInterstitialDelegate {
+@_documentation(visibility: internal) extension RTBSDK.RTBFullscreenAd {
+  public func setDSPAdapters(_ adapters: [any RTBSDK.RTBDSPInterstitialProtocol])
+}
+@_documentation(visibility: internal) extension RTBSDK.RTBFullscreenAd : RTBSDK.RTBDSPInterstitialDelegate {
   @objc dynamic public func dspAdViewDidReceiveAd(_ ad: any RTBSDK.RTBDSPInterstitialProtocol, networkName: Swift.String)
   @objc dynamic public func dspAdView(_ ad: any RTBSDK.RTBDSPInterstitialProtocol, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
   @objc dynamic public func dspAdViewDidRecordClick(_ ad: any RTBSDK.RTBDSPInterstitialProtocol, networkName: Swift.String)
@@ -295,64 +297,22 @@ extension RTBSDK.RTBFullscreenAd : RTBSDK.RTBDSPInterstitialDelegate {
 @_hasMissingDesignatedInitializers @objc public class RTBBannerBid : RTBSDK.RTBBidInfo {
   @objc deinit
 }
-@objc public protocol RTBDSPBannerProtocol : RTBSDK.RTBDSAdPProtocol {
+@_documentation(visibility: internal) @objc public protocol RTBDSPBannerProtocol : RTBSDK.RTBDSAdPProtocol {
   @objc var bannerDelegate: (any RTBSDK.RTBDSPBannerDelegate)? { get set }
   @objc func setBannerSize(size: CoreFoundation.CGSize)
   @objc func getBannerView() -> UIKit.UIView?
 }
-@objc public protocol RTBDSPBannerDelegate {
+@_documentation(visibility: internal) @objc public protocol RTBDSPBannerDelegate {
   @objc func dspAdViewDidReceiveAd(_ ad: any RTBSDK.RTBDSPBannerProtocol, networkName: Swift.String)
   @objc func dspAdView(_ ad: any RTBSDK.RTBDSPBannerProtocol, didFailToReceiveAd errorMessage: Swift.String, networkName: Swift.String)
   @objc func dspAdViewDidRecordClick(_ ad: any RTBSDK.RTBDSPBannerProtocol, networkName: Swift.String)
   @objc func dspAdViewDidPauseForAd(_ ad: any RTBSDK.RTBDSPBannerProtocol, networkName: Swift.String)
   @objc func dspAdViewDidResumeAfterAd(_ ad: any RTBSDK.RTBDSPBannerProtocol, networkName: Swift.String)
 }
-@objc @_inheritsConvenienceInitializers public class RTBLogger : ObjectiveC.NSObject {
+@objc @_inheritsConvenienceInitializers @_documentation(visibility: internal) public class RTBLogger : ObjectiveC.NSObject {
   public static func log(level: RTBSDK.RTBLogLevel, message: Swift.String, withoutAATFormatting: Swift.Bool = false, forceLog: Swift.Bool = false, callingMethod: Swift.String = #function, file: Swift.String = #file, tag: Swift.String = "RTBSDK")
   @objc override dynamic public init()
   @objc deinit
-}
-public let kRTBErrorDomain: Swift.String
-public enum RTBErrorCode : Swift.Int {
-  case noFill
-  case parse
-  case server
-  case invalidAsset
-  case unsupportedAsset
-  case nullAd
-  case invalidAd
-  case invalidZoneId
-  case invalidSignalData
-  case notInitialised
-  case auctionNoAd
-  case renderingBanner
-  case renderingInterstitial
-  case renderingRewarded
-  case mraidPlayer
-  case vastPlayer
-  case trackingUrl
-  case trackingJS
-  case invalidUrl
-  case internalErrorCode
-  case unknown
-  case disabledFormat
-  case disabledRenderingEngine
-  case expiredAd
-  case vastParserSchemaValidation
-  case vastParserTooManyWrappers
-  case vastParserNoCompatibleMediaFile
-  case vastParserNoInternetConnection
-  case vastParserMovieTooShort
-  case adFeedbackFormNotLoaded
-  case invalidHTML
-  case vastParserNoAdResponse
-  case vastParserBothAdAndErrorPresentInRootResponse
-  case invalidRemoteConfigData
-  public init?(rawValue: Swift.Int)
-  public typealias RawValue = Swift.Int
-  public var rawValue: Swift.Int {
-    get
-  }
 }
 @_inheritsConvenienceInitializers @objc public class RTBBannerRequestConfiguration : RTBSDK.RTBRequestConfiguration {
   @objc override dynamic public var description: Swift.String {
@@ -361,7 +321,7 @@ public enum RTBErrorCode : Swift.Int {
   @objc override public init(placementId: Swift.Int, iTunesAppId: Swift.String)
   @objc deinit
 }
-@_hasMissingDesignatedInitializers open class NetworkReachabilityManager {
+@_hasMissingDesignatedInitializers @_documentation(visibility: internal) open class NetworkReachabilityManager {
   public enum NetworkReachabilityStatus {
     case unknown
     case notReachable
@@ -402,9 +362,9 @@ public enum RTBErrorCode : Swift.Int {
   open func startListening() -> Swift.Bool
   open func stopListening()
 }
-extension RTBSDK.NetworkReachabilityManager.NetworkReachabilityStatus : Swift.Equatable {
+@_documentation(visibility: internal) extension RTBSDK.NetworkReachabilityManager.NetworkReachabilityStatus : Swift.Equatable {
 }
-public func == (lhs: RTBSDK.NetworkReachabilityManager.NetworkReachabilityStatus, rhs: RTBSDK.NetworkReachabilityManager.NetworkReachabilityStatus) -> Swift.Bool
+@_documentation(visibility: internal) public func == (lhs: RTBSDK.NetworkReachabilityManager.NetworkReachabilityStatus, rhs: RTBSDK.NetworkReachabilityManager.NetworkReachabilityStatus) -> Swift.Bool
 @objc public enum RTBGender : Swift.Int, Swift.RawRepresentable {
   public typealias RawValue = Swift.String
   case male
@@ -419,9 +379,6 @@ public func == (lhs: RTBSDK.NetworkReachabilityManager.NetworkReachabilityStatus
 extension RTBSDK.RTBLogLevel : Swift.Equatable {}
 extension RTBSDK.RTBLogLevel : Swift.Hashable {}
 extension RTBSDK.RTBLogLevel : Swift.RawRepresentable {}
-extension RTBSDK.RTBErrorCode : Swift.Equatable {}
-extension RTBSDK.RTBErrorCode : Swift.Hashable {}
-extension RTBSDK.RTBErrorCode : Swift.RawRepresentable {}
 extension RTBSDK.NetworkReachabilityManager.ConnectionType : Swift.Equatable {}
 extension RTBSDK.NetworkReachabilityManager.ConnectionType : Swift.Hashable {}
 extension RTBSDK.RTBGender : Swift.Equatable {}
